@@ -1,0 +1,199 @@
+/*------------------------------------
+  Tagsinput
+------------------------------------*/
+
+.form-control-tags {
+  display: flex;
+  height: auto;
+  border-radius: $input-border-radius;
+  border-color: $input-border-color;
+  transition: $input-transition;
+  background-color: $white;
+  width: 100%;
+  min-height: $input-height;
+
+  .tagify__tag__removeBtn {
+    font-weight: $form-control-tags-removeBtn-font-weight;
+  }
+
+  // On hover
+  &:hover {
+    border-color: $input-border-color;
+  }
+
+  // Field styles
+  .tagify__input {
+    color: $input-color;
+    padding-top: .5rem;
+
+    &::before {
+      line-height: 2.2;
+      color: $input-placeholder-color;
+    };
+  }
+
+  // On focus
+  &.tagify--focus {
+    border-color: $input-focus-border-color;
+  }
+
+  // Tag styles
+  .tagify__tag {
+    background-color: #eeeef1;
+    color: $gray-500;
+    line-height: 1.5;
+    border-radius: $tag-boredr-radius;
+
+    &:not([readonly]) div::before {
+      box-shadow: none;
+    }
+
+    &:hover:not([readonly]) div::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+// Readonly
+.form-control-tags[readonly] .tagify__tag > div {
+  color: $gray-300;
+
+  &::before {
+    background: none;
+    box-shadow: none;
+  }
+}
+
+// Padding tag for textarea
+.form-control-tags.tags-textarea .tagify__input .tagify__tag>div {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+  // Remove box-shadow in textarea
+  &::before {
+    box-shadow: none;
+  }
+}
+
+// Boxshadow when hover on the tag
+.form-control-tags .tagify__tag:hover:not([readonly]) div::before {
+  box-shadow: $form-control-tags-hover-box-shadow;
+}
+
+// Styles when hover on the remove button
+.form-control-tags .tagify__tag__removeBtn:hover + div::before {
+  box-shadow: $form-control-tags-removeBtn-hover-box-shadow !important;
+}
+
+.form-control-tags .tagify__tag__removeBtn:hover {
+  background: $form-control-tags-removeBtn-hover-background;
+  color: $form-control-tags-removeBtn-hover-color;
+}
+
+// Transition for tag
+.form-control-tags .tagify__tag__removeBtn+div>span {
+  transition: $form-control-tags-removeBtn-hover-transition;
+}
+
+// Large
+.form-control-lg.form-control-tags {
+  min-height: $input-height-lg;
+  padding: 0;
+
+  // Tag styles
+  .tagify__tag>div {
+    font-size: $input-font-size-lg;
+    padding-right: .8rem;
+  }
+
+  // Remove icon
+  .tagify__tag__removeBtn {
+    font-size: 18px;
+    margin-right: .8rem;
+  }
+
+  // Field styles
+  .tagify__input {
+    font-size: $input-font-size-lg;
+
+    &::before {
+      font-size: $input-font-size-lg;
+    }
+  }
+}
+
+// Small
+.form-control-sm.form-control-tags {
+  padding: 0;
+  min-height: $input-height-sm;
+
+  // Tag styles
+  .tagify__tag {
+    margin: 0.1875rem 0 0.1875rem 0.3125rem;
+
+    &>div {
+      font-size: $input-font-size-sm;
+      padding-top: .16em;
+      padding-bottom: .16em;
+    }
+  }
+
+  // Field styles
+  .tagify__input {
+    font-size: $input-font-size-sm;
+    padding-top: .25rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
+
+    &::before {
+      font-size: $input-font-size-sm;
+    }
+  }
+}
+
+// Dropdown menu
+.tagify__dropdown__wrapper {
+  border: $form-control-tags-dropdown-border-color;
+
+  & .tagify__dropdown__item {
+    border-radius: 0;
+    background-color: $form-control-tags-dropdown-item-background-color;
+    padding-top: $form-control-tags-dropdown-item-padding-y;
+    padding-bottom: $form-control-tags-dropdown-item-padding-y;
+    margin: 0;
+
+    &--active {
+      color: $input-color;
+      background-color: $form-control-tags-dropdown-item-active-background-color;
+    }
+  }
+}
+
+// Images sizing
+.form-control-tags-avatars .tag-avatar {
+  width: $form-control-tags-img;
+  height: $form-control-tags-img;
+}
+
+.form-control-lg.form-control-tags-avatars .tag-avatar {
+  width: $form-control-tags-lg-img;
+  height: $form-control-tags-lg-img;
+  margin-right: 2rem;
+}
+
+.form-control-sm.form-control-tags-avatars .tag-avatar {
+  width: $form-control-tags-sm-img;
+  height: $form-control-tags-sm-img;
+}
+
+// Validation
+.u-has-success .form-control-tags {
+  border-color: $form-control-tags-valid-border-color;
+}
+
+.u-has-error .form-control-tags {
+  border-color: $form-control-tags-invalid-border-color;
+}

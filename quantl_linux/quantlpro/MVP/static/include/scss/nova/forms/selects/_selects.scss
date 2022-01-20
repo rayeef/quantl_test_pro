@@ -1,0 +1,27 @@
+/*------------------------------------
+	Selects
+------------------------------------*/
+.custom-select.custom-select-without-bordered {
+  border: none;
+  background-color: transparent;
+  line-height: 1.7;
+  padding-left: 0;
+}
+
+.input-group-prepend .custom-select {
+  position: relative;
+  z-index: 2;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-append .custom-select {
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group .input-group-merge:hover {
+  cursor: pointer;
+}

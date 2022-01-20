@@ -1,0 +1,35 @@
+/*------------------------------------
+  Datatable
+------------------------------------*/
+
+.dataTables_length,
+.dataTables_filter,
+.dataTables_info {
+  display: none;
+}
+
+// Hover On Datables Header
+.sorting:hover,
+.sorting_asc:hover,
+.sorting_desc:hover {
+  cursor: pointer;
+}
+
+// Hover On Datables Sort Links
+.link-sorting-desc,
+.link-sorting-asc {
+  color: $gray-300;
+
+  &:hover {
+    color: $gray-300;
+  }
+}
+
+// Sort Links Colors
+.sorting_desc .link-sorting-desc {
+  color: $primary;
+}
+
+.sorting_asc .link-sorting-asc {
+  color: $primary;
+}

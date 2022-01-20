@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>Spinners | Nova - Responsive WebApp UI Kit</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+    <!-- CSS Nova Template -->
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+
+    <!-- CSS Nova Doc -->
+    <link rel="stylesheet" href="../assets/css/docs.css">
+  </head>
+
+  <body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+    <header class="header header-light bg-white">
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+          <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+            <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+          </a>
+
+          <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+            <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova" style="width: 41px; height: 33px;">
+            <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova" style="width: 130px; height: 33px;">
+          </a>
+        </div>
+
+        <div class="header-content col px-md-3">
+          <div class="d-flex align-items-center">
+            <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+
+            <div class="js-header-search ml-lg-2"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+
+              <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+            <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                   data-url="../assets/include/json/autocomplete-data.json">
+            <div class="input-group-append-merge">
+              <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                <i class="nova-search icon-text"></i>
+              </a>
+            </div>
+          </form>
+            </div>
+
+            <a class="link-dark ml-auto mr-3 mr-sm-0" href="../../demo-crypto/dashboards/index.html">
+              Crypto Demo
+            </a>
+
+            <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3 d-none d-sm-block" href="../getting-started/changelog.html">
+                Changelog (v1.2.2) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+            </div>
+
+            <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span class="d-none d-md-inline">Components</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+          <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/customization.html">Customization</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/changelog.html">Changelog</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Content</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+          <!--<li class="pt-1">-->
+          <!--<span class="sidebar-heading h6 text-uppercase">Icons:</span>-->
+          <!--<ul class="list-unstyled pl-3">-->
+          <!--<li><a class="side-nav-menu-link py-1" href="../components/typography12.html">Nova Icons</a></li>-->
+          <!--</ul>-->
+          <!--</li>-->
+
+
+          <li class="sidebar-heading h6 text-uppercase">Components</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/dropdowns.html">Dropdowns</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navbar.html">Navbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/popovers.html">Popovers</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+          <li><a class="side-nav-menu-link py-1 active" href="../components/spinners.html">Spinners</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tooltips.html">Tooltips</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+          <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/datatables.html">Datatables</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/date-range-picker.html">Date Range Picker</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/dropzone.html">Dropzone</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/editable-rows.html">Editable Rows</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/flatpickr.html">Flatpickr</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/font-awesome.html">Font Awesome</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-recaptcha.html">Google reCAPTCHA</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Input Masks</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/range-slider.html">Range Slider</a></li><li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+<li><a class="side-nav-menu-link py-1" href="../libraries/summernote.html">Summernote</a></li>
+          <!-- <li><a class="side-nav-menu-link py-1" href="../libraries/step-form.html">Step Form</a></li> -->
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tagsinput.html">Input Tags</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+
+      <div class="content overflow-inherit">
+        <div class="hs-docs-content py-4 px-3 px-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+                  <ul id="scrollNav" class="hs-docs-content-nav">
+                    <li class="hs-docs-content-nav-item"><a href="#about">About</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#border-spinner">Border spinner</a>
+                      <ul>
+                        <li class="hs-docs-content-nav-item"><a href="#spinner-colors">Colors</a></li>
+                      </ul>
+                    </li>
+                    <li class="hs-docs-content-nav-item"><a href="#growing-spinner">Growing spinner</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#alignment">Alignment</a>
+                      <ul>
+                        <li class="hs-docs-content-nav-item"><a href="#margin">Margin</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#placement">Placement</a>
+                          <ul>
+                            <li class="hs-docs-content-nav-item"><a href="#flex">Flex</a></li>
+                            <li class="hs-docs-content-nav-item"><a href="#floats">Floats</a></li>
+                            <li class="hs-docs-content-nav-item"><a href="#text-align">Text align</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="hs-docs-content-nav-item"><a href="#size">Size</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#buttons">Buttons</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-xl-10 order-xl-1">
+                  <div class="border-bottom pb-3 mb-6">
+                    <h1 class="h3 mb-3 mb-md-4">Spinners</h1>
+                    <p class="lead">Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.</p>
+                  </div>
+
+                  <div id="about" class="mb-9">
+                    <h2 class="h4">About <a class="anchorjs-link" href="#about" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Bootstrap “spinners” can be used to show the loading state in your projects. They’re built only with HTML and CSS, meaning you don’t need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.</p>
+                    <p>For accessibility purposes, each loader here includes <code>role="status"</code> and a nested <code>&lt;span class="sr-only"&gt;Loading...&lt;/span&gt;</code>.</p>
+                  </div>
+
+                  <div id="border-spinner" class="mb-9">
+                    <h2 class="h4">Border spinner <a class="anchorjs-link" href="#border-spinner" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Use the border spinners for a lightweight loading indicator.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-1" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-1" data-toggle="pill" href="#spinners-result-1" role="tab" aria-controls="spinners-result-1" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-1" data-toggle="pill" href="#spinners-html-1" role="tab" aria-controls="spinners-html-1" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-1">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-1" role="tabpanel" aria-labelledby="spinners-result-tab-1">
+                          <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-1" role="tabpanel" aria-labelledby="spinners-html-tab-1">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-border" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="spinner-colors" class="mb-9">
+                    <h2 class="h4">Colors <a class="anchorjs-link" href="#spinner-colors" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>The border spinner uses <code>currentColor</code> for its <code>border-color</code>, meaning you can customize the color with <a href="../utilities/colors.html">text color utilities</a>. You can use any of our text color utilities on the standard spinner.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-2" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-2" data-toggle="pill" href="#spinners-result-2" role="tab" aria-controls="spinners-result-2" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-2" data-toggle="pill" href="#spinners-html-2" role="tab" aria-controls="spinners-html-2" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-2">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-2" role="tabpanel" aria-labelledby="spinners-result-tab-2">
+                          <div class="spinner-border text-primary mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-secondary mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-success mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-danger mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-warning mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-info mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-light mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-border text-dark mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-2" role="tabpanel" aria-labelledby="spinners-html-tab-2">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-border text-primary" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-secondary" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-success" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-danger" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-warning" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-info" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-light" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-border text-dark" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+
+                    <div class="alert alert-danger mb-5" role="alert">
+                      <h3 class="h5 font-weight-bold">Why not use border-color utilities?</h3>
+                      <p class="alert-text mb-0">Each border spinner specifies a <code>transparent</code> border for at least one side, so <code>.border-{color}</code> utilities would override that.</p>
+                    </div>
+                  </div>
+
+                  <div id="growing-spinner" class="mb-9">
+                    <h2 class="h4">Growing spinner <a class="anchorjs-link" href="#growing-spinner" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>If you don’t fancy a border spinner, switch to the grow spinner. While it doesn’t technically spin, it does repeatedly grow!</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-3" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-3" data-toggle="pill" href="#spinners-result-3" role="tab" aria-controls="spinners-result-3" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-3" data-toggle="pill" href="#spinners-html-3" role="tab" aria-controls="spinners-html-3" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-3">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-3" role="tabpanel" aria-labelledby="spinners-result-tab-3">
+                          <div class="spinner-grow" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-3" role="tabpanel" aria-labelledby="spinners-html-tab-3">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-grow" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+
+                    <p>Once again, this spinner is built with <code>currentColor</code>, so you can easily change its appearance with <a href="../utilities/colors.html">text color utilities</a>. Here it is in blue, along with the supported variants.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-4" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-4" data-toggle="pill" href="#spinners-result-4" role="tab" aria-controls="spinners-result-4" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-4" data-toggle="pill" href="#spinners-html-4" role="tab" aria-controls="spinners-html-4" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-4">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-4" role="tabpanel" aria-labelledby="spinners-result-tab-4">
+                          <div class="spinner-grow text-primary mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-secondary mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-success mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-danger mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-warning mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-info mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-light mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow text-dark mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-4" role="tabpanel" aria-labelledby="spinners-html-tab-4">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-grow text-primary" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-secondary" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-success" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-danger" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-warning" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-info" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-light" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow text-dark" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="alignment" class="mb-9">
+                    <h2 class="h4">Alignment <a class="anchorjs-link" href="#alignment" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Spinners in Bootstrap are built with <code>rem</code>s, <code>currentColor</code>, and <code>display: inline-flex</code>. This means they can easily be resized, recolored, and quickly aligned.</p>
+                  </div>
+
+                  <div id="margin" class="mb-9">
+                    <h2 class="h4">Margin <a class="anchorjs-link" href="#margin" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Use margin utilities like <code>.m-5</code> for easy spacing.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-5" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-5" data-toggle="pill" href="#spinners-result-5" role="tab" aria-controls="spinners-result-5" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-5" data-toggle="pill" href="#spinners-html-5" role="tab" aria-controls="spinners-html-5" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-5">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-5" role="tabpanel" aria-labelledby="spinners-result-tab-5">
+                          <div class="spinner-border m-5" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-5" role="tabpanel" aria-labelledby="spinners-html-tab-5">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-border m-5" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="placement" class="mb-9">
+                    <h2 class="h4">Placement <a class="anchorjs-link" href="#placement" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Use flexbox utilities, float utilities, or text alignment utilities to place spinners exactly where you need them in any situation.</p>
+                  </div>
+
+                  <div id="flex" class="mb-9">
+                    <h2 class="h4">Flex <a class="anchorjs-link" href="#flex" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-6" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-6" data-toggle="pill" href="#spinners-result-6" role="tab" aria-controls="spinners-result-6" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-6" data-toggle="pill" href="#spinners-html-6" role="tab" aria-controls="spinners-html-6" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-6">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-6" role="tabpanel" aria-labelledby="spinners-result-tab-6">
+                          <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-6" role="tabpanel" aria-labelledby="spinners-html-tab-6">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="d-flex justify-content-center"&gt;
+                                &lt;div class="spinner-border" role="status"&gt;
+                                  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-7" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-7" data-toggle="pill" href="#spinners-result-7" role="tab" aria-controls="spinners-result-7" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-7" data-toggle="pill" href="#spinners-html-7" role="tab" aria-controls="spinners-html-7" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-7">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-7" role="tabpanel" aria-labelledby="spinners-result-tab-7">
+                          <div class="d-flex align-items-center">
+                            <strong>Loading...</strong>
+                            <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-7" role="tabpanel" aria-labelledby="spinners-html-tab-7">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="d-flex align-items-center"&gt;
+                                &lt;strong&gt;Loading...&lt;/strong&gt;
+                                &lt;div class="spinner-border ml-auto" role="status" aria-hidden="true"&gt;&lt;/div&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="floats" class="mb-9">
+                    <h2 class="h4">Floats <a class="anchorjs-link" href="#floats" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-8" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-8" data-toggle="pill" href="#spinners-result-8" role="tab" aria-controls="spinners-result-8" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-8" data-toggle="pill" href="#spinners-html-8" role="tab" aria-controls="spinners-html-8" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-8">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-8" role="tabpanel" aria-labelledby="spinners-result-tab-8">
+                          <div class="clearfix">
+                            <div class="spinner-border float-right" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-8" role="tabpanel" aria-labelledby="spinners-html-tab-8">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="clearfix"&gt;
+                                &lt;div class="spinner-border float-right" role="status"&gt;
+                                  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="text-align" class="mb-9">
+                    <h2 class="h4">Text align <a class="anchorjs-link" href="#text-align" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-9" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-9" data-toggle="pill" href="#spinners-result-9" role="tab" aria-controls="spinners-result-9" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-9" data-toggle="pill" href="#spinners-html-9" role="tab" aria-controls="spinners-html-9" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-9">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-9" role="tabpanel" aria-labelledby="spinners-result-tab-9">
+                          <div class="text-center">
+                            <div class="spinner-border" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-9" role="tabpanel" aria-labelledby="spinners-html-tab-9">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="text-center"&gt;
+                                &lt;div class="spinner-border" role="status"&gt;
+                                  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="size" class="mb-9">
+                    <h2 class="h4">Size <a class="anchorjs-link" href="#size" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Add <code>.spinner-border-sm</code> and <code>.spinner-grow-sm</code> to make a smaller spinner that can quickly be used within other components.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-10" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-10" data-toggle="pill" href="#spinners-result-10" role="tab" aria-controls="spinners-result-10" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-10" data-toggle="pill" href="#spinners-html-10" role="tab" aria-controls="spinners-html-10" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-10">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-10" role="tabpanel" aria-labelledby="spinners-result-tab-10">
+                          <div class="spinner-border spinner-border-sm mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow spinner-grow-sm mr-2" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-10" role="tabpanel" aria-labelledby="spinners-html-tab-10">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-border spinner-border-sm" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow spinner-grow-sm" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+
+                    <p>Or, use custom CSS or inline styles to change the dimensions as needed.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-11" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-11" data-toggle="pill" href="#spinners-result-11" role="tab" aria-controls="spinners-result-11" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-11" data-toggle="pill" href="#spinners-html-11" role="tab" aria-controls="spinners-html-11" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-11">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-11" role="tabpanel" aria-labelledby="spinners-result-tab-11">
+                          <div class="spinner-border mr-2" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                          <div class="spinner-grow mr-2" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-11" role="tabpanel" aria-labelledby="spinners-html-tab-11">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                              &lt;div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="buttons" class="mb-9">
+                    <h2 class="h4">Buttons <a class="anchorjs-link" href="#buttons" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-12" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-12" data-toggle="pill" href="#spinners-result-12" role="tab" aria-controls="spinners-result-12" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-12" data-toggle="pill" href="#spinners-html-12" role="tab" aria-controls="spinners-html-12" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-12">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-12" role="tabpanel" aria-labelledby="spinners-result-tab-12">
+                          <button class="btn btn-primary mr-2" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="sr-only">Loading...</span>
+                          </button>
+                          <button class="btn btn-primary mr-2" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                          </button>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-12" role="tabpanel" aria-labelledby="spinners-html-tab-12">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;button class="btn btn-primary" type="button" disabled&gt;
+                                &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/button&gt;
+                              &lt;button class="btn btn-primary" type="button" disabled&gt;
+                                &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                                Loading...
+                              &lt;/button&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="spinners-tab-13" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="spinners-result-tab-13" data-toggle="pill" href="#spinners-result-13" role="tab" aria-controls="spinners-result-13" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="spinners-html-tab-13" data-toggle="pill" href="#spinners-html-13" role="tab" aria-controls="spinners-html-13" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="spinners-tabContent-13">
+                        <div class="tab-pane fade p-4 show active" id="spinners-result-13" role="tabpanel" aria-labelledby="spinners-result-tab-13">
+                          <button class="btn btn-primary mr-2" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            <span class="sr-only">Loading...</span>
+                          </button>
+                          <button class="btn btn-primary mr-2" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                          </button>
+                        </div>
+                        <div class="tab-pane fade" id="spinners-html-13" role="tabpanel" aria-labelledby="spinners-html-tab-13">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;button class="btn btn-primary" type="button" disabled&gt;
+                                &lt;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                                &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+                              &lt;/button&gt;
+                              &lt;button class="btn btn-primary" type="button" disabled&gt;
+                                &lt;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+                                Loading...
+                              &lt;/button&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="small bg-white p-3 px-md-4 mt-auto">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                    <i class="nova-twitter-alt"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                    <i class="nova-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                    <i class="nova-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                    <i class="nova-dribbble"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                    <i class="nova-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+    <script src="../assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../../assets/js/hs.core.js"></script>
+    <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="../../assets/js/components/hs.side-nav.js"></script>
+    <script src="../../assets/js/components/hs.unfold.js"></script>
+    <script src="../../assets/js/components/hs.header-search.js"></script>
+    <script src="../../assets/js/components/hs.autocomplete.js"></script>
+    <script src="../assets/js/components/hs.scroll-nav.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of custom scroll
+        var $scrollbar = $('.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of dropdown component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+          unfoldHideOnScroll: false,
+          afterOpen: function () {
+            // initialization of charts
+            $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+            setTimeout(function() {
+              $('#activity .js-bar-chart').css('opacity', 1);
+            }, 100);
+
+            // help function for accordions in hidden block
+            $('#headerProjects .accordion-header').on('click', function () {
+              // vars
+              var target = $(this).data('target');
+
+              $(target).collapse('show');
+            });
+          }
+        });
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+          duration: 700
+        });
+      });
+    </script>
+  </body>
+</html>

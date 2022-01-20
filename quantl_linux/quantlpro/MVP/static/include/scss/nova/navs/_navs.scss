@@ -1,0 +1,40 @@
+/* Nav Steps */
+.nav-icon {
+  .nav-item {
+    color: $nav-icon-nav-item-color;
+
+    &.active {
+      color: $nav-icon-nav-item-active-color;
+
+      .nav-icon-action {
+        color: $nav-icon-nav-item-active-nia-color;
+        background-color: $nav-icon-nav-item-active-nia-bg-color;
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-action {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    z-index: $nav-icon-z-index;
+    line-height: $nav-icon-line-height;
+    width: $nav-icon-width;
+    height: $nav-icon-height;
+    font-size: $nav-icon-font-size;
+    color: $nav-icon-action-color;
+    background-color: $nav-icon-action-bg-color;
+    @include border-radius($nav-icon-action-border-radius);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: .5rem;
+    transition: $nav-transition;
+    transform: scale(.8);
+
+    &-inner {
+      @include content-centered;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.custom-select[multiple] {
+  & option {
+    padding: $bs-multiple-select-option-padding-y $bs-multiple-select-option-padding-x;
+    margin-bottom : $bs-multiple-select-option-margin-bottom;
+    border-radius: $bs-multiple-select-option-border-radius;
+  }
+}

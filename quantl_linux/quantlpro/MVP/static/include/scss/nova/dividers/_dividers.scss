@@ -1,0 +1,35 @@
+/*------------------------------------
+  Dividers
+------------------------------------*/
+
+.divider {
+  border-top: $border-width solid $border-color;
+
+  &-sm {
+    width: $divider-width-sm;
+  }
+}
+
+.divider-with-text {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 0;
+    background: $white;
+    border-top: 1px solid $gray-200;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+.divider-with-text__content {
+  position: relative;
+  display: inline-block;
+  background-color: $white;
+  padding: $divider-width-text-content-padding;
+}

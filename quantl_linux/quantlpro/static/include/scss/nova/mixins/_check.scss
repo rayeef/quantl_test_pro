@@ -1,0 +1,10 @@
+@mixin check($hs-color) {
+  background-color: $hs-color;
+  color: $white;
+  border-color: $hs-color;
+}
+
+@mixin check-2($hs-color) {
+  color: $primary;
+  border-color: $primary;
+}

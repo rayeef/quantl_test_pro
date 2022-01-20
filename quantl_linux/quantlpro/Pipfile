@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+asgiref = "==3.3.4"
+certifi = "==2021.5.30"
+chardet = "==4.0.0"
+djangorestframework = "==3.12.4"
+idna = "==2.10"
+pytz = "==2021.1"
+requests = "==2.25.1"
+sqlparse = "==0.4.1"
+urllib3 = "==1.26.6"
+Django = "==3.2.4"
+django-crispy-forms = "*"
+channels = "*"
+pandas = "*"
+munch = "*"
+tenacity = "*"
+requests-cache = "*"
+marshmallow = "*"
+python-binance = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

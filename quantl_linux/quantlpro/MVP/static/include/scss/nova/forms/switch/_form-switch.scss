@@ -1,0 +1,95 @@
+/*------------------------------------
+	Switch
+------------------------------------*/
+//.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+//  background-color: $custom-switch-indicator-background-color;
+//}
+
+.u-has-success .custom-switch {
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: $switch-valid-background-color;
+    border-color: $switch-valid-background-color;
+  }
+}
+
+.u-has-error .custom-switch {
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: $switch-valid-background-color;
+    border-color: $switch-valid-background-color;
+  }
+}
+
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+
+  .custom-control-label::after {
+    background-color: $switch-valid-toggle-background-color;
+  }
+
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    background-color: $custom-switch-indicator-focus-background-color;
+    border-color: $custom-switch-indicator-focus-background-color;
+  }
+
+  .custom-control-label {
+    &::before {
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-width;
+      height: $custom-switch-indicator-size + .25;
+      pointer-events: all;
+      border-radius: $custom-switch-indicator-border-radius;
+      border-color: $hr-border-color;
+      cursor: pointer;
+    }
+
+    &::after {
+      top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
+      left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      background-color: $custom-switch-indicator-background-color;
+      border-radius: $custom-switch-indicator-border-radius;
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+      cursor: pointer;
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label {
+    &::before {
+      border-color: $hr-border-color;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $white;
+      border-color: $primary;
+      transform: translateX($custom-switch-width - $custom-control-indicator-size - .3);
+    }
+  }
+
+  .custom-control-input:disabled ~ .custom-control-label {
+    &::before {
+      background-color: $custom-control-indicator-disabled-bg;
+    }
+    &::after {
+      background-color: rgba($primary, .5);
+    }
+  }
+
+  .is-valid + .custom-control-label::after, .is-valid.custom-control-input:disabled ~ .custom-control-label::after {
+    background-color: $switch-valid-toggle-background-color;
+  }
+
+  .is-invalid + .custom-control-label::after, .is-invalid.custom-control-input:disabled ~ .custom-control-label::after {
+    background-color: $switch-invalid-toggle-background-color;
+  }
+
+  .is-invalid.custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: $switch-invalid-background-color;
+  }
+
+  .is-valid.custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: $switch-valid-background-color;
+  }
+}

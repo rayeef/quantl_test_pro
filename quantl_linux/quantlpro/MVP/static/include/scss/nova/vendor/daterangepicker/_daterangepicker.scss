@@ -1,0 +1,232 @@
+/*------------------------------------
+  Daterangepicker
+------------------------------------*/
+
+.daterangepicker {
+  font-family: inherit;
+  box-shadow: $daterangepicker-box-shadow;
+  font-size: $daterangepicker-font-size;
+  border: none;
+
+  // Arrow Of Menu Down
+  &:before {
+    border-bottom-color: $daterangepicker-arrow-menu-border-color;
+  }
+
+  // Arrow Of Menu Up
+  &.drop-up:before {
+    border-top-color: $daterangepicker-arrow-menu-border-color;
+  }
+
+  // Range
+  .ranges {
+    ul {
+      width: $daterangepicker-list-item-width;
+    }
+
+    li {
+      font-size: $daterangepicker-list-item-font-size;
+
+      &:hover {
+        background-color: $daterangepicker-list-item-bg-hover;
+      }
+
+      &.active {
+        background-color: $daterangepicker-list-item-bg;
+      }
+    }
+  }
+
+  // Prev Arrow Icon
+  .prev.available {
+    &:hover {
+      background: none;
+    }
+
+   span {
+     border: none;
+     font-family: 'nova-icons' !important;
+     speak: none;
+     font-style: normal;
+     font-weight: normal;
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     color: $daterangepicker-arrow-color;
+     transform: none;
+     font-size: $daterangepicker-arrow-font-size;
+     &:before {
+       content: "\e919";
+     }
+     &:hover {
+       color: $daterangepicker-arrow-hover-color;
+     }
+   }
+  }
+
+  // Next Arrow Icon
+  .next.available {
+    &:hover {
+      background: none;
+    }
+
+    span {
+      border: none;
+      font-family: 'nova-icons' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      color: $daterangepicker-arrow-color;
+      transform: none;
+      font-size: $daterangepicker-arrow-font-size;
+      &:before {
+        content: "\e91a";
+      }
+      &:hover {
+        color: $daterangepicker-arrow-hover-color;
+      }
+    }
+  }
+
+  // Calednar Box
+  .drp-calendar {
+    max-width: $daterangepicker-calendar-width;
+  }
+
+  // Month
+  th.month {
+    font-weight: $daterangepicker-month-font-weight;
+    font-size: $daterangepicker-month-font-size;
+    padding-bottom: $daterangepicker-month-padding-bottom;
+    color: $daterangepicker-mont-color;
+  }
+
+  // Selects
+  select.monthselect,
+  select.yearselect,
+  select.hourselect,
+  select.ampmselect,
+  select.minuteselect {
+    background: $daterangepicker-select-bg;
+    border: $daterangepicker-select-border;
+    padding: $daterangepicker-select-padding;
+    outline: $daterangepicker-select-outline;
+    font-size: $daterangepicker-select-font-size;
+  }
+
+  // Calendar Dates Grid
+  .calendar-table td {
+    font-size: $daterangepicker-calendar-table-date-font-size;
+    padding: $daterangepicker-calendar-table-date-padding;
+    color: $daterangepicker-calendar-table-date-color;
+
+    border-radius: $daterangepicker-border-radius;
+
+    &:hover {
+      background-color: $daterangepicker-date-hover-bg;
+    }
+  }
+
+  // Buttons
+  .drp-selected {
+    font-size: $btn-font-size-sm;
+  }
+
+  .drp-buttons {
+    border-top-color: $daterangepicker-border-color;
+  }
+
+  .drp-buttons .btn {
+    font-size: $btn-font-size-sm;
+    font-weight: 600;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  // Footer Buttons
+  &.show-calendar .drp-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    .drp-selected {
+      margin-left: auto;
+    }
+  }
+
+  // Off Dates
+  td {
+    &.off {
+      color: $daterangepicker-off-date-color;
+    }
+
+    // Start And End Dates
+    &.start-date.end-date {
+      border-radius: $daterangepicker-single-date-border-radius;
+    }
+
+    // Dates In Range
+    &.in-range {
+      border-radius: $daterangepicker-in-range-border-radius;
+    }
+
+    // Start Date
+    &.start-date {
+      color: $daterangepicker-start-date-color;
+      border-radius: $daterangepicker-start-date-border-radius;
+    }
+
+    // End Date
+    &.end-date {
+      border-radius: $daterangepicker-end-date-border-radius;
+    }
+
+    // Active Date
+    &.active,
+    &.start-date.in-range {
+      background-color: $daterangepicker-active-bg;
+      &:hover {
+        background-color: $daterangepicker-active-bg;
+      }
+    }
+
+    // Odd Date In Range
+    &.in-range,
+    &.off.in-range {
+      background-color: $daterangepicker-in-range-bg;
+      &:hover {
+        background-color: $daterangepicker-in-range-bg;
+      }
+    }
+
+    &.end-date,
+    &.off.end-date {
+      background-color: $daterangepicker-active-bg;
+      color: $daterangepicker-active-color;
+
+      &:hover {
+        background-color: $daterangepicker-active-bg;
+      }
+    }
+  }
+
+  // Calendar Table
+  .calendar-table table {
+    border-collapse: separate;
+    border-spacing: $daterangepicker-rows-spacing;
+
+    // Week Titles
+    thead tr:last-of-type {
+      th {
+        font-size: $daterangepicker-week-title-font-size;
+        color: $daterangepicker-week-title-color;
+        line-height: $daterangepicker-week-title-line-height;
+        font-weight: $daterangepicker-week-title-font-weight;
+      }
+    }
+  }
+}

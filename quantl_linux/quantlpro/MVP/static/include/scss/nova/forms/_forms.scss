@@ -1,0 +1,18 @@
+/*------------------------------------
+	Forms
+------------------------------------*/
+
+// Button Outline
+.btn-outline {
+  &-primary:hover,
+  &-secondary:hover,
+  &-info:hover,
+  &-success:hover,
+  &-warning:hover,
+  &-danger:hover,
+  &-light:hover {
+    .form-check-subtext {
+      color: #fff !important;
+    }
+  }
+}

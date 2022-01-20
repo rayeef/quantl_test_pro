@@ -1,0 +1,135 @@
+/*------------------------------------
+  Form Validation
+------------------------------------*/
+
+.validate-icon {
+  & .input-group-append ~ .form-control-img {
+    padding-right: 4.5rem;
+  }
+}
+
+.u-has-error:focus, .u-has-error *:focus, .u-has-error .input-group-text, .u-has-error {
+  & .u-summernote-editor .note-editor.note-frame {
+    border-color: $summernote-editor-invalid-border-color;
+  }
+
+
+  & .form-control {
+    border-color: $form-control-invalid-border-color;
+  }
+
+  & .custom-select {
+    border-color: $custom-select-invalid-border-color !important;
+  }
+
+  &.validate-icon {
+    & .form-control {
+      padding-right: 2.76rem;
+      background-image: $form-feedback-icon-invalid;
+      background-repeat: no-repeat;
+      background-position: center right calc(0.35em + 0.315rem);
+      background-size: calc(0.7em + 0.63rem) calc(0.7em + 0.63rem);
+    }
+  }
+
+  & .custom-control-label::before,
+  & .custom-control-label:focus {
+    border-color: $custom-checkbox-invalid-border-color;
+  }
+
+  & .custom-control-input:checked ~ .custom-control-label::before,
+  & .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+    background-color: $custom-checkbox-invalid-background;
+    border-color: $custom-checkbox-invalid-border-color;
+  }
+
+  & .custom-control-label {
+    color: $custom-checkbox-invalid-color;
+  }
+
+  & .custom-switch .custom-control-label::after {
+    background-color: $custom-switch-invalid-background;
+  }
+  & .custom-switch .custom-control-label::before {
+    border-color: $custom-switch-invalid-border-color;
+  }
+
+  & .u-dropzone {
+    border-color: $dropzone-invalid-border-color;
+  }
+
+  & .custom-file-input:focus ~ .custom-file-label {
+    border-color: $custom-file-input-invalid-border-color;
+  }
+
+  & .datepicker {
+    border-color: $flatpickr-invalid-border-color;
+
+    & .nova-angle-down:before {
+      color: $flatpickr-invalid-border-color;
+    }
+  }
+}
+
+.u-has-success:focus, .u-has-success *:focus, .u-has-success .input-group-text, .u-has-success {
+
+  & .u-summernote-editor .note-editor.note-frame {
+    border-color: $summernote-editor-valid-border-color;
+  }
+
+  & .form-control {
+    border-color: $form-control-valid-border-color;
+  }
+
+  & .custom-select {
+    border-color: $custom-select-valid-border-color !important;
+  }
+
+  & .datepicker {
+    border-color: $flatpickr-valid-border-color;
+
+    & .nova-angle-down:before {
+      color: $flatpickr-valid-border-color;
+    }
+  }
+
+  &.validate-icon {
+    & .form-control {
+      padding-right: 2.76rem;
+      background-image: $form-feedback-icon-valid;
+      background-repeat: no-repeat;
+      background-position: center right calc(0.35em + 0.315rem);
+      background-size: calc(0.7em + 0.63rem) calc(0.7em + 0.63rem);
+    }
+  }
+
+  & .custom-control-label::before,
+  & .custom-control-label:focus {
+    border-color: $custom-checkbox-valid-border-color;
+  }
+
+  & .custom-control-input:checked ~ .custom-control-label::before,
+  & .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+    background-color: $custom-checkbox-valid-background;
+    border-color: $custom-checkbox-valid-border-color;
+  }
+
+  & .custom-control-label {
+    color: $custom-checkbox-valid-color;
+  }
+
+  & .custom-switch .custom-control-label::after {
+    background-color: $custom-switch-valid-background;
+  }
+  & .custom-switch .custom-control-label::before {
+    border-color: $custom-switch-valid-border-color;
+  }
+
+  & .u-dropzone {
+    border-color: $dropzone-valid-border-color;
+  }
+
+  & .custom-file-input:focus ~ .custom-file-label {
+    border-color: $custom-file-input-valid-border-color;
+  }
+}

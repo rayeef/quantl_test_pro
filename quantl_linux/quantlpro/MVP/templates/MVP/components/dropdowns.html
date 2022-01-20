@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>Bootstrap Dropdowns | Nova - Responsive WebApp UI Kit</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+    <!-- CSS Nova Template -->
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+
+    <!-- CSS Nova Doc -->
+    <link rel="stylesheet" href="../assets/css/docs.css">
+  </head>
+
+  <body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+    <header class="header header-light bg-white">
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+          <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+            <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+          </a>
+
+          <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+            <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova" style="width: 41px; height: 33px;">
+            <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova" style="width: 130px; height: 33px;">
+          </a>
+        </div>
+
+        <div class="header-content col px-md-3">
+          <div class="d-flex align-items-center">
+            <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+
+            <div class="js-header-search ml-lg-2"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+
+              <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+            <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                   data-url="../assets/include/json/autocomplete-data.json">
+            <div class="input-group-append-merge">
+              <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                <i class="nova-search icon-text"></i>
+              </a>
+            </div>
+          </form>
+            </div>
+
+            <a class="link-dark ml-auto mr-3 mr-sm-0" href="../../demo-crypto/dashboards/index.html">
+              Crypto Demo
+            </a>
+
+            <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3 d-none d-sm-block" href="../getting-started/changelog.html">
+                Changelog (v1.2.2) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+            </div>
+
+            <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span class="d-none d-md-inline">Components</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+          <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/customization.html">Customization</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/changelog.html">Changelog</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Content</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+          <!--<li class="pt-1">-->
+          <!--<span class="sidebar-heading h6 text-uppercase">Icons:</span>-->
+          <!--<ul class="list-unstyled pl-3">-->
+          <!--<li><a class="side-nav-menu-link py-1" href="../components/typography12.html">Nova Icons</a></li>-->
+          <!--</ul>-->
+          <!--</li>-->
+
+
+          <li class="sidebar-heading h6 text-uppercase">Components</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+          <li><a class="side-nav-menu-link py-1 active" href="../components/dropdowns.html">Dropdowns</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navbar.html">Navbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/popovers.html">Popovers</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/spinners.html">Spinners</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tooltips.html">Tooltips</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+          <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/datatables.html">Datatables</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/date-range-picker.html">Date Range Picker</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/dropzone.html">Dropzone</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/editable-rows.html">Editable Rows</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/flatpickr.html">Flatpickr</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/font-awesome.html">Font Awesome</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-recaptcha.html">Google reCAPTCHA</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Input Masks</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/range-slider.html">Range Slider</a></li><li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+<li><a class="side-nav-menu-link py-1" href="../libraries/summernote.html">Summernote</a></li>
+          <!-- <li><a class="side-nav-menu-link py-1" href="../libraries/step-form.html">Step Form</a></li> -->
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tagsinput.html">Input Tags</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+
+      <div class="content overflow-inherit">
+        <div class="hs-docs-content py-4 px-3 px-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+                  <ul id="scrollNav" class="hs-docs-content-nav">
+                    <li class="hs-docs-content-nav-item active"><a href="#overview">Overview</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#examples">Examples</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#sizes">Sizes</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#accessibility">Accessibility</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-xl-10 order-xl-1">
+                  <div class="border-bottom pb-3 mb-6">
+                    <h1 class="h3 mb-3 mb-md-4">Dropdowns</h1>
+                    <p class="lead">Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.</p>
+                  </div>
+
+                  <div id="overview" class="mb-9">
+                    <h2 class="h4">Overview <a class="anchorjs-link" href="#overview" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is <a href="http://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">an intentional design decision</a>.</p>
+
+                    <p>Dropdowns are built on a third party library, <a href="https://popper.js.org/">Popper.js</a>, which provides dynamic positioning and viewport detection. Be sure to include <a href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">popper.min.js</a> before Bootstrap’s JavaScript or use <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> which contains Popper.js. Popper.js isn’t used to position dropdowns in navbars though as dynamic positioning isn’t required.</p>
+
+                    <p>If you’re building our JavaScript from source, it <a href="https://getbootstrap.com/docs/4.3/getting-started/javascript/#util">requires util.js</a>.</p>
+                  </div>
+
+                  <div id="examples" class="mb-9">
+                    <h2 class="h4">Examples <a class="anchorjs-link" href="#examples" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Wrap the dropdown’s toggle (your button or link) and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Dropdowns can be triggered from <code>&lt;a&gt;</code> or <code>&lt;button&gt;&lt;/button&gt;</code> elements to better fit your potential needs.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-2" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-2" data-toggle="pill" href="#pills-result-2" role="tab" aria-controls="pills-result-2" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-2" data-toggle="pill" href="#pills-html-2" role="tab" aria-controls="pills-html-2" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="pills-tabContent-2">
+                        <div class="tab-pane fade p-4 show active" id="pills-result-2" role="tabpanel" aria-labelledby="pills-result-tab-2" style="height: 350px;">
+                          <div class="dropdown" style="max-width: 300px;">
+                            <a id="dropdownPosition" class="btn btn-primary dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false"
+                               data-toggle="dropdown">
+                              <span class="align-middle">Dropdown Variation</span>
+                              <i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"></i>
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownPosition">
+                              <a class="dropdown-item" href="#">Training taxes</a>
+                              <a class="dropdown-item" href="#">Shipping</a>
+                              <a class="dropdown-item" href="#">Outsourcing</a>
+                              <a class="dropdown-item disabled" href="#">Consulting</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Office supplies</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-html-2" role="tabpanel" aria-labelledby="pills-html-tab-2">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="dropdown"&gt;
+                                &lt;a id="dropdownPosition" class="btn btn-primary dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false"
+                                   data-toggle="dropdown"&gt;
+                                  &lt;span class="align-middle"&gt;Dropdown Variation&lt;/span&gt;
+                                  &lt;i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+
+                                &lt;div class="dropdown-menu" aria-labelledby="dropdownPosition"&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Training taxes&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Shipping&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Outsourcing&lt;/a&gt;
+                                  &lt;a class="dropdown-item disabled" href="#"&gt;Consulting&lt;/a&gt;
+                                  &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Office supplies&lt;/a&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="sizes" class="mb-9">
+                    <h2 class="h4">Sizes <a class="anchorjs-link" href="#sizes" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.</p>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-3" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-3" data-toggle="pill" href="#pills-result-3" role="tab" aria-controls="pills-result-3" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-3" data-toggle="pill" href="#pills-html-3" role="tab" aria-controls="pills-html-3" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="pills-tabContent-3">
+                        <div class="tab-pane fade p-4 show active" id="pills-result-3" role="tabpanel" aria-labelledby="pills-result-tab-3" style="height: 350px;">
+                          <div class="d-flex align-items-end flex-wrap">
+                            <div class="dropdown">
+                              <a id="dropdownPosition2" class="btn btn-primary btn-lg dropdown-toggle mb-3 mb-md-0 mr-4" href="#" aria-haspopup="true" aria-expanded="false"
+                                 data-toggle="dropdown">
+                                <span class="align-middle">Large button</span>
+                                <i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"></i>
+                              </a>
+
+                              <div class="dropdown-menu" aria-labelledby="dropdownPosition2">
+                                <a class="dropdown-item" href="#">Training taxes</a>
+                                <a class="dropdown-item" href="#">Shipping</a>
+                                <a class="dropdown-item" href="#">Outsourcing</a>
+                                <a class="dropdown-item disabled" href="#">Consulting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Office supplies</a>
+                              </div>
+                            </div>
+
+                            <div class="dropdown">
+                              <a id="dropdownSizeMd" class="btn btn-primary dropdown-toggle mb-3 mb-md-0 mr-4" href="#" aria-haspopup="true" aria-expanded="false"
+                                 data-toggle="dropdown">
+                                <span class="align-middle">Medium button</span>
+                                <i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"></i>
+                              </a>
+
+                              <div class="dropdown-menu" aria-labelledby="dropdownSizeMd">
+                                <a class="dropdown-item" href="#">Training taxes</a>
+                                <a class="dropdown-item" href="#">Shipping</a>
+                                <a class="dropdown-item" href="#">Outsourcing</a>
+                                <a class="dropdown-item disabled" href="#">Consulting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Office supplies</a>
+                              </div>
+                            </div>
+
+                            <div class="dropdown">
+                              <a id="dropdownSizeSm" class="btn btn-primary btn-sm dropdown-toggle mb-3 mb-md-0" href="#" aria-haspopup="true" aria-expanded="false"
+                                 data-toggle="dropdown">
+                                <span class="align-middle">Small button</span>
+                                <i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"></i>
+                              </a>
+
+                              <div class="dropdown-menu" aria-labelledby="dropdownSizeSm">
+                                <a class="dropdown-item" href="#">Training taxes</a>
+                                <a class="dropdown-item" href="#">Shipping</a>
+                                <a class="dropdown-item" href="#">Outsourcing</a>
+                                <a class="dropdown-item disabled" href="#">Consulting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Office supplies</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-html-3" role="tabpanel" aria-labelledby="pills-html-tab-3">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="dropdown"&gt;
+                                &lt;a id="dropdownPosition2" class="btn btn-primary btn-lg dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false"
+                                   data-toggle="dropdown"&gt;
+                                  &lt;span class="align-middle"&gt;Large button&lt;/span&gt;
+                                  &lt;i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+
+                                &lt;div class="dropdown-menu" aria-labelledby="dropdownPosition2"&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Training taxes&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Shipping&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Outsourcing&lt;/a&gt;
+                                  &lt;a class="dropdown-item disabled" href="#"&gt;Consulting&lt;/a&gt;
+                                  &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Office supplies&lt;/a&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="dropdown"&gt;
+                                &lt;a id="dropdownSizeMd" class="btn btn-primary dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false"
+                                   data-toggle="dropdown"&gt;
+                                  &lt;span class="align-middle"&gt;Medium button&lt;/span&gt;
+                                  &lt;i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+
+                                &lt;div class="dropdown-menu" aria-labelledby="dropdownSizeMd"&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Training taxes&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Shipping&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Outsourcing&lt;/a&gt;
+                                  &lt;a class="dropdown-item disabled" href="#"&gt;Consulting&lt;/a&gt;
+                                  &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Office supplies&lt;/a&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+
+                              &lt;div class="dropdown"&gt;
+                                &lt;a id="dropdownSizeSm" class="btn btn-primary btn-sm dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false"
+                                   data-toggle="dropdown"&gt;
+                                  &lt;span class="align-middle"&gt;Small button&lt;/span&gt;
+                                  &lt;i class="nova-angle-down icon-text icon-text-xs align-middle ml-3"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+
+                                &lt;div class="dropdown-menu" aria-labelledby="dropdownSizeSm"&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Training taxes&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Shipping&lt;/a&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Outsourcing&lt;/a&gt;
+                                  &lt;a class="dropdown-item disabled" href="#"&gt;Consulting&lt;/a&gt;
+                                  &lt;div class="dropdown-divider"&gt;&lt;/div&gt;
+                                  &lt;a class="dropdown-item" href="#"&gt;Office supplies&lt;/a&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="accessibility" class="mb-9">
+                    <h2 class="h4">Accessibility <a class="anchorjs-link" href="#accessibility" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Nova’s dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the <code>role</code> and <code>aria-</code> attributes required for true ARIA menus. Authors will have to include these more specific attributes themselves.</p>
+
+                    <p>However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual <code>.dropdown-item</code> elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="small bg-white p-3 px-md-4 mt-auto">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                    <i class="nova-twitter-alt"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                    <i class="nova-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                    <i class="nova-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                    <i class="nova-dribbble"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                    <i class="nova-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+    <script src="../assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../../assets/js/hs.core.js"></script>
+    <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="../../assets/js/components/hs.side-nav.js"></script>
+    <script src="../../assets/js/components/hs.unfold.js"></script>
+    <script src="../../assets/js/components/hs.header-search.js"></script>
+    <script src="../../assets/js/components/hs.autocomplete.js"></script>
+    <script src="../assets/js/components/hs.scroll-nav.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of custom scroll
+        var $scrollbar = $('.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of dropdown component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+          unfoldHideOnScroll: false,
+          afterOpen: function () {
+            // initialization of charts
+            $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+            setTimeout(function() {
+              $('#activity .js-bar-chart').css('opacity', 1);
+            }, 100);
+
+            // help function for accordions in hidden block
+            $('#headerProjects .accordion-header').on('click', function () {
+              // vars
+              var target = $(this).data('target');
+
+              $(target).collapse('show');
+            });
+          }
+        });
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+          duration: 700
+        });
+      });
+    </script>
+  </body>
+</html>

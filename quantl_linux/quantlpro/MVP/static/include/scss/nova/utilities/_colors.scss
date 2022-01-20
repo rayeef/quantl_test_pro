@@ -1,0 +1,17 @@
+/*------------------------------------
+  Text Colors
+------------------------------------*/
+
+.text {
+  &-main {
+    color: $gray-500 !important;
+  }
+
+  &-teal {
+    color: $teal !important;
+  }
+
+  &-twitter {
+    color: $twitter !important;
+  }
+}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>Bootstrap Step Form | Nova - Responsive WebApp UI Kit</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+    <link rel="stylesheet" href="../../assets/vendor/select2/dist/css/select2.min.css">
+
+    <!-- CSS Nova Template -->
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+
+    <!-- CSS Nova Doc -->
+    <link rel="stylesheet" href="../assets/css/docs.css">
+  </head>
+
+  <body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+    <header class="header header-light bg-white">
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+          <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+            <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+          </a>
+
+          <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+            <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova" style="width: 41px; height: 33px;">
+            <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova" style="width: 130px; height: 33px;">
+          </a>
+        </div>
+
+        <div class="header-content col px-md-3">
+          <div class="d-flex align-items-center">
+            <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+
+            <div class="js-header-search ml-lg-2"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+
+              <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+            <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                   data-url="../assets/include/json/autocomplete-data.json">
+            <div class="input-group-append-merge">
+              <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                <i class="nova-search icon-text"></i>
+              </a>
+            </div>
+          </form>
+            </div>
+
+            <a class="link-dark ml-auto mr-3 mr-sm-0" href="../../demo-crypto/dashboards/index.html">
+              Crypto Demo
+            </a>
+
+             <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3 d-none d-sm-block" href="../getting-started/changelog.html">
+                Changelog (v1.2.2) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+            </div>
+
+            <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span class="d-none d-md-inline">Components</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+          <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/customization.html">Customization</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/changelog.html">Changelog</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Content</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+          <!--<li class="pt-1">-->
+          <!--<span class="sidebar-heading h6 text-uppercase">Icons:</span>-->
+          <!--<ul class="list-unstyled pl-3">-->
+          <!--<li><a class="side-nav-menu-link py-1" href="../components/typography12.html">Nova Icons</a></li>-->
+          <!--</ul>-->
+          <!--</li>-->
+
+
+          <li class="sidebar-heading h6 text-uppercase">Components</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/dropdowns.html">Dropdowns</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navbar.html">Navbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/popovers.html">Popovers</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/spinners.html">Spinners</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tooltips.html">Tooltips</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+          <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/datatables.html">Datatables</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/date-range-picker.html">Date Range Picker</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/dropzone.html">Dropzone</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/editable-rows.html">Editable Rows</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/flatpickr.html">Flatpickr</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/font-awesome.html">Font Awesome</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-recaptcha.html">Google reCAPTCHA</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Input Masks</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/range-slider.html">Range Slider</a></li><li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+<li><a class="side-nav-menu-link py-1" href="../libraries/summernote.html">Summernote</a></li>
+          <!-- <li><a class="side-nav-menu-link py-1 active" href="../libraries/step-form.html">Step Form</a></li> -->
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tagsinput.html">Input Tags</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+
+      <div class="content overflow-inherit">
+        <div class="hs-docs-content py-4 px-3 px-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+                  <ul id="scrollNav" class="hs-docs-content-nav">
+                    <li class="hs-docs-content-nav-item active"><a href="#how-to-use">How to use?</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#basic-example">Basic example</a></li>
+                    <li class="hs-docs-content-nav-item">
+                      <a href="#js-behavior">JavaScript behavior</a>
+                      <ul>
+                        <li class="hs-docs-content-nav-item"><a href="#config">Config</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#methods">Methods</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-xl-10 order-xl-1">
+                  <div class="border-bottom pb-3 mb-6">
+                    <h1 class="h3 mb-3 mb-md-4">Step Form (Wizard)</h1>
+                    <p class="lead">Creates a multi step form to get more leads and increase engagement.</p>
+                  </div>
+
+                  <div id="how-to-use" class="mb-9">
+                    <h2 class="h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                    <p>Wrap any block in a parent element with an ID or class and add the same ID in the JS init function of the <code>hs.validation.js</code> plugin.</p>
+
+                    <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS Nova</u></em> to enable it.</p>
+
+                    <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script src="../../assets/js/components/hs.jquery-validation.js"&gt;&lt;/script&gt;
+              &lt;script src="../../assets/js/components/hs.step-form.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
+
+                    <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code> tag, to enable it.</p>
+
+                    <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of validation
+                  $.HSCore.components.HSValidation.init('#stepForm');
+
+                  // initialization of step form
+                  $.HSCore.components.HSStepForm.init('#stepForm', {
+                    validate: function() {
+                      return $('#stepForm').valid();
+                    }
+                  });
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+                  </div>
+
+                  <div id="basic-example" class="mb-9">
+                    <h2 class="h4">Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                    <div class="mb-3">
+                      <!-- Nav Classic -->
+                      <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-1" role="tablist">
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-1" data-toggle="pill" href="#pills-result-1" role="tab" aria-controls="pills-result-1" aria-selected="true">Result</a>
+                        </li>
+                        <li class="nav-item border-bottom border-xl-bottom-0">
+                          <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-1" data-toggle="pill" href="#pills-html-1" role="tab" aria-controls="pills-html-1" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- End Nav Classic -->
+
+                      <!-- Tab Content -->
+                      <div class="tab-content bg-lighter" id="pills-tabContent-1">
+                        <div class="tab-pane fade p-4 show active" id="pills-result-1" role="tabpanel" aria-labelledby="pills-result-tab-1">
+                          <!-- Step Form -->
+                          <form id="stepForm" class="bg-white p-3 p-md-4"
+                                data-current-step="#step1"
+                                data-steps-selector=".js-step"
+                                data-counter-selector="#stepFormCounter"
+                                data-dots-selector="#stepFormDots"
+                                data-next-selector="#stepFormNext"
+                                data-submit-selector="#stepFormSubmit">
+
+                            <fieldset id="step1" class="js-step js-form-message">
+                              <select id="account" class="js-custom-select" name="account" style="width: 100%;" required
+                                      data-placeholder="Please select"
+
+                                      data-msg-classes="test">
+                                <option></option>
+                                <option value="jp-morgan-chase">One</option>
+                                <option value="credit-suisse">Two</option>
+                                <option value="bank-of-china">Three</option>
+                              </select>
+                            </fieldset>
+
+                            <fieldset id="step2" class="js-step js-form-message" style="display: none;">
+                              <input id="fullName" class="form-control" name="fullName" type="text" placeholder="Please enter text" required
+                                     data-msg-classes="test">
+                            </fieldset>
+
+                            <fieldset id="step3" class="js-step js-form-message" style="display: none;">
+                              <input id="email" class="form-control" name="email" type="email" placeholder="Please enter your email" required
+                                     data-msg-classes="test">
+                            </fieldset>
+
+                            <div class="d-flex align-items-center mt-3">
+                              <div id="stepFormCounter" class="d-flex text-primary"></div>
+
+                              <div id="stepFormDots" class="dots dots-light flex-fill d-flex justify-content-center"></div>
+
+                              <a id="stepFormNext" class="btn btn-link btn-link-primary text-uppercase border-0 ml-auto" href="#">
+                                <span>Next</span>
+                                <i class="nova-angle-right icon-text icon-text-xs"></i>
+                              </a>
+
+                              <button id="stepFormSubmit" class="btn btn-link btn-link-primary text-uppercase border-0 ml-auto" type="submit" style="display: none;">
+                                <span>Next</span>
+                                <i class="nova-angle-right icon-text icon-text-xs"></i>
+                              </button>
+                            </div>
+                          </form>
+                          <!-- End Step Form -->
+                        </div>
+                        <div class="tab-pane fade" id="pills-html-1" role="tabpanel" aria-labelledby="pills-html-tab-1">
+                <pre>
+                  <code class="language-markup" data-lang="html">
+                          &lt;!-- Step Form --&gt;
+                          &lt;form id="stepForm" class="bg-white p-3 p-md-4"
+                                data-current-step="#step1"
+                                data-steps-selector=".js-step"
+                                data-counter-selector="#stepFormCounter"
+                                data-dots-selector="#stepFormDots"
+                                data-next-selector="#stepFormNext"
+                                data-submit-selector="#stepFormSubmit"&gt;
+
+                            &lt;fieldset id="step1" class="js-step js-form-message"&gt;
+                              &lt;select id="account" class="js-custom-select" name="account" style="width: 100%;" required
+                                      data-placeholder="Please select"
+
+                                      data-msg-classes="test"&gt;
+                                &lt;option&gt;&lt;/option&gt;
+                                &lt;option value="jp-morgan-chase"&gt;One&lt;/option&gt;
+                                &lt;option value="credit-suisse"&gt;Two&lt;/option&gt;
+                                &lt;option value="bank-of-china"&gt;Three&lt;/option&gt;
+                              &lt;/select&gt;
+                            &lt;/fieldset&gt;
+
+                            &lt;fieldset id="step2" class="js-step js-form-message" style="display: none;"&gt;
+                              &lt;input id="fullName" class="form-control" name="fullName" type="text" placeholder="Please enter text" required
+                                     data-msg-classes="test"&gt;
+                            &lt;/fieldset&gt;
+
+                            &lt;fieldset id="step3" class="js-step js-form-message" style="display: none;"&gt;
+                              &lt;input id="email" class="form-control" name="email" type="email" placeholder="Please enter your email" required
+                                     data-msg-classes="test"&gt;
+                            &lt;/fieldset&gt;
+
+                            &lt;div class="d-flex align-items-center mt-3"&gt;
+                              &lt;div id="stepFormCounter" class="d-flex text-primary"&gt;&lt;/div&gt;
+
+                              &lt;div id="stepFormDots" class="dots dots-light flex-fill d-flex justify-content-center"&gt;&lt;/div&gt;
+
+                              &lt;a id="stepFormNext" class="btn btn-link btn-link-primary text-uppercase border-0 ml-auto" href="#"&gt;
+                                &lt;span&gt;Next&lt;/span&gt;
+                                &lt;i class="nova-angle-right icon-text icon-text-xs"&gt;&lt;/i&gt;
+                              &lt;/a&gt;
+
+                              &lt;button id="stepFormSubmit" class="btn btn-link btn-link-primary text-uppercase border-0 ml-auto" type="submit" style="display: none;"&gt;
+                                &lt;span&gt;Next&lt;/span&gt;
+                                &lt;i class="nova-angle-right icon-text icon-text-xs"&gt;&lt;/i&gt;
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+                          &lt;/form&gt;
+                          &lt;!-- End Step Form --&gt;
+                  </code>
+                </pre>
+                        </div>
+                      </div>
+                      <!-- End Tab Content -->
+                    </div>
+                  </div>
+
+                  <div id="js-behavior" class="mb-5">
+                    <h2 class="h4">JavaScript behavior <a class="anchorjs-link" href="#js-behavior" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                  </div>
+
+                  <div id="config" class="mb-5">
+                    <h2 class="h4">Config <a class="anchorjs-link" href="#config" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                    <pre class="mb-4">
+            <code class="language-js" data-lang="js">
+              dotTemplate: '<a class="dots-item rounded-circle mx-1" href="#"></a>',
+              activeClass: 'active',
+              currentStep: 0,
+              validate: function () {}
+            </code>
+          </pre>
+
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th style="width: 25%;">Parameter</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>dotTemplate</code></td>
+                          <td>single dot pattern.</td>
+                        </tr>
+                        <tr>
+                          <td><code>activeClass</code></td>
+                          <td>class that will be given to the block with the active step.</td>
+                        </tr>
+                        <tr>
+                          <td><code>currentStep</code></td>
+                          <td>determines the initial form to fill out.</td>
+                        </tr>
+                        <tr>
+                          <td><code>validate</code></td>
+                          <td>performs all the functions inside, each time while validating the whole form.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div id="methods" class="mb-9">
+                    <h2 class="h4">Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-current-step=""</code>.</p>
+
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th style="width: 25%;">Attribute</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>data-current-step</code></td>
+                          <td>determines the initial form to fill out.</td>
+                        </tr>
+                        <tr>
+                          <td><code>data-steps-selector</code></td>
+                          <td>The block ID that contains the blocks with steps.</td>
+                        </tr>
+                        <tr>
+                          <td><code>data-counter-selector</code></td>
+                          <td>The block ID that contains a step counter.</td>
+                        </tr>
+                        <tr>
+                          <td><code>data-dots-selector</code></td>
+                          <td>The block ID  into which dots are generated.</td>
+                        </tr>
+                        <tr>
+                          <td><code>data-next-selector</code></td>
+                          <td>ID of the element, when clicked, which will go to the next step.</td>
+                        </tr>
+                        <tr>
+                          <td><code>data-submit-selector</code></td>
+                          <td>ID of the element, when clicking on which the form will be sent.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="small bg-white p-3 px-md-4 mt-auto">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                    <i class="nova-twitter-alt"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                    <i class="nova-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                    <i class="nova-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                    <i class="nova-dribbble"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                    <i class="nova-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+    <script src="../assets/vendor/prism/prism.js"></script>
+    <script src="../../assets/vendor/select2/dist/js/select2.full.min.js"></script>
+    <script src="../../assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../../assets/js/hs.core.js"></script>
+    <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="../../assets/js/components/hs.side-nav.js"></script>
+    <script src="../../assets/js/components/hs.unfold.js"></script>
+    <script src="../../assets/js/components/hs.header-search.js"></script>
+    <script src="../../assets/js/components/hs.autocomplete.js"></script>
+    <script src="../assets/js/components/hs.scroll-nav.js"></script>>
+    <script src="../../assets/js/components/hs.select2.js"></script>
+    <script src="../../assets/js/components/hs.jquery-validation.js"></script>
+    <script src="../../assets/js/components/hs.step-form.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of malihu scrollbar
+        var $scrollbar = $('#sidebar.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of unfold component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+          duration: 700
+        });
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of show on type module
+        $.HSCore.components.HSSelect2.init('.js-custom-select');
+
+        // initialization of validation
+        $.HSCore.components.HSValidation.init('#stepForm');
+
+        // initialization of step form
+        $.HSCore.components.HSStepForm.init('#stepForm', {
+          validate: function() {
+            return $('#stepForm').valid();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

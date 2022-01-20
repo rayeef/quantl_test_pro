@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Bootstrap Flatpickr | Nova - Responsive WebApp UI Kit</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+  <link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css">
+
+  <!-- CSS Nova Template -->
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+
+  <!-- CSS Nova Doc -->
+  <link rel="stylesheet" href="../assets/css/docs.css">
+</head>
+
+<body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+<header class="header header-light bg-white">
+  <nav class="navbar flex-nowrap p-0">
+    <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+      <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+        <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+      </a>
+
+      <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+        <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova"
+             style="width: 41px; height: 33px;">
+        <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova"
+             style="width: 130px; height: 33px;">
+      </a>
+    </div>
+
+    <div class="header-content col px-md-3">
+      <div class="d-flex align-items-center">
+        <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+           data-close-invoker="#sidebarClose"
+           data-target="#sidebar"
+           data-target-wrapper="body">
+          <i class="nova-align-left"></i>
+        </a>
+
+        <div class="js-header-search ml-lg-2"
+             data-search-target="#headerSearchResults"
+             data-search-mobile-invoker="#headerSearchMobileInvoker"
+             data-search-form="#headerSearchForm"
+             data-search-field="#headerSearchField">
+          <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+            <i class="nova-search"></i>
+          </a>
+
+          <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+            <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                   data-url="../assets/include/json/autocomplete-data.json">
+            <div class="input-group-append-merge">
+              <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                <i class="nova-search icon-text"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+
+        <a class="link-dark ml-auto mr-3 mr-sm-0" href="../../demo-crypto/dashboards/index.html">
+              Crypto Demo
+            </a>
+
+         <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3 d-none d-sm-block" href="../getting-started/changelog.html">
+                Changelog (v1.2.2) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+            </div>
+
+        <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span
+            class="d-none d-md-inline">Components</span></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="main">
+  <!-- Sidebar Nav -->
+  <aside id="sidebar" class="js-custom-scroll side-nav">
+    <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+      <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+      <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../getting-started/customization.html">Customization</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../getting-started/changelog.html">Changelog</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Content</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+          <!--<li class="pt-1">-->
+          <!--<span class="sidebar-heading h6 text-uppercase">Icons:</span>-->
+          <!--<ul class="list-unstyled pl-3">-->
+          <!--<li><a class="side-nav-menu-link py-1" href="../components/typography12.html">Nova Icons</a></li>-->
+          <!--</ul>-->
+          <!--</li>-->
+
+
+      <li class="sidebar-heading h6 text-uppercase">Components</li>
+      <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a>
+      </li>
+      <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/dropdowns.html">Dropdowns</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navbar.html">Navbar</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/popovers.html">Popovers</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/spinners.html">Spinners</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tooltips.html">Tooltips</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+      <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/datatables.html">Datatables</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/date-range-picker.html">Date Range Picker</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/dropzone.html">Dropzone</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/editable-rows.html">Editable Rows</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+      <li><a class="side-nav-menu-link py-1 active" href="../libraries/flatpickr.html">Flatpickr</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/font-awesome.html">Font Awesome</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/google-recaptcha.html">Google reCAPTCHA</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Input Masks</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/range-slider.html">Range Slider</a></li><li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/summernote.html">Summernote</a></li>
+      <!-- <li><a class="side-nav-menu-link py-1" href="../libraries/step-form.html">Step Form</a></li> -->
+      <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/tagsinput.html">Input Tags</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+      <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+    </ul>
+  </aside>
+  <!-- End Sidebar Nav -->
+
+  <div class="content overflow-inherit">
+    <div class="hs-docs-content py-4 px-3 px-md-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+              <ul id="scrollNav" class="hs-docs-content-nav">
+                <li class="hs-docs-content-nav-item active"><a href="#how-to-use">How to use?</a></li>
+                <li class="hs-docs-content-nav-item"><a href="#basic-example">Basic examples</a></li>
+                <li class="hs-docs-content-nav-item"><a href="#sizing">Sizing</a></li>
+                <li class="hs-docs-content-nav-item"><a href="#disabled-dates">Disabling dates</a></li>
+                <li class="hs-docs-content-nav-item"><a href="#in-modal">Modal</a></li>
+                <li class="hs-docs-content-nav-item"><a href="#validation-states">Validation states</a></li>
+                <li class="hs-docs-content-nav-item">
+                  <a href="#js-behavior">JavaScript behavior</a>
+                  <ul>
+                    <li class="hs-docs-content-nav-item"><a href="#config">Config</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#methods">Methods</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-xl-10 order-xl-1">
+              <div class="border-bottom pb-3 mb-6">
+                <h1 class="h3 mb-3 mb-md-4">Flatpickr</h1>
+                <p class="lead">Lightweight and powerful datetime picker.</p>
+              </div>
+
+              <div class="alert alert-warning mb-5" role="alert">
+                <h3 class="h6 font-weight-bold">Official documentation</h3>
+                <p class="alert-text mb-0">For more detailed information and examples, see the official documentation: <a href="https://flatpickr.js.org/" target="_blank">Flatpickr documentation</a>.</p>
+              </div>
+
+              <div id="how-to-use" class="mb-9">
+                <h2 class="h4">How to use? <a class="anchorjs-link" href="#how-to-use" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                <p>To add <code>hs.flatpickr.js</code> in your page, wrap any block in a parent element with an ID or
+                  class and add the same ID or the class in the JS init function of the plugin.</p>
+
+                <p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> to load the CSS.</p>
+
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css"&gt;
+                  </code>
+                </pre>
+
+                <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS
+                  Implementing Plugins</u></em> to enable it.</p>
+
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;script src="../../assets/vendor/flatpickr/dist/flatpickr.min.js"&gt;&lt;/script&gt;
+                  </code>
+                </pre>
+
+                <p>Copy-paste the following <code>&lt;script&gt;</code> near the end of your pages under <em><u>JS
+                  Nova</u></em> to enable it.</p>
+
+                <pre>
+                  <code class="language-html" data-lang="html">
+                    &lt;script src="../../assets/js/components/hs.flatpickr.js"&gt;&lt;/script&gt;
+                  </code>
+                </pre>
+
+                <p>Copy-paste the init function under <em><u>JS Plugins Init.</u></em>, before the closing <code>&lt;/body&gt;</code>
+                  tag, to enable it.</p>
+
+                <pre>
+            <code class="language-html" data-lang="html">
+              &lt;script&gt;
+                $(document).on('ready', function () {
+                  // initialization of datepicker
+                  $.HSCore.components.HSFlatpickr.init('.js-datepicker');
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
+              </div>
+
+              <div id="basic-example" class="mb-9">
+                <h2 class="h4">Basic example <a class="anchorjs-link" href="#basic-example" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                <p>Basic example that highlights today's day.</p>
+                <div class="mb-3">
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-2" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-2" data-toggle="pill" href="#pills-result-2" role="tab" aria-controls="pills-result-2" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-2" data-toggle="pill" href="#pills-html-2" role="tab" aria-controls="pills-html-2" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-2" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-2" role="tabpanel" aria-labelledby="pills-result-tab-2">
+                      <!-- Datepicker -->
+                      <div class="input-group">
+                        <input type="text" class="form-control js-datepicker" placeholder="Select dates">
+                      </div>
+                      <!-- End Datepicker -->
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-2" role="tabpanel" aria-labelledby="pills-html-tab-2">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="input-group"&gt;
+                                &lt;input type="text" class="form-control js-datepicker" placeholder="Select dates"&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>With value</p>
+                  <p>Use <code>value="21/06/2019"</code></p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-3" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-3" data-toggle="pill" href="#pills-result-3" role="tab" aria-controls="pills-result-3" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-3" data-toggle="pill"
+                         href="#pills-html-3" role="tab" aria-controls="pills-html-3" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-3" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-3" role="tabpanel" aria-labelledby="pills-result-tab-3">
+                      <div class="input-group">
+                        <input type="text" class="js-datepicker form-control" value="21/06/2019">
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-3" role="tabpanel" aria-labelledby="pills-html-tab-3">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="input-group"&gt;
+                                &lt;input type="text" class="js-datepicker form-control" value="21/06/2019"&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>With arrow</p>
+                  <p>Use <code>.input-group-merge</code> with <code>.input-group-prepend-merge</code> or <code>.input-group-append-merge</code> with <code>data-toggle</code> attribute</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-4" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-4" data-toggle="pill" href="#pills-result-4" role="tab" aria-controls="pills-result-4" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-4" data-toggle="pill" href="#pills-html-4" role="tab" aria-controls="pills-html-4" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-4" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-4" role="tabpanel"
+                         aria-labelledby="pills-result-tab-4">
+                      <div class="datepicker">
+                        <div class="input-group input-group-merge js-datepicker" data-rp-is-wrap="true">
+                          <input type="text" class="form-control form-control-append-icon" placeholder="Select dates" data-input>
+                          <div class="input-group-append-merge" data-toggle>
+                            <i class="nova-angle-down"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-4" role="tabpanel" aria-labelledby="pills-html-tab-4">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="datepicker"&gt;
+                                &lt;div class="input-group input-group-merge js-datepicker" data-rp-is-wrap="true"&gt;
+                                  &lt;input type="text" class="form-control form-control-append-icon" placeholder="Select dates" data-input&gt;
+                                  &lt;div class="input-group-append-merge" data-toggle&gt;
+                                    &lt;i class="nova-angle-down"&gt;&lt;/i&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                          </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>With append</p>
+                  <p>Use <code>.input-group-append</code> and <code>.input-group-text</code> classes</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-123" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-123" data-toggle="pill" href="#pills-result-123" role="tab" aria-controls="pills-result-123" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-123" data-toggle="pill" href="#pills-html-123" role="tab" aria-controls="pills-html-123" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-123" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-123" role="tabpanel" aria-labelledby="pills-result-tab-123">
+                      <div class="input-group">
+                        <input type="text" id="with-append" class="js-datepicker form-control" value="21/06/2019">
+                        <div class="input-group-append">
+                          <label for="with-append" class="input-group-text">
+                            <i class="nova-calendar"></i>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-123" role="tabpanel" aria-labelledby="pills-html-tab-123">
+                      <pre>
+                        <code class="language-markup" data-lang="html">
+                          &lt;div class="input-group"&gt;
+                            &lt;input type="text" id="with-append" class="js-datepicker form-control" value="21/06/2019"&gt;
+                            &lt;div class="input-group-append"&gt;
+                              &lt;label for="with-append" class="input-group-text"&gt;
+                                &lt;i class="nova-calendar"&gt;&lt;/i&gt;
+                              &lt;/label&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>Range example that shows starting and ending highlighted dates.</p>
+                  <p>Uce <code>data-rp-type="range"</code> attribute</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-13" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-13" data-toggle="pill" href="#pills-result-13" role="tab" aria-controls="pills-result-13" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-13" data-toggle="pill"
+                         href="#pills-html-13" role="tab" aria-controls="pills-html-13" aria-selected="false">HTML</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-js-tab-13" data-toggle="pill" href="#pills-js-13" role="tab" aria-controls="pills-js-13" aria-selected="false">JS</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-13" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-13" role="tabpanel"
+                         aria-labelledby="pills-result-tab-13">
+                      <div class="input-group">
+                        <input type="text" id="rangeDatepicker" class="form-control" data-rp-type="range" data-rp-date-format="d M Y" data-rp-default-date='["02 Oct 2018", "18 Oct 2018"]'>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-13" role="tabpanel" aria-labelledby="pills-html-tab-13">
+                      <pre>
+                        <code class="language-markup" data-lang="html">
+                          &lt;div class="input-group"&gt;
+                            &lt;input type="text" id="rangeDatepicker" class="form-control"
+                                   data-rp-type="range"
+                                   data-rp-date-format="d M Y"
+                                   data-rp-default-date='["02 Oct 2018", "18 Oct 2018"]'&gt;
+                          &lt;/div&gt;
+                        </code>
+                      </pre>
+                    </div>
+                    <div class="tab-pane fade" id="pills-js-13" role="tabpanel" aria-labelledby="pills-js-tab-13">
+                      <pre>
+                        <code class="language-js" data-lang="js">
+                          $.HSCore.components.HSFlatpickr.init('#rangeDatepicker', {
+                            locale: {
+                                weekdays: {
+                                    shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                                },
+                                rangeSeparator: ' - '
+                            },
+                            nextArrow: '<em class="nova-arrow-right"></em>',
+                            prevArrow: '<em class="nova-arrow-left"></em>'
+                          });
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>Selecting multiple dates</p>
+                  <p>Use <code>data-rp-type="multiple"</code> attribute</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-5" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-5" data-toggle="pill" href="#pills-result-5" role="tab" aria-controls="pills-result-5" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-5" data-toggle="pill" href="#pills-html-5" role="tab" aria-controls="pills-html-5" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-5" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-5" role="tabpanel" aria-labelledby="pills-result-tab-5">
+                      <div class="input-group">
+                        <input type="text" class="form-control js-datepicker" placeholder="Select Dates"
+                               data-rp-type="multiple">
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-5" role="tabpanel" aria-labelledby="pills-html-tab-5">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="input-group"&gt;
+                                &lt;input type="text" class="form-control js-datepicker" placeholder="Select Dates" data-rp-type="multiple"&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>Without bordered</p>
+                  <p>Use <code>.form-control-plaintext</code> for input tag</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-6" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-6" data-toggle="pill" href="#pills-result-6" role="tab" aria-controls="pills-result-6" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-6" data-toggle="pill" href="#pills-html-6" role="tab" aria-controls="pills-html-6" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-6" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-6" role="tabpanel" aria-labelledby="pills-result-tab-6">
+                      <div class="datepicker">
+                        <input type="text" class="js-datepicker form-control-plaintext" placeholder="Select dates" value="21/06/2019"
+                               data-input>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-6" role="tabpanel" aria-labelledby="pills-html-tab-6">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="datepicker"&gt;
+                                &lt;input type="text" class="js-datepicker form-control-plaintext" value="21/06/2019"
+                                       data-input&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>Inline without field</p>
+                  <p>Use <code>data-rp-is-inline="true</code> attribute</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-7" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-7" data-toggle="pill" href="#pills-result-7" role="tab" aria-controls="pills-result-7" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-7" data-toggle="pill" href="#pills-html-7" role="tab" aria-controls="pills-html-7" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-7" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-7" role="tabpanel"
+                         aria-labelledby="pills-result-tab-7">
+                      <div class="datepicker">
+                        <input type="text" class="js-datepicker d-none form-control" placeholder="Select dates" data-rp-is-inline="true">
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-7" role="tabpanel" aria-labelledby="pills-html-tab-7">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="datepicker"&gt;
+                                &lt;input type="text" class="js-datepicker d-none form-control" placeholder="Select dates"
+                                       data-rp-is-inline="true"&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-300" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-300" data-toggle="pill" href="#pills-result-300" role="tab" aria-controls="pills-result-300" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-300" data-toggle="pill" href="#pills-html-300" role="tab" aria-controls="pills-html-300" aria-selected="false">HTML</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-js-tab-300" data-toggle="pill" href="#pills-js-300" role="tab" aria-controls="pills-js-300" aria-selected="false">JS</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-300">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-300" role="tabpanel"
+                         aria-labelledby="pills-result-tab-300">
+                      <div style="width: 330px">
+                        <div class="mb-3">
+                          <h6 class="font-weight-semi-bold mb-0">Today</h6>
+                        </div>
+
+                        <div class="datepicker-inline position-relative mb-3">
+                          <input id="inlineCalendarAlt" type="text" data-rp-is-inline="true" data-rp-event-dates='["20180401", "20180403", "20180406"]'>
+                        </div>
+                     </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-300" role="tabpanel" aria-labelledby="pills-html-tab-300">
+                    <pre>
+                      <code class="language-markup" data-lang="html">
+                      &lt;div style="width: 330px"&gt;
+                        &lt;div class="mb-3"&gt;
+                          &lt;h6 class="font-weight-semi-bold mb-0"&gt;Today&lt;/h6&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="datepicker-inline position-relative mb-3"&gt;
+                          &lt;input id="inlineCalendarAlt" type="text"
+                                 data-rp-is-inline="true"
+                                 data-rp-event-dates='["20180401", "20180403", "20180406"]'&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      </code>
+                    </pre>
+                    </div>
+                    <div class="tab-pane fade" id="pills-js-300" role="tabpanel" aria-labelledby="pills-js-tab-300">
+                    <pre>
+                      <code class="language-javascript" data-lang="js">
+                        &lt;script&gt;
+                          $(document).on('ready', function () {
+                            $.HSCore.components.HSFlatpickr.init('#inlineCalendarAlt', {
+                              locale: {
+                                weekdays: {
+                                    shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                                }
+                              },
+                              nextArrow: '&lt;i class="nova-arrow-right icon-text icon-text-xs"&gt;&lt;/i&gt;',
+                              prevArrow: '&lt;i class="nova-arrow-left icon-text icon-text-xs"&gt;&lt;/i&gt;'
+                              });
+                          });
+                        &lt;/script&gt;
+                      </code>
+                    </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div class="mb-3">
+                  <p>Disabled</p>
+                  <p>Use <code>.datepicker-disabled</code> class and <code>disabled</code> attribute for input tag</p>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-8" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-8" data-toggle="pill" href="#pills-result-8" role="tab" aria-controls="pills-result-8" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-8" data-toggle="pill" href="#pills-html-8" role="tab" aria-controls="pills-html-8" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-8" style="height: 450px">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-8" role="tabpanel" aria-labelledby="pills-result-tab-8">
+                      <div class="input-group">
+                        <input type="text" class="js-datepicker form-control datepicker-disabled" placeholder="Select dates" value="21/06/2019" data-input disabled>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-8" role="tabpanel" aria-labelledby="pills-html-tab-8">
+                          <pre>
+                            <code class="language-markup" data-lang="html">
+                              &lt;div class="datepicker datepicker-rangepicker"&gt;
+                                &lt;input type="text" class="js-datepicker form-control datepicker-disabled" placeholder="Select dates"
+                                       value="21/06/2019"
+                                       disabled
+                                       data-input&gt;
+                              &lt;/div&gt;
+                            </code>
+                          </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+              </div>
+
+              <div id="sizing" class="mb-9">
+                <h2 class="h4">Sizing <a class="anchorjs-link" href="#sizing" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                <p>Use <code>.input-group-sm</code> and <code>.input-group-lg</code> with <code>.input-group</code></p>
+                <!-- Nav Classic -->
+                <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-14" role="tablist">
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-14"
+                       data-toggle="pill" href="#pills-result-14" role="tab" aria-controls="pills-result-14"
+                       aria-selected="true">Result</a>
+                  </li>
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-14" data-toggle="pill"
+                       href="#pills-html-14" role="tab" aria-controls="pills-html-14" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav Classic -->
+
+                <!-- Tab Content -->
+                <div class="tab-content bg-lighter" id="pills-tabContent-14" style="height: 450px">
+                  <div class="tab-pane fade p-4 show active" id="pills-result-14" role="tabpanel" aria-labelledby="pills-result-tab-14">
+                    <!-- Small -->
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control form-control-sm js-datepicker" placeholder="Select dates">
+                    </div>
+                    <!-- End Small -->
+
+                    <!-- Default -->
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control js-datepicker" placeholder="Select dates">
+                    </div>
+                    <!-- End Default -->
+
+                    <!-- Large -->
+                    <div class="input-group">
+                      <input type="text" class="form-control form-control-lg js-datepicker" placeholder="Select dates">
+                    </div>
+                    <!-- End Large -->
+                  </div>
+                  <div class="tab-pane fade" id="pills-html-14" role="tabpanel" aria-labelledby="pills-html-tab-14">
+                    <pre>
+                      <code class="language-markup" data-lang="html">
+                        &lt;!-- Small --&gt;
+                        &lt;div class="input-group mb-3"&gt;
+                          &lt;input type="text" class="form-control form-control-sm js-datepicker" placeholder="Select dates"&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Small --&gt;
+
+                        &lt;!-- Default --&gt;
+                        &lt;div class="input-group mb-3"&gt;
+                          &lt;input type="text" class="form-control js-datepicker" placeholder="Select dates"&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Default --&gt;
+
+                        &lt;!-- Large --&gt;
+                        &lt;div class="input-group"&gt;
+                          &lt;input type="text" class="form-control form-control-lg js-datepicker" placeholder="Select dates"&gt;
+                        &lt;/div&gt;
+                        &lt;!-- End Large --&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <!-- End Tab Content -->
+              </div>
+
+              <div id="disabled-dates" class="mb-9">
+                <h2 class="h4">Disabling dates <a class="anchorjs-link" href="#disabled-dates" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                <p>Your can write custom javascript function</p>
+                <!-- Nav Classic -->
+                <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-12" role="tablist">
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-12" data-toggle="pill" href="#pills-result-12" role="tab" aria-controls="pills-result-12" aria-selected="true">Result</a>
+                  </li>
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-12" data-toggle="pill" href="#pills-html-12" role="tab" aria-controls="pills-html-12" aria-selected="false">HTML</a>
+                  </li>
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-js-tab-12" data-toggle="pill" href="#pills-js-12" role="tab" aria-controls="pills-js-12" aria-selected="false">JS</a>
+                  </li>
+                </ul>
+                <!-- End Nav Classic -->
+
+                <!-- Tab Content -->
+                <div class="tab-content bg-lighter" id="pills-tabContent-12" style="height: 450px">
+                  <div class="tab-pane fade p-4 show active" id="pills-result-12" role="tabpanel" aria-labelledby="pills-result-tab-12">
+                    <div class="input-group">
+                      <input type="text" id="disableDatepicker" class="form-control" placeholder="Select dates">
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-html-12" role="tabpanel" aria-labelledby="pills-html-tab-12">
+                    <pre>
+                      <code class="language-markup" data-lang="html">
+                        &lt;div class="input-group"&gt;
+                          &lt;input type="text" id="disableDatepicker" class="form-control" placeholder="Select dates"&gt;
+                        &lt;/div&gt;
+                      </code>
+                    </pre>
+                  </div>
+                  <div class="tab-pane fade" id="pills-js-12" role="tabpanel" aria-labelledby="pills-js-tab-12">
+                    <pre>
+                      <code class="language-js" data-lang="js">
+                        &lt;script&gt;
+                          $(document).on('ready', function () {
+                              $.HSCore.components.HSFlatpickr.init('#disableDatepicker', {
+                                  locale: {
+                                      weekdays: {
+                                          shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                                      },
+                                      rangeSeparator: ' - ',
+                                  },
+                                  disable: [
+                                      function (date) {
+                                          // return true to disable
+                                          return (date.getDay() === 0 || date.getDay() === 6);
+                                      }
+                                  ],
+                                  nextArrow: '&lt;em class="nova-arrow-right"&gt;&lt;/em&gt;',
+                                  prevArrow: '&lt;em class="nova-arrow-left"&gt;&lt;/em&gt;'
+                              });
+                          });
+                        &lt;/script&gt;
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <!-- End Tab Content -->
+              </div>
+
+              <div id="in-modal" class="mb-9">
+                <h2 class="h4">Modal <a class="anchorjs-link" href="#in-modal" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                <!-- Nav Classic -->
+                <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-9" role="tablist">
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-9" data-toggle="pill" href="#pills-result-9" role="tab" aria-controls="pills-result-9" aria-selected="true">Result</a>
+                  </li>
+                  <li class="nav-item border-bottom border-xl-bottom-0">
+                    <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-9" data-toggle="pill" href="#pills-html-9" role="tab" aria-controls="pills-html-9" aria-selected="false">HTML</a>
+                  </li>
+                </ul>
+                <!-- End Nav Classic -->
+
+                <!-- Tab Content -->
+                <div class="tab-content bg-lighter" id="pills-tabContent-9">
+                  <div class="tab-pane fade p-4 show active" id="pills-result-9" role="tabpanel" aria-labelledby="pills-result-tab-9">
+                    <!-- Button Trigger Modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Open modal
+                      </button>
+              <!-- End Button Trigger Modal -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Example Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <label>Select a date</label>
+                            <div class="datepicker">
+                              <input type="text" class="js-datepicker form-control" placeholder="Select dates">
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Continue</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-html-9" role="tabpanel" aria-labelledby="pills-html-tab-9">
+                        <pre>
+                          <code class="language-markup" data-lang="html">
+                            &lt;!-- Button Trigger Modal --&gt;
+                            &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"&gt;
+                              Open modal
+                            &lt;/button&gt;
+                            &lt;!-- End Button Trigger Modal --&gt;
+
+                            &lt;!-- Modal --&gt;
+                            &lt;div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                 aria-hidden="true"&gt;
+                              &lt;div class="modal-dialog" role="document"&gt;
+                                &lt;div class="modal-content"&gt;
+                                  &lt;div class="modal-header"&gt;
+                                    &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Example Title&lt;/h5&gt;
+                                    &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                      &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                    &lt;/button&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="modal-body"&gt;
+                                    &lt;label&gt;Select a date&lt;/label&gt;
+                                    &lt;div class="datepicker"&gt;
+                                      &lt;input type="text" class="js-datepicker form-control" placeholder="Select dates"&gt;
+                                    &lt;/div&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class="modal-footer"&gt;
+                                    &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                                    &lt;button type="button" class="btn btn-primary"&gt;Continue&lt;/button&gt;
+                                  &lt;/div&gt;
+                                &lt;/div&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          </code>
+                        </pre>
+                  </div>
+                </div>
+                <!-- End Tab Content -->
+              </div>
+
+              <div id="validation-states" class="mb-9">
+                <h2 class="h4">Valdiation States <a class="anchorjs-link" href="#validation-states" aria-label="Anchor"
+                                                    data-anchorjs-icon="#"></a></h2>
+                <p>For more inforamation about form validation your can read on <a href="./validation.html">Validation
+                  page</a></p>
+
+                <div class="mb-3">
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-10" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-10" data-toggle="pill" href="#pills-result-10" role="tab" aria-controls="pills-result-10" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-10" data-toggle="pill" href="#pills-html-10" role="tab" aria-controls="pills-html-10" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-10">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-10" role="tabpanel"
+                         aria-labelledby="pills-result-tab-10">
+                      <div class="u-has-success mb-3">
+                        <div class="datepicker">
+                          <input type="text" class="js-datepicker form-control" placeholder="Select dates" value="21/06/2019">
+                        </div>
+                        <small class="text-success">Select a date</small>
+                      </div>
+
+                      <div class="u-has-success">
+                        <div class="datepicker">
+                          <input type="text" class="js-datepicker form-control-plaintext" placeholder="Select dates" value="21/06/2019">
+                        </div>
+                        <small class="text-success">Select a date</small>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-10" role="tabpanel" aria-labelledby="pills-html-tab-10">
+                      <pre>
+                        <code class="language-markup" data-lang="html">
+                          &lt;!-- Default --&gt;
+                          &lt;div class="u-has-success mb-3"&gt;
+                            &lt;div class="datepicker"&gt;
+                              &lt;input type="text" class="js-datepicker form-control" placeholder="Select dates"
+                                       value="21/06/2019"&gt;
+                            &lt;/div&gt;
+                            &lt;small class="text-success"&gt;Select a date&lt;/small&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Default --&gt;
+
+                          &lt;!-- Without Bordered --&gt;
+                           &lt;div class="u-has-success"&gt;
+                             &lt;div class="datepicker"&gt;
+                               &lt;input type="text" class="js-datepicker form-control-plaintext" placeholder="Select dates" value="21/06/2019"&gt;
+                             &lt;/div&gt;
+                            &lt;small class="text-success"&gt;Select a date&lt;/small&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Without Bordered --&gt;
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+
+                <div>
+                  <!-- Nav Classic -->
+                  <ul class="nav nav-v2 nav-primary d-block d-xl-flex" id="pills-tab-11" role="tablist">
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3 active" id="pills-result-tab-11" data-toggle="pill" href="#pills-result-11" role="tab" aria-controls="pills-result-11" aria-selected="true">Result</a>
+                    </li>
+                    <li class="nav-item border-bottom border-xl-bottom-0">
+                      <a class="nav-link d-flex align-items-center py-2 px-3" id="pills-html-tab-11" data-toggle="pill" href="#pills-html-11" role="tab" aria-controls="pills-html-11" aria-selected="false">HTML</a>
+                    </li>
+                  </ul>
+                  <!-- End Nav Classic -->
+
+                  <!-- Tab Content -->
+                  <div class="tab-content bg-lighter" id="pills-tabContent-11">
+                    <div class="tab-pane fade p-4 show active" id="pills-result-11" role="tabpanel"
+                         aria-labelledby="pills-result-tab-11">
+                      <div class="u-has-error mb-3">
+                        <div class="datepicker">
+                          <input type="text" class="js-datepicker form-control" placeholder="Select dates" value="21/06/2019">
+                        </div>
+                        <small class="text-danger">Select a date</small>
+                      </div>
+
+                      <div class="error">
+                        <div class="datepicker">
+                          <input type="text" class="js-datepicker form-control-plaintext" placeholder="Select dates" value="21/06/2019">
+                        </div>
+                        <small class="text-danger">Select a date</small>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-html-11" role="tabpanel" aria-labelledby="pills-html-tab-11">
+                      <pre>
+                        <code class="language-markup" data-lang="html">
+                          &lt;!-- Default --&gt;
+                          &lt;div class="u-has-error mb-3"&gt;
+                            &lt;div class="datepicker"&gt;
+                              &lt;input type="text" class="js-datepicker form-control" placeholder="Select dates"
+                                     value="21/06/2019"&gt;
+                            &lt;/div&gt;
+                            &lt;small class="text-danger"&gt;Select a date&lt;/small&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Default --&gt;
+
+                          &lt;!-- Without Bordered --&gt;
+                           &lt;div class="u-has-error"&gt;
+                             &lt;div class="datepicker"&gt;
+                               &lt;input type="text" class="js-datepicker form-control-plaintext" placeholder="Select dates" value="21/06/2019"&gt;
+                             &lt;/div&gt;
+                            &lt;small class="text-danger"&gt;Select a date&lt;/small&gt;
+                          &lt;/div&gt;
+                          &lt;!-- End Without Bordered --&gt;
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <!-- End Tab Content -->
+                </div>
+              </div>
+
+              <div id="js-behavior" class="mb-5">
+                <h2 class="h4">JavaScript behavior <a class="anchorjs-link" href="#js-behavior" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+              </div>
+
+              <div id="config" class="mb-5">
+                <h2 class="h4">Config <a class="anchorjs-link" href="#config" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                <pre>
+            <code class="language-js" data-lang="js">
+              locale: {
+                firstDayOfWeek: 1 - integer
+                weekdays: {
+                  shorthand: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"] - array
+                }
+                rangeSeparator: '-' - string
+              }
+              nextArrow: '&gt;' - string
+              prevArrow: '&lt;' - string
+              onDayCreate: function(){} - callback function
+            </code>
+          </pre>
+              </div>
+
+              <div id="methods" class="mb-9">
+                <h2 class="h4">Methods <a class="anchorjs-link" href="#methods" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name
+                  to <code>data-</code>, as in <code>data-rp-wrapper=""</code>.</p>
+
+                <table class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th style="width: 25%;">Attribute</th>
+                    <th>Description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+                      <p><code>data-rp-wrapper</code></p>
+                    </td>
+                    <td>If the value is not empty, then indicates the container where the drop-down block with the
+                      calendar will be placed. If the value is empty, then the drop-down box will be placed immediately
+                      after the closing <code>body</code> tag.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>data-rp-is-inline</code></p>
+                    </td>
+                    <td>If set to <code>true</code>, then the calendar will behave like a static block in the content.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>data-rp-type</code></p>
+                    </td>
+                    <td>
+                      Type of calendar. Valid values are:
+
+                      <ul>
+                        <li>single</li>
+                        <li>multiple</li>
+                        <li>range</li>
+                      </ul>
+
+                      Default value: <code>single</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>data-rp-date-format</code></p>
+                    </td>
+                    <td>Date format.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>data-rp-default-date</code></p>
+                    </td>
+                    <td>The default date (placeholder).</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>data-rp-event-dates</code></p>
+                    </td>
+                    <td>Selected dates. Such dates will be highlighted in styles.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>locale.firstDayOfWeek</code></p>
+                    </td>
+                    <td>Determines from which day the week begins.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>locale.weekdays.shorthand</code></p>
+                    </td>
+                    <td>Short names for the days of the week.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>locale.rangeSeparator</code></p>
+                    </td>
+                    <td>Separator which, if <code>data-rp-type="range"</code>is set to indicate 2 dates in the
+                      placeholder.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>nextArrow</code></p>
+                    </td>
+                    <td>Markup button that shows the next month.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>prevArrow</code></p>
+                    </td>
+                    <td>Markup button that shows the previous month.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p><code>onDayCreate</code></p>
+                    </td>
+                    <td>Performs functions inside when initializing the calendar. By default, a function is assigned
+                      that adds the dates specified in the <code>data-rp-event-dates</code> to the dates.
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="small bg-white p-3 px-md-4 mt-auto">
+      <div class="row justify-content-between">
+        <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+          <ul class="list-dot list-inline mb-0">
+            <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+            <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg text-center mb-3 mb-lg-0">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mx-2">
+              <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                <i class="nova-twitter-alt"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                <i class="nova-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                <i class="nova-github"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                <i class="nova-dribbble"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mx-2">
+              <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                <i class="nova-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg text-center text-lg-right">
+          &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<!-- JS Global Compulsory -->
+<script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+<script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- JS Implementing Plugins -->
+<script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+<script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+<script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+<script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+<script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+<script src="../assets/vendor/prism/prism.js"></script>
+<script src="../../assets/vendor/flatpickr/dist/flatpickr.min.js"></script>
+
+<!-- JS Nova -->
+<script src="../../assets/js/hs.core.js"></script>
+<script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+<script src="../../assets/js/components/hs.side-nav.js"></script>
+<script src="../../assets/js/components/hs.unfold.js"></script>
+<script src="../../assets/js/components/hs.header-search.js"></script>
+<script src="../../assets/js/components/hs.autocomplete.js"></script>
+<script src="../assets/js/components/hs.scroll-nav.js"></script>
+<script src="../../assets/js/components/hs.flatpickr.js"></script>
+
+<!-- JS Plugins Init. -->
+<script>
+    $(document).on('ready', function () {
+        // initialization of malihu scrollbar
+        var $scrollbar = $('.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of unfold component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'));
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+            duration: 700
+        });
+
+        // initialization of datepicker
+        $.HSCore.components.HSFlatpickr.init('.js-datepicker');
+
+        $.HSCore.components.HSFlatpickr.init('#rangeDatepicker', {
+            locale: {
+                weekdays: {
+                    shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                },
+                rangeSeparator: ' - '
+            },
+        });
+
+        $.HSCore.components.HSFlatpickr.init('#inlineCalendarAlt', {
+            locale: {
+                weekdays: {
+                    shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                }
+            },
+            nextArrow: '<i class="nova-arrow-right icon-text icon-text-xs"></i>',
+            prevArrow: '<i class="nova-arrow-left icon-text icon-text-xs"></i>'
+        });
+
+        $.HSCore.components.HSFlatpickr.init('#disableDatepicker', {
+            locale: {
+                weekdays: {
+                    shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                },
+                rangeSeparator: ' - ',
+            },
+            disable: [
+                function (date) {
+                    // return true to disable
+                    return (date.getDay() === 0 || date.getDay() === 6);
+                }
+            ],
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>Customization | Nova - Responsive WebApp UI Kit</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+    <!-- CSS Nova Template -->
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+
+    <!-- CSS Nova Doc -->
+    <link rel="stylesheet" href="../assets/css/docs.css">
+  </head>
+
+  <body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+    <header class="header header-light bg-white">
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+          <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+            <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+          </a>
+
+          <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+            <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova" style="width: 41px; height: 33px;">
+            <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova" style="width: 130px; height: 33px;">
+          </a>
+        </div>
+
+        <div class="header-content col px-md-3">
+          <div class="d-flex align-items-center">
+            <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+
+            <div class="js-header-search ml-lg-2"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+
+              <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+            <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                   data-url="../assets/include/json/autocomplete-data.json">
+            <div class="input-group-append-merge">
+              <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                <i class="nova-search icon-text"></i>
+              </a>
+            </div>
+          </form>
+            </div>
+
+            <a class="link-dark ml-auto mr-3 mr-sm-0" href="../../demo-crypto/dashboards/index.html">
+              Crypto Demo
+            </a>
+
+             <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3 d-none d-sm-block" href="./changelog.html">
+                Changelog (v1.2.2) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+             </div>
+
+            <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span class="d-none d-md-inline">Components</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+          <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+          <li><a class="side-nav-menu-link py-1 active" href="../getting-started/customization.html">Customization</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../getting-started/changelog.html">Changelog</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Content</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+          <!--<li class="pt-1">-->
+          <!--<span class="sidebar-heading h6 text-uppercase">Icons:</span>-->
+          <!--<ul class="list-unstyled pl-3">-->
+          <!--<li><a class="side-nav-menu-link py-1" href="../components/typography12.html">Nova Icons</a></li>-->
+          <!--</ul>-->
+          <!--</li>-->
+
+
+          <li class="sidebar-heading h6 text-uppercase">Components</li>
+          <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/dropdowns.html">Dropdowns</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navbar.html">Navbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/popovers.html">Popovers</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/spinners.html">Spinners</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tooltips.html">Tooltips</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+          <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/datatables.html">Datatables</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/date-range-picker.html">Date Range Picker</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/dropzone.html">Dropzone</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/editable-rows.html">Editable Rows</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/flatpickr.html">Flatpickr</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../libraries/font-awesome.html">Font Awesome</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/google-recaptcha.html">Google reCAPTCHA</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Input Masks</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/range-slider.html">Range Slider</a></li><li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+<li><a class="side-nav-menu-link py-1" href="../libraries/summernote.html">Summernote</a></li>
+          <!-- <li><a class="side-nav-menu-link py-1" href="../libraries/step-form.html">Step Form</a></li> -->
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/tagsinput.html">Input Tags</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+          <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+
+      <div class="content overflow-inherit">
+        <div class="hs-docs-content py-4 px-3 px-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+                  <ul id="scrollNav" class="hs-docs-content-nav">
+                    <li class="hs-docs-content-nav-item">
+                      <a href="#how-to-include-a-typeface">How to include a typeface?</a>
+                      <ul>
+                        <li class="hs-docs-content-nav-item"><a href="#with-css">with CSS</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#with-sass">with SASS</a></li>
+                      </ul>
+                    </li>
+                    <li class="hs-docs-content-nav-item">
+                      <a href="#sass">SASS</a>
+                      <ul>
+                        <li class="hs-docs-content-nav-item"><a href="#customizing-sass">Customizing SASS</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#variable-defaults">Variable defaults</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#maps-and-loops">Maps and loops</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#modify-map">Modify map</a></li>
+                        <li class="hs-docs-content-nav-item"><a href="#add-to-map">Add to map</a></li>
+                      </ul>
+                    </li>
+                    <li class="hs-docs-content-nav-item"><a href="#sass-options">SASS options</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#color">Color</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#all-colors">All colors</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#theme-colors">Theme colors</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#grays">Grays</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#sass-components">Components</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#modifiers">Modifiers</a></li>
+                    <li class="hs-docs-content-nav-item"><a href="#customizing-js">Customizing JS</a></li>
+                  </ul>
+                </div>
+
+                <div class="col-xl-10 order-xl-1">
+                  <div class="border-bottom pb-3 mb-6">
+                    <h1 class="h3 mb-3 mb-md-4">Customization</h1>
+                    <p class="lead">You can take advantage of the Nova's past, current and future updates, by learning how to create your own content without changing the core styles of Nova.</p>
+                  </div>
+
+                  <div id="how-to-include-a-typeface" class="mb-5">
+                    <h2 class="h4">How to include a typeface? <a class="anchorjs-link" href="#how-to-include-a-typeface" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Add or change Nova typography with the following instructions.</p>
+                  </div>
+
+                  <div id="with-css" class="mb-5">
+                    <h3 class="h6">With CSS:</h3>
+                    <ol>
+                      <li class="mb-3">
+                        Simply replace the font family <code>font-family</code> from <code>&lt;body&gt;</code> in <code>theme.css</code> tag with yours.
+
+                        <pre>
+                          <code class="language-css" data-lang="css">
+                            <span>body</span> <span>{</span>
+                              <span>font-family</span><span>:</span> <span>"Source Sans Pro", Helvetica, Arial, sans-serif</span><span>;</span>
+                            <span>}</span>
+                          </code>
+                        </pre>
+                      </li>
+                      <li>
+                        Add your font stylesheet into the <code>&lt;head&gt;</code> before all other stylesheets. Like:
+
+                        <pre>
+                          <code class="language-html" data-lang="html">
+                            &lt;!-- CSS Global Compulsory --&gt;
+                            &lt;link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"&gt;
+                          </code>
+                        </pre>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <div id="with-sass" class="mb-9">
+                    <h3 class="h6">With SASS:</h3>
+                    <ol>
+                      <li class="mb-3">
+                        Use the <code>$font-family-base</code> attribute as our typographic base applied to the <code>&lt;body&gt;</code> in <code>_user-variables.scss</code> file to change the current font family variable with yours.
+
+                        <pre>
+                          <code class="language-scss" data-lang="scss">
+                            <span>$font-family-base</span><span>:</span> <span>"Source Sans Pro", Helvetica, Arial, sans-serif !default</span><span>;</span>
+                          </code>
+                        </pre>
+                      </li>
+                      <li>
+                        If you are using fonts from <a target="_blank" href="https://fonts.google.com/">Google Fonts</a>, just add your font stylesheet into the <code>&lt;head&gt;</code> before all other stylesheets:
+
+                        <pre>
+                          <code class="language-html" data-lang="html">
+                            &lt;!-- CSS Global Compulsory --&gt;
+                            &lt;link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700"&gt;
+                          </code>
+                        </pre>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <div id="sass" class="mb-5">
+                    <h2 class="h4">SASS <a class="anchorjs-link" href="#sass" data-anchorjs-icon="#"></a></h2>
+                    <p>Utilize our source SASS files to take advantage of variables, mixins, and more.</p>
+                    <p>Whenever possible, avoid modifying Nova's core files. For SASS, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it.</p>
+                  </div>
+
+                  <div id="customizing-sass" class="mb-5">
+                    <h2 class="h4">Customizing SASS <a class="anchorjs-link" href="#customizing-sass" data-anchorjs-icon="#"></a></h2>
+                    <p>To avoid file loss, overrides of your custom styles or any other conflicts during the upgrade process, you should create or modify your style with these 2 files <code>[assets/scss/]</code>:</p>
+
+                    <ul>
+                      <li><code>_user-variables.scss</code> - Variables file for customizing or overriding Bootstrap core and Nova elements/components that have been tied to variables.</li>
+                      <li><code>_user.scss</code> - Create a new style in here.</li>
+                    </ul>
+
+                    <div class="alert alert-info mb-5" role="alert">
+                      <h3 class="h6 font-weight-bold">Note</h3>
+                      <p class="alert-text mb-0">Custom files along with Bootstrap core CSS files will be generated into the <code>theme.css</code> file.</p>
+                    </div>
+                  </div>
+
+                  <div id="variable-defaults" class="mb-5">
+                    <h2 class="h4">Variable defaults <a class="anchorjs-link" href="#variable-defaults" data-anchorjs-icon="#"></a></h2>
+                    <p>Every SASS variable in Nova includes the <code>!default</code> flag allowing you to override the variable's default value in your own SASS without modifying either Bootstrap or Nova's source code. Copy and paste variables as needed, modify their values, and remove the <code>!default</code> flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Nova.</p>
+
+                    <p>You will find the complete list of Nova's variables in <code>assets/include/scss/nova/_variables.scss</code>.</p>
+
+                    <p>Variable overrides within the same SASS file can come before or after the default variables. However, when overriding across SASS files, your overrides must come before you import Nova's SASS files.</p>
+
+                    <p>Here's an example that changes the <code>color</code> of the template in the <code>scss/_user-variables.scss</code> file when importing and compiling Nova via npm:</p>
+
+                    <pre>
+                      <code class="language-scss" data-lang="scss">
+                        // Your variable overrides
+                        $primary #8069f2; // Primary color
+                      </code>
+                    </pre>
+                  </div>
+
+                  <div id="maps-and-loops" class="mb-5">
+                    <h2 class="h4">Maps and loops <a class="anchorjs-link" href="#maps-and-loops" data-anchorjs-icon="#"></a></h2>
+                    <p>Bootstrap 4 includes a handful of SASS maps, key value pairs that make it easier to generate families of related CSS. We use SASS maps for our colors, grid breakpoints, and more. Just like SASS variables, all SASS maps include the <code>!default</code> flag and can be overridden and extended.</p>
+                    <p>Some of our SASS maps are merged into empty ones by default. This is done to allow easy expansion of a given SASS map, but comes at the cost of making removing items from a map slightly more difficult.</p>
+                  </div>
+
+                  <div id="modify-map" class="mb-5">
+                    <h2 class="h4">Modify map <a class="anchorjs-link" href="#modify-map" data-anchorjs-icon="#"></a></h2>
+                    <p>To modify an existing color in our <code>$theme-colors</code> map, add the following to your custom SASS file:</p>
+
+                    <pre>
+                      <code class="language-scss" data-lang="scss">
+                        $theme-colors: (
+                          "primary": #377dff,
+                          "danger": #de4437
+                        );
+                      </code>
+                    </pre>
+                  </div>
+
+                  <div id="add-to-map" class="mb-9">
+                    <h2 class="h4">Add to map <a class="anchorjs-link" href="#add-to-map" data-anchorjs-icon="#"></a></h2>
+                    <p>To add a new color to <code>$theme-colors</code>, add the new key and value:</p>
+
+                    <pre>
+                      <code class="language-scss" data-lang="scss">
+                        $theme-colors: (
+                          "custom-color": #000
+                        );
+                      </code>
+                    </pre>
+                  </div>
+
+                  <div id="sass-options" class="mb-9">
+                    <h2 class="h4">SASS options <a class="anchorjs-link" href="#sass-options" data-anchorjs-icon="#"></a></h2>
+                    <p>Customize Nova with our built-in custom variables file and easily toggle global CSS preferences with <code>$enable-*</code> SASS variables. Override a variable's value and recompile as needed.</p>
+
+                    <p>You can find and customize these variables for key global options in Nova's <code>scss/_theme-variables.scss</code> file.</p>
+
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 20%;">Variable</th>
+                          <th>Values</th>
+                          <th>Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>$spacer</code></td>
+                          <td><code>1rem</code> (default), or any value &gt; 0</td>
+                          <td>Specifies the default spacer value to programmatically generate additional padding and margins.</td>
+                        </tr>
+                        <tr>
+                          <td><code>$enable-rounded</code></td>
+                          <td><code>true</code> (default) or <code>false</code></td>
+                          <td>Enables predefined <code>border-radius</code> styles on various components.</td>
+                        </tr>
+                        <tr>
+                          <td><code>$enable-accessibility</code></td>
+                          <td><code>true</code> or <code>false</code> (default)</td>
+                          <td>Enables predefined <code>accessibility</code> styles on various components.</td>
+                        </tr>
+                        <tr>
+                          <td><code>$enable-print-styles</code></td>
+                          <td><code>true</code> or <code>false</code> (default)</td>
+                          <td>Enables styles for optimizing printing.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div id="color" class="mb-5">
+                    <h2 class="h4">Color <a class="anchorjs-link" href="#color" data-anchorjs-icon="#"></a></h2>
+                    <p>Many of Nova's various components and utilities are built through a series of colors defined in a SASS map. This map can be looped over in SASS to quickly generate a series of rulesets.</p>
+                  </div>
+
+                  <div id="all-colors" class="mb-5">
+                    <h2 class="h4">All colors <a class="anchorjs-link" href="#all-colors" data-anchorjs-icon="#"></a></h2>
+                    <p>All colors available in Nova, are available as SASS variables and a SASS map in <code>scss/_theme-variables.scss</code> file. Below is how you can use these in your SASS:</p>
+
+                    <pre>
+                      <code class="language-scss" data-lang="scss">
+                        .alpha {
+                          color: $primary;
+                        }
+                      </code>
+                    </pre>
+
+                    <p><a href="../utilities/colors.html">Color utility classes</a> are also available for setting <code>color</code> and <code>background-color</code>.</p>
+                  </div>
+
+                  <div id="theme-colors" class="mb-5">
+                    <h2 class="h4">Theme colors <a class="anchorjs-link" href="#theme-colors" data-anchorjs-icon="#"></a></h2>
+                    <p>We use a subset of all Bootstrap colors to create a smaller color palette for generating color schemes, also available as SASS variables and a SASS map in Nova's <code>scss/nova/_variables.scss</code> file.</p>
+                  </div>
+
+                  <div id="grays" class="mb-5">
+                    <h2 class="h4">Grays <a class="anchorjs-link" href="#grays" data-anchorjs-icon="#"></a></h2>
+                    <p>An expansive set of gray variables and a SASS map in <code>scss/nova/_variables.scss</code> for consistent shades of gray across your project.</p>
+                  </div>
+
+                  <div id="sass-components" class="mb-5">
+                    <h2 class="h4">Components <a class="anchorjs-link" href="#sass-components" data-anchorjs-icon="#"></a></h2>
+                    <p>Many of Bootstrap's components and utilities are built with <code>@each</code> loops that iterate over a SASS map. This is especially helpful for generating variants of a component by <code>$theme-colors</code> and creating responsive variants for each breakpoint. As you customize these SASS maps and recompile, you'll automatically see your changes reflected in these loops.</p>
+                  </div>
+
+                  <div id="modifiers" class="mb-9">
+                    <h2 class="h4">Modifiers <a class="anchorjs-link" href="#modifiers" data-anchorjs-icon="#"></a></h2>
+                    <p>Many of Bootstrap and Nova's components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., <code>.btn</code>) while style variations are confined to modifier classes (e.g., <code>.btn-danger</code>). These modifier classes are built from the <code>$theme-colors</code> map to make customizing the number and name of our modifier classes.</p>
+
+                    <p>Here are two examples of how we loop over the <code>$theme-colors</code> map to generate modifiers to the <code>.alert</code> component and all our <code>.bg-*</code> background utilities.</p>
+
+                    <pre>
+                      <code class="language-scss" data-lang="scss">
+                        // Generate alert modifier classes
+                        @each $color, $value in $theme-colors {
+                          .alert-#{$color} {
+                            @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -9), theme-color-level($color, 6));
+                          }
+                        }
+
+                        // Generate `.bg-*` color utilities
+                        @each $color, $value in $theme-colors {
+                          @include bg-variant('.bg-#{$color}', $value);
+                        }
+                      </code>
+                    </pre>
+                  </div>
+
+                  <div id="customizing-js" class="mb-9">
+                    <h2 class="h4">Customizing JS <a class="anchorjs-link" href="#customizing-js" data-anchorjs-icon="#"></a></h2>
+                    <p>To avoid file loss, overrides of your custom styles or any other conflicts during the upgrade process, create or modify your styles with <code>assets/js/theme-custom.js</code> file.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="small bg-white p-3 px-md-4 mt-auto">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                    <i class="nova-twitter-alt"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                    <i class="nova-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                    <i class="nova-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                    <i class="nova-dribbble"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                    <i class="nova-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+    <script src="../assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../../assets/js/hs.core.js"></script>
+    <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="../../assets/js/components/hs.side-nav.js"></script>
+    <script src="../../assets/js/components/hs.unfold.js"></script>
+    <script src="../../assets/js/components/hs.header-search.js"></script>
+    <script src="../../assets/js/components/hs.autocomplete.js"></script>
+    <script src="../assets/js/components/hs.scroll-nav.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of custom scroll
+        var $scrollbar = $('.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of dropdown component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+          unfoldHideOnScroll: false,
+          afterOpen: function () {
+            // initialization of charts
+            $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+            setTimeout(function() {
+              $('#activity .js-bar-chart').css('opacity', 1);
+            }, 100);
+
+            // help function for accordions in hidden block
+            $('#headerProjects .accordion-header').on('click', function () {
+              // vars
+              var target = $(this).data('target');
+
+              $(target).collapse('show');
+            });
+          }
+        });
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+          duration: 700
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/*------------------------------------
+	Form controls alternative
+------------------------------------*/
+
+// Alternative
+.form-control-alt {
+	@extend .form-control;
+}
+
+.form-control-alt-lg {
+	min-height: 54px;
+	padding: 15px 18px;
+}
+
+// Transparent
+.form-control-transparent {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+}
+
+// Sizes
+.form-control-transparent-lg {
+	line-height: 1;
+	font-size: 24px;
+	border: 1px solid $gray-200;
+	padding: 26px 22px;
+	transition: border-color .2s ease-in-out;
+	
+	&::-webkit-input-placeholder {
+		color: $gray-500;
+		opacity: 1;
+	}
+
+	&:-moz-placeholder {
+		color: $gray-500;
+		opacity: 1;
+	}
+
+	&:focus {
+		border-color: $primary;
+
+		&::-webkit-input-placeholder {
+			color: $white;
+			opacity: 0;
+		}
+
+		&:-moz-placeholder {
+			color: $white;
+			opacity: 0;
+		}
+	}
+}

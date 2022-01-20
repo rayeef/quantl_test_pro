@@ -1,0 +1,15 @@
+
+MVP/static/css/.DS_Store
+MVP/static/.DS_Store
+MVP/.DS_Store
+MVP/static/.DS_Store
+MVP/static/.DS_Store
+MVP/static/svg/.DS_Store
+MVP/static/svg/.DS_Store
+MVP/static/.DS_Store
+*.pyc
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

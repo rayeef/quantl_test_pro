@@ -1,0 +1,222 @@
+[
+  {
+    "label": "Widgets",
+    "category": "UI Kit Components",
+    "url": "widgets.html"
+  },
+
+  {
+    "label": "Forms",
+    "category": "UI Kit Components",
+    "url": "forms/basic-inputs.html"
+  },
+  {
+    "label": "Input Groups",
+    "category": "UI Kit Components",
+    "url": "forms/input-groups.html"
+  },
+  {
+    "label": "Form Layouts",
+    "category": "UI Kit Components",
+    "url": "forms/form-layouts.html"
+  },
+
+  {
+    "label": "Text Inputs",
+    "category": "UI Kit Components",
+    "url": "forms/basic-inputs.html"
+  },
+  {
+    "label": "Selects",
+    "category": "UI Kit Components",
+    "url": "forms/basic-inputs.html"
+  },
+  {
+    "label": "File Uploading",
+    "category": "UI Kit Components",
+    "url": "forms/basic-inputs.html"
+  },
+  {
+    "label": "Toggles",
+    "category": "UI Kit Components",
+    "url": "forms/checkboxes.html"
+  },
+  {
+    "label": "Radios",
+    "category": "UI Kit Components",
+    "url": "forms/checkboxes.html"
+  },
+  {
+    "label": "Checkboxes",
+    "category": "UI Kit Components",
+    "url": "forms/checkboxes.html"
+  },
+  {
+    "label": "Textarea",
+    "category": "UI Kit Components",
+    "url": "forms/basic-inputs.html"
+  },
+  {
+    "label": "Date Range Picker",
+    "category": "Form Extentions",
+    "url": "advanced-forms/date-range-picker.html"
+  },
+  {
+    "label": "Dropzone",
+    "category": "Form Extentions",
+    "url": "advanced-forms/dropzone.html"
+  },
+  {
+    "label": "Google reCAPTCHA",
+    "category": "Form Extentions",
+    "url": "advanced-forms/google-recaptcha.html"
+  },
+  {
+    "label": "Input Masks",
+    "category": "Form Extentions",
+    "url": "advanced-forms/masked-inputs.html"
+  },
+  {
+    "label": "Input Tags",
+    "category": "Form Extentions",
+    "url": "advanced-forms/tagsinput.html"
+  },
+  {
+    "label": "Selects2",
+    "category": "Form Extentions",
+    "url": "advanced-forms/select2.html"
+  },
+  {
+    "label": "Summernote",
+    "category": "Form Extentions",
+    "url": "advanced-forms/summernote.html"
+  },
+  {
+    "label": "Range Slider",
+    "category": "Form Extentions",
+    "url": "advanced-forms/sliders.html"
+  },
+  {
+    "label": "Validations",
+    "category": "Form Extentions",
+    "url": "advanced-forms/validation.html"
+  },
+  {
+    "label": "Datepicker",
+    "category": "Form Extentions",
+    "url": "advanced-forms/datepicker.html"
+  },
+  {
+    "label": "Clipboard",
+    "category": "Form Extentions",
+    "url": "advanced-forms/clipboard.html"
+  },
+
+  {
+    "label": "Static",
+    "category": "Layouts",
+    "url": "layouts/static.html"
+  },
+  {
+    "label": "Fixed Header & Sidebar",
+    "category": "Layouts",
+    "url": "layouts/fixed-header-sidebar.html"
+  },
+  {
+    "label": "Mini Nav",
+    "category": "Layouts",
+    "url": "layouts/static-mini-nav-mobi.html"
+  },
+
+  {
+    "label": "Card Variations",
+    "category": "Cards",
+    "url": "cards/card-variations.html"
+  },
+  {
+    "label": "Card Options",
+    "category": "Cards",
+    "url": "cards/card-options.html"
+  },
+  {
+    "label": "Card Designs",
+    "category": "Cards",
+    "url": "cards/card-designs.html"
+  },
+
+
+  {
+    "label": "Basic Tables",
+    "category": "Tables",
+    "url": "tables/basic-tables.html"
+  },
+  {
+    "label": "Datatables",
+    "category": "Tables",
+    "url": "tables/datatables.html"
+  },
+
+
+  {
+    "label": "Chartist",
+    "category": "Charts",
+    "url": "charts/chartist.html"
+  },
+  {
+    "label": "Google Geo Chart",
+    "category": "Charts",
+    "url": "charts/google-geo-chart.html"
+  },
+  {
+    "label": "Timeline Chart",
+    "category": "Charts",
+    "url": "charts/timeline-chart.html"
+  },
+
+
+  {
+    "label": "Accordions",
+    "category": "UI Elements",
+    "url": "ui-elements/accordions.html"
+  },
+  {
+    "label": "Alerts",
+    "category": "UI Elements",
+    "url": "ui-elements/alerts.html"
+  },
+  {
+    "label": "Buttons",
+    "category": "UI Elements",
+    "url": "ui-elements/buttons.html"
+  },
+  {
+    "label": "Badges",
+    "category": "UI Elements",
+    "url": "ui-elements/badges-indicators.html"
+  },
+    {
+    "label": "Indicators",
+    "category": "UI Elements",
+    "url": "ui-elements/badges-indicators.html"
+  },
+  {
+    "label": "Progress",
+    "category": "UI Elements",
+    "url": "ui-elements/progress.html"
+  },
+  {
+    "label": "Dropdowns",
+    "category": "UI Elements",
+    "url": "ui-elements/dropdowns.html"
+  },
+  {
+    "label": "Icons",
+    "category": "UI Elements",
+    "url": "ui-elements/icons.html"
+  },
+  {
+    "label": "Typography",
+    "category": "UI Elements",
+    "url": "ui-elements/typography.html"
+  }
+]

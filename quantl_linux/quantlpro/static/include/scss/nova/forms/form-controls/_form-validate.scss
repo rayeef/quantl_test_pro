@@ -1,0 +1,29 @@
+.no-validate-image {
+  &.is-valid, &.is-invalid {
+    background-image: none;
+  }
+}
+
+@if $enable-accessibility {
+  .was-validated .form-control:invalid:focus,
+  .was-validated .form-control-alt:invalid:focus,
+  .form-control.is-invalid:focus,
+  .is-invalid.form-control-alt:focus,
+  .u-has-error .form-control:focus,
+  .u-has-error .custom-file-input:focus ~ .custom-file-label,
+  .u-has-error .custom-control-input:focus ~ .custom-control-label::before,
+  .u-has-error .custom-control-input:active ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba($form-control-invalid-border-color, 0.25);
+  }
+
+  .was-validated .form-control:valid:focus,
+  .was-validated .form-control-alt:valid:focus,
+  .form-control.is-valid:focus,
+  .is-valid.form-control-alt:focus,
+  .u-has-success .form-control:focus,
+  .u-has-success .custom-file-input:focus ~ .custom-file-label,
+  .u-has-success .custom-control-input:focus ~ .custom-control-label::before,
+  .u-has-success .custom-control-input:active ~ .custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem rgba($form-control-valid-border-color, 0.25);
+  }
+}

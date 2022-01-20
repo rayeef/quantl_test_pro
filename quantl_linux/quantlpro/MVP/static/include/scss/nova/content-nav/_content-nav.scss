@@ -1,0 +1,33 @@
+/*------------------------------------
+  Content navigation
+------------------------------------*/
+
+.content-nav {
+  position: sticky;
+  top: 6.5rem;
+  padding-left: 0;
+  overflow-y: auto;
+  list-style: none;
+
+  &-item {
+
+    & > a {
+      display: block;
+      color: $body-color;
+      padding: $nav-content-padding-y $nav-content-padding-x;
+      border-left: solid 2px transparent;
+    }
+    &.active > a {
+      background-color: $white;
+      border-color: $primary;
+
+      .content-nav-icon {
+        color: $primary;
+      }
+    }
+
+    & > a:hover {
+      color: $primary;
+    }
+  }
+}

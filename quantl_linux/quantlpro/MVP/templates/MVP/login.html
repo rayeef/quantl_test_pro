@@ -1,0 +1,21 @@
+
+{% extends './base.html' %}
+{%block content%}
+{% load crispy_forms_tags %}
+
+ <!--Login-->
+ <div class="container py-5">
+   <h2>Quantl MVP - User Login</h2>
+     <p></p>
+   <form method="POST">
+     {% csrf_token %}
+     {{ login_form|crispy }}
+       <p></p>
+     <button class="btn btn-primary" type="submit">Login</button>
+   </form>
+    <p></p>
+   <p class="text-left">Don't have an account? <a href="/MVP/register/">Create an account</a>.</p>
+   <p class="text-left">Forgot your password? <a href="/MVP/password_reset">Reset Password</a>.</p>
+ </div>
+
+{% endblock%}

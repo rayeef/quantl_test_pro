@@ -1,0 +1,9 @@
+__author__ = "Shamaz Khan"
+__author_email__ = "shamaz.khan@outlook.com"
+__copyright__ = "Copyright 2020-2025"
+__credits__ = [""]
+__license__ = "BSD"
+__version__ = "0.0.01"
+__maintainer__ = "Shamaz Khan"
+__status__ = "Development"
+__url__ = "https://github.com/shamazkhan/IGServices"

@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Quantl | Backtester</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  {% load static %}
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'favicon.ico'%}">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link href="{% static '/vendor/nova-icons/nova-icons.css' %}" rel="stylesheet">
+
+  <!-- CSS Implementing Libraries -->
+  <link rel="stylesheet" href="{% static 'vendor/animate.css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/flatpickr/dist/flatpickr.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/select2/dist/css/select2.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/chartist/dist/chartist.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/jquery-shorten/src/jquery.shorten.css' %}">
+  <link rel="stylesheet" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+
+
+  <!-- CSS Nova Template -->
+  <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+
+
+<!--  adding datepicker-maaz-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+
+<body class="has-sidebar has-fixed-sidebar-and-header">
+<!-- Header -->
+<header class="header header-light bg-white">
+  <nav class="navbar flex-nowrap p-0">
+    <div class="navbar-brand-wrapper col-auto">
+      <!-- Logo For Mobile View -->
+      <a class="navbar-brand navbar-brand-mobile" href="{% url 'MVP:demo' %}">
+        <img class="img-fluid w-100" src="{%static 'img/quantl-purple-mini.png' %}">
+      </a>
+      <!-- End Logo For Mobile View -->
+
+<!--  Logo For Desktop View&ndash -->
+      <a class="navbar-brand navbar-brand-desktop" href="{% url 'MVP:demo' %}">
+        <img class="side-nav-show-on-closed" src="{% static 'img/quantl-purple-mini.png' %}" alt="" style="width: 40px; height: 40px;">
+        <img class="side-nav-hide-on-closed" src="{% static 'img/quantl-large.png' %}" alt="Nova" style="width: 150px; height: 60px;">
+      </a>
+<!--      End Logo For Desktop View -->
+    </div>
+
+    <div class="header-content col px-md-3 px-md-3">
+      <div class="d-flex align-items-center">
+        <!-- Side Nav Toggle -->
+        <a class="js-side-nav header-invoker mr-md-2" href="#"
+           data-close-invoker="#sidebarClose"
+           data-target="#sidebar"
+           data-target-wrapper="body">
+          <i class="nova-align-left"></i>
+        </a>
+        <!-- End Side Nav Toggle -->
+
+        <!-- Header Search -->
+        <div class="js-header-search position-relative"
+             data-search-target="#headerSearchResults"
+             data-search-mobile-invoker="#headerSearchMobileInvoker"
+             data-search-form="#headerSearchForm"
+             data-search-field="#headerSearchField"
+             data-search-clear="#headerSearchResultsClear">
+          <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+            <i class="nova-search"></i>
+          </a>
+
+          <form id="headerSearchForm" class="header-search input-group input-group-merge w-18_75rem w-md-22_5rem" action="#">
+            <input id="headerSearchField" class="header-search-input form-control form-control-append-icon" type="text" placeholder="Search">
+            <div class="input-group-append-merge focus-hide">
+              <i class="nova-search icon-text"></i>
+            </div>
+            <div class="input-group-append-merge focus-show">
+              <span id="headerSearchResultsClear">
+                <i class="nova-close icon-text"></i>
+              </span>
+            </div>
+
+            <div id="headerSearchResults" class="unfold unfold-light unfold-top unfold-centered position-absolute w-100 mt-3">
+              <div class="border-bottom px-3 px-md-4 py-3">
+                <h6 class="font-weight-semi-bold mb-3">Projects</h6>
+
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2">
+                    <a class="link-dark" href="#">Technical delivery call</a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="link-dark" href="#">R&D meeting</a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="link-dark" href="#">Discuss campaign performance</a>
+                  </li>
+                  <li class="mb-0">
+                    <a class="link-dark" href="#">SciFi Writing Group</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="border-bottom px-3 px-md-4 py-3">
+                <h6 class="font-weight-semi-bold mb-3">Projects</h6>
+
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2">
+                    <a class="link-dark media align-items-center" href="#">
+                      <img class="avatar rounded-circle mr-2" src="{% static 'img/100x100/img4.jpg' %}" width="40" alt="Image description">
+
+                      <div class="media-body">
+                        <h6 class="font-weight-semi-bold mb-0">Frances James</h6>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="link-dark media align-items-center" href="#">
+                      <img class="avatar rounded-circle mr-2" src="{% static 'img/100x100/img6.jpg' %}" width="40" alt="Image description">
+
+                      <div class="media-body">
+                        <h6 class="font-weight-semi-bold mb-0">Susie Gibbs</h6>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="link-dark media align-items-center" href="#">
+                      <img class="avatar rounded-circle mr-2" src="{% static 'img/100x100/img12.jpg' %}" width="40" alt="Image description">
+
+                      <div class="media-body">
+                        <h6 class="font-weight-semi-bold mb-0">Gertrude Ramsey</h6>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="px-3 px-md-4 py-3">
+                <a class="link" href="#">Show all (24) Results</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- End Header Search -->
+
+        <!-- Header Dropdown -->
+        <div class="dropdown ml-auto">
+          <a id="messagesInvoker" class="header-invoker" href="#" aria-controls="messages" aria-haspopup="true" aria-expanded="false"
+             data-unfold-event="click"
+             data-unfold-target="#messages"
+             data-unfold-type="css-animation"
+             data-unfold-duration="300"
+             data-unfold-animation-in="fadeIn"
+             data-unfold-animation-out="fadeOut">
+            <span class="indicator indicator-bordered indicator-top-right indicator-secondary rounded-circle"></span>
+            <i class="nova-email"></i>
+          </a>
+
+          <div id="messages" class="dropdown-menu dropdown-menu-center py-0 mt-4 w-18_75rem w-md-22_5rem" aria-labelledby="messagesInvoker">
+            <div class="card">
+              <div class="card-header d-flex align-items-center border-bottom py-3">
+                <h5 class="mb-0">Messages</h5>
+                <a class="link small ml-auto" href="#">View All</a>
+              </div>
+
+              <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <div class="media align-items-center">
+                      <div class="position-relative d-none d-md-block mr-2">
+                        <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-left indicator-success rounded-circle"></span>
+                        <img class="avatar-lg rounded-circle" src="../../assets/img/100x100/img4.jpg" alt="Image description">
+                      </div>
+
+                      <div class="media-body">
+                        <div class="d-flex">
+                          <h6 class="font-weight-semi-bold mb-0">Frances James</h6>
+                          <small class="text-muted ml-auto">just now</small>
+                        </div>
+
+                        <p class="text-truncate mb-0" style="max-width: 250px;">
+                          Reminder about your Appointment
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <div class="media align-items-center">
+                      <div class="position-relative d-none d-md-block mr-2">
+                        <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-left indicator-danger rounded-circle"></span>
+                        <img class="avatar-lg rounded-circle" src="../../assets/img/100x100/img8.jpg" alt="Image description">
+                      </div>
+
+                      <div class="media-body">
+                        <div class="d-flex">
+                          <h6 class="font-weight-semi-bold mb-0">Chad Ward</h6>
+                          <small class="text-muted ml-auto">an hour ago</small>
+                        </div>
+
+                        <p class="text-truncate mb-0" style="max-width: 250px;">
+                          If you could have any kind of pet, what would you choose?
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <div class="media align-items-center">
+                      <div class="position-relative d-none d-md-block mr-2">
+                        <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-left indicator-warning rounded-circle"></span>
+                        <img class="avatar-lg rounded-circle" src="../../assets/img/100x100/img5.jpg" alt="Image description">
+                      </div>
+
+                      <div class="media-body">
+                        <div class="d-flex">
+                          <h6 class="font-weight-semi-bold mb-0">Carolyn Carlson</h6>
+                          <small class="text-muted ml-auto">2 days ago</small>
+                        </div>
+
+                        <p class="text-truncate mb-0" style="max-width: 250px;">
+                          I won $500 million in the lottery, I quit!
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="list-group-item list-group-item-action" href="#">
+                    <div class="media align-items-center">
+                      <div class="position-relative d-none d-md-block mr-2">
+                        <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-left indicator-success rounded-circle"></span>
+                        <img class="avatar-lg rounded-circle" src="../../assets/img/100x100/img6.jpg" alt="Image description">
+                      </div>
+
+                      <div class="media-body">
+                        <div class="d-flex">
+                          <h6 class="font-weight-semi-bold mb-0">Lizzie Barber</h6>
+                          <small class="text-muted ml-auto">4 days ago</small>
+                        </div>
+
+                        <p class="text-truncate mb-0" style="max-width: 250px;">
+                          Spring fever.
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Dropdown -->
+
+        <!-- Header Dropdown -->
+        <div class="dropdown ml-2">
+          <a id="notificationsInvoker" class="header-invoker" href="#" aria-controls="notifications" aria-haspopup="true" aria-expanded="false"
+             data-unfold-event="click"
+             data-unfold-target="#notifications"
+             data-unfold-type="css-animation"
+             data-unfold-duration="300"
+             data-unfold-animation-in="fadeIn"
+             data-unfold-animation-out="fadeOut">
+            <span class="indicator indicator-bordered indicator-top-right indicator-primary rounded-circle"></span>
+            <i class="nova-bell"></i>
+          </a>
+
+          <div id="notifications" class="dropdown-menu dropdown-menu-center py-0 mt-4 w-18_75rem w-md-22_5rem" aria-labelledby="notificationsInvoker">
+            <div class="card">
+              <div class="card-header d-flex align-items-center border-bottom py-3">
+                <h5 class="mb-0">Notifications</h5>
+                <a class="link small ml-auto" href="#">Clear All</a>
+              </div>
+
+              <div class="card-body p-0">
+                <div class="list-group list-group-flush">
+                  <div class="list-group-item list-group-item-action">
+                    <div class="d-flex align-items-center text-nowrap mb-2">
+                      <i class="nova-star icon-text text-primary mr-2"></i>
+                      <h6 class="font-weight-semi-bold mb-0">Frances James</h6>
+                      <span class="list-group-item-date text-muted ml-auto">just now</span>
+                    </div>
+
+                    <p class="mb-0">
+                      Reminder about your Appointment.
+                    </p>
+                    <a class="list-group-item-closer text-muted" href="#"><i class="nova-close"></i></a>
+                  </div>
+
+                  <div class="list-group-item list-group-item-action">
+                    <div class="d-flex align-items-center text-nowrap mb-2">
+                      <i class="nova-twitter icon-text text-primary mr-2"></i>
+                      <h6 class="font-weight-semi-bold mb-0">Mollie Banks</h6>
+                      <span class="list-group-item-date text-muted ml-auto">an hour ago</span>
+                    </div>
+
+                    <p class="mb-0">
+                      You subscribed to local deals in Amsterdam
+                    </p>
+                    <a class="list-group-item-closer text-muted" href="#"><i class="nova-close"></i></a>
+                  </div>
+
+                  <div class="list-group-item list-group-item-action">
+                    <div class="d-flex align-items-center text-nowrap mb-2">
+                      <i class="nova-dropbox icon-text text-primary mr-2"></i>
+                      <h6 class="font-weight-semi-bold mb-0">File Sync</h6>
+                      <span class="list-group-item-date text-muted ml-auto">2 days ago</span>
+                    </div>
+
+                    <p class="mb-0">
+                      Subscription confirmed
+                    </p>
+                    <a class="list-group-item-closer text-muted" href="#"><i class="nova-close"></i></a>
+                  </div>
+
+                  <div class="list-group-item list-group-item-action">
+                    <div class="d-flex align-items-center text-nowrap mb-2">
+                      <i class="nova-dribbble icon-text text-primary mr-2"></i>
+                      <h6 class="font-weight-semi-bold mb-0">Cody Walters</h6>
+                      <span class="list-group-item-date text-muted ml-auto">4 days ago</span>
+                    </div>
+
+                    <p class="mb-0">
+                      Do you like roller coasters?
+                    </p>
+                    <a class="list-group-item-closer text-muted" href="#"><i class="nova-close"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Dropdown -->
+
+        <!-- Header User Dropdown -->
+        <div class="dropdown mx-3">
+          <a id="profileMenuInvoker" class="header-complex-invoker" href="#" aria-controls="profileMenu" aria-haspopup="true" aria-expanded="false"
+             data-unfold-event="click"
+             data-unfold-target="#profileMenu"
+             data-unfold-type="css-animation"
+             data-unfold-duration="300"
+             data-unfold-animation-in="fadeIn"
+             data-unfold-animation-out="fadeOut">
+            <img class="avatar rounded-circle mr-md-2" src="{% static 'img/100x100/img9.jpg' %}" alt="Image description">
+            <span class="d-none d-md-block">Shamaz Khan</span>
+            <i class="nova-angle-down d-none d-md-block ml-2"></i>
+          </a>
+
+          <ul id="profileMenu" class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute pt-2 pb-1 mt-4" aria-labelledby="profileMenuInvoker">
+            <li class="unfold-item">
+              <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                <span class="unfold-item-icon mr-3">
+                  <i class="nova-user"></i>
+                </span>
+                My Profile
+              </a>
+            </li>
+            <li class="unfold-item">
+              <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                <span class="unfold-item-icon mr-3">
+                  <i class="nova-cup"></i>
+                </span>
+                Upgrade Plan
+              </a>
+            </li>
+            <li class="unfold-item">
+              <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                <span class="unfold-item-icon mr-3">
+                  <i class="nova-folder"></i>
+                </span>
+                Latest Projects
+              </a>
+            </li>
+            <li class="unfold-item">
+              <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                <span class="unfold-item-icon mr-3">
+                  <i class="nova-book"></i>
+                </span>
+                Get Support
+              </a>
+            </li>
+            <li class="unfold-item unfold-item-has-divider">
+              <a class="unfold-link d-flex align-items-center text-nowrap" href="#">
+                <span class="unfold-item-icon mr-3">
+                  <i class="nova-power-off"></i>
+                </span>
+                Sign Out
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Header User Dropdown -->
+
+        <!-- Info Sidebar Toggle -->
+        <a id="activityInvoker" class="header-invoker" href="#" aria-controls="activity" aria-haspopup="true" aria-expanded="false"
+           data-unfold-event="click"
+           data-unfold-target="#activity"
+           data-unfold-type="css-animation"
+           data-unfold-animation-in="fadeInRight"
+           data-unfold-animation-out="fadeOutRight"
+           data-unfold-duration="300">
+          <i class="nova-align-right"></i>
+        </a>
+        <!-- End Info Sidebar Toggle -->
+
+        <!-- Info Sidebar -->
+        <div id="activity" class="js-custom-scroll sidebar sidebar-light sidebar-right sidebar-full-height unfold-css-animation unfold-hidden position-fixed" aria-labelledby="activityInvoker">
+          <div class="border-bottom d-flex align-items-center text-nowrap px-3 px-md-4 py-3">
+            <h5 class="mb-0">Activity</h5>
+            <a id="activityClose" class="text-muted small ml-auto" href="#" aria-controls="activity" aria-haspopup="true" aria-expanded="false"
+               data-unfold-event="click"
+               data-unfold-target="#activity"
+               data-unfold-type="css-animation"
+               data-unfold-animation-in="fadeInRight"
+               data-unfold-animation-out="fadeOutRight"
+               data-unfold-duration="300">
+              <i class="nova-close icon-text"></i>
+            </a>
+          </div>
+
+          <form>
+            <section class="border-bottom p-3 p-md-4">
+              <h6 class="d-none font-weight-semi-bold mb-0">Activity</h6>
+              <div class="row">
+                <div class="col-md-6">
+                  <select id="period" class="js-custom-select"
+                          data-width="auto"
+                          data-classes="custom-select-without-bordered">
+                    <option value="thisWeek">This Week</option>
+                    <option value="thisMonth">This Month</option>
+                    <option value="thisYear">This Year</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4 ml-auto text-md-right">
+                  <a class="link small" href="#">Show Report</a>
+                </div>
+              </div>
+
+              <div class="js-bar-chart transition-opacity-0_1" style="height: 219px; opacity: 0;"
+                   data-series="[
+                         [90,60,70,100,60,20,5]
+                       ]"
+                   data-labels='["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]'
+                   data-is-show-axis-x="false"
+                   data-is-show-axis-y="false"
+                   data-is-show-label-axis-x="true"
+                   data-is-show-label-axis-y="false"
+                   data-height="219"
+                   data-high="150"
+                   data-offset-axis-x="23"
+                   data-offset-axis-y="0"
+                   data-low="0"
+                   data-distance="52"
+                   data-stroke-width="40"
+                   data-mobile-stroke-width="30"
+                   data-stroke-color='["#8069f2"]'
+                   data-is-grid-solid-line="true"
+                   data-is-show-bar-labels="true"
+                   data-grid-line-color="#eeeef1"
+                   data-label-color-axis-x="#4a4e69"
+                   data-label-font-size-axis-x="14px"
+                   data-label-color-axis-y="#868e96"
+                   data-label-font-size-axis-y="14px"></div>
+            </section>
+
+            <section class="border-bottom p-3 p-md-4">
+              <div class="d-flex align-items-center mb-3">
+                <h6 class="font-weight-semi-bold mb-0">Most Active Traders</h6>
+                <a class="link small ml-auto" href="#">Show All</a>
+              </div>
+
+               <div class="d-flex">
+                <div class="position-relative mr-3">
+                  <span class="indicator indicator-success indicator-lg indicator-bordered-reverse indicator-top-left rounded-circle"></span>
+                  <img class="avatar-lg rounded-circle" src="{% static 'img/100x100/img11.jpg' %}" alt="Image description">
+                </div>
+
+                <div class="position-relative mr-3">
+                  <span class="indicator indicator-success indicator-lg indicator-bordered-reverse indicator-top-left rounded-circle"></span>
+                  <img class="avatar-lg rounded-circle" src="{% static 'img/100x100/img7.jpg' %}" alt="Image description">
+                </div>
+
+                <div class="position-relative">
+                  <span class="indicator indicator-success indicator-lg indicator-bordered-reverse indicator-top-left rounded-circle"></span>
+                  <img class="avatar-lg rounded-circle" src="{% static 'img/100x100/img10.jpg' %}" alt="Image description">
+                </div>
+              </div>
+            </section>
+
+            <section class="border-bottom p-3 p-md-4">
+              <div class="mb-3">
+                <h6 class="font-weight-semi-bold mb-0">Today</h6>
+              </div>
+
+              <div class="datepicker-inline position-relative mb-3">
+                <input id="headerRightSidebarDatepicker" type="text"
+                       data-rp-is-inline="true"
+                       data-rp-event-dates='["20180401", "20180403", "20180406"]'>
+              </div>
+
+              <div class="alert alert-dismissible alert-left-bordered border-primary bg-soft-primary d-flex align-items-center rounded-0 p-3 fade show" role="alert" style="margin-bottom: 1px;">
+                <i class="nova-alarm-clock icon-text text-primary mr-2"></i>
+                <span>Discuss project requirements</span>
+                <strong class="font-weight-semi-bold ml-auto">9:36pm</strong>
+              </div>
+
+              <div class="alert alert-dismissible alert-left-bordered border-warning bg-soft-warning d-flex align-items-center rounded-0 p-3 fade show" role="alert" style="margin-bottom: 1px;">
+                <i class="nova-pin-alt icon-text text-warning mr-2"></i>
+                <span>Secret Project presentation</span>
+                <strong class="font-weight-semi-bold ml-auto">6:50am</strong>
+              </div>
+
+              <div class="alert alert-dismissible alert-left-bordered border-success bg-soft-success d-flex align-items-center rounded-0 p-3 mb-3 fade show" role="alert">
+                <i class="nova-pin-alt icon-text text-success mr-2"></i>
+                <span>Discuss campaign performance</span>
+                <strong class="font-weight-semi-bold ml-auto">6:50am</strong>
+              </div>
+
+              <a class="btn btn-primary" href="#">Add New Event</a>
+            </section>
+
+            <section class="border-bottom p-3 p-md-4">
+              <div class="d-flex align-items-center mb-3">
+                <h6 class="font-weight-semi-bold mb-0">Projects</h6>
+                <a class="link small ml-auto" href="#">Show All</a>
+              </div>
+
+              <div id="headerProjects">
+                <div class="accordion accordion-bordered accordion-rounded mb-2">
+                  <div id="headerProjectsHeading1" class="accordion-header accordion-header-bordered-bottom p-0" aria-expanded="true" aria-controls="headerProjectsBody1"
+                       data-toggle="collapse"
+                       data-target="#headerProjectsBody1" role="region">
+                    <div class="accordion-icon accordion-icon-md position-relative text-white bg-success mr-2">
+                      <span class="font-weight-semi-bold text-white">D</span>
+                    </div>
+
+                    <h6 class="font-weight-semi-bold mb-0">Design Indaba Conference</h6>
+                    <i class="accordion-control nova-angle-down icon-text icon-text-xs ml-auto mr-3"></i>
+                  </div>
+
+                  <div id="headerProjectsBody1" class="collapse in show" aria-labelledby="headerProjectsHeading1"
+                       data-parent="#headerProjects">
+                    <div class="accordion-body px-3 pt-3 pt-md-4">
+                      <div class="form-check position-relative mb-2">
+
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck1" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck1">Visualize vertical interfaces</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+
+                       <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck2" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck2">Monetize B2B portals</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck3" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck3">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative">
+                      <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck4" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck4">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion accordion-bordered accordion-rounded mb-2">
+                  <div id="headerProjectsHeading2" class="accordion-header accordion-header-bordered-bottom p-0 collapsed" aria-expanded="false" aria-controls="headerProjectsBody2"
+                       data-toggle="collapse"
+                       data-target="#headerProjectsBody2" role="region">
+                    <div class="accordion-icon accordion-icon-md position-relative text-white bg-primary mr-2">
+                      <span class="font-weight-semi-bold text-white">O</span>
+                    </div>
+
+                    <h6 class="font-weight-semi-bold mb-0">OFFSET Dublin</h6>
+                    <i class="accordion-control nova-angle-down icon-text icon-text-xs ml-auto mr-3"></i>
+                  </div>
+
+                  <div id="headerProjectsBody2" class="collapse in" aria-labelledby="headerProjectsHeading2"
+                       data-parent="#headerProjects">
+                    <div class="accordion-body px-3 pt-3 pt-md-4">
+                      <div class="form-check position-relative mb-2">
+                       <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck5" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck5">Visualize vertical interfaces</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck6" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck6">Monetize B2B portals</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck7" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck7">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative">
+                       <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck8" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck8">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion accordion-bordered accordion-rounded mb-2">
+                  <div id="headerProjectsHeading3" class="accordion-header accordion-header-bordered-bottom p-0 collapsed" aria-expanded="false" aria-controls="headerProjectsBody3"
+                       data-toggle="collapse"
+                       data-target="#headerProjectsBody3" role="region">
+                    <div class="accordion-icon accordion-icon-md position-relative text-white bg-primary-darker mr-2">
+                      <span class="font-weight-semi-bold text-white">I</span>
+                    </div>
+
+                    <h6 class="font-weight-semi-bold mb-0">Interaction 17</h6>
+                    <i class="accordion-control nova-angle-down icon-text icon-text-xs ml-auto mr-3"></i>
+                  </div>
+
+                  <div id="headerProjectsBody3" class="collapse in" aria-labelledby="headerProjectsHeading3"
+                       data-parent="#headerProjects">
+                    <div class="accordion-body px-3 pt-3 pt-md-4">
+                      <div class="form-check position-relative mb-2">
+                         <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck9" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck9">Visualize vertical interfaces</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck10" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck10">Monetize B2B portals</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                       <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck11" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck11">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck12" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck12">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion accordion-bordered accordion-rounded">
+                  <div id="headerProjectsHeading4" class="accordion-header accordion-header-bordered-bottom p-0 collapsed" aria-expanded="false" aria-controls="headerProjectsBody4"
+                       data-toggle="collapse"
+                       data-target="#headerProjectsBody4" role="region">
+                    <div class="accordion-icon accordion-icon-md position-relative text-white bg-warning mr-2">
+                      <span class="font-weight-semi-bold text-white">S</span>
+                    </div>
+
+                    <h6 class="font-weight-semi-bold mb-0">Salone del Mobile Milano</h6>
+                    <i class="accordion-control nova-angle-down icon-text icon-text-xs ml-auto mr-3"></i>
+                  </div>
+
+                  <div id="headerProjectsBody4" class="collapse in" aria-labelledby="headerProjectsHeading4"
+                       data-parent="#headerProjects">
+                    <div class="accordion-body px-3 pt-3 pt-md-4">
+                      <div class="form-check position-relative mb-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck13" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck13">Visualize vertical interfaces</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                         <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck14" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck14">Monetize B2B portals</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative mb-2">
+                       <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck15" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck15">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+
+                      <div class="form-check position-relative">
+                       <div class="custom-control custom-checkbox">
+                          <input type="checkbox" id="headerProjectsCheck16" class="custom-control-input">
+                          <label class="custom-control-label" for="headerProjectsCheck16">Repurpose viral metrics</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </form>
+        </div>
+        <!-- End Info Sidebar -->
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- End Header -->
+
+<main class="main">
+  <!-- Sidebar Nav -->
+  <aside id="sidebar" class="js-custom-scroll side-nav">
+    <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+      <!-- Sidebar Sub Title -->
+      <li class="sidebar-heading h6">Dashboards</li>
+      <!-- End Sidebar Sub Title -->
+
+      <!-- Dashboards -->
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="{% url 'MVP:demo' %}">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-dashboard"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Dashboard</span>
+        </a>
+      </li>
+      <!-- End Dashboards -->
+
+      <!-- ICO Distribution Admin -->
+
+
+      <!-- Buy and Sell -->
+      <li class="side-nav-menu-item active">
+        <a class="side-nav-menu-link media align-items-center" href="{% url 'MVP:backtester' %}">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-stats-up"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Backtester</span>
+        </a>
+      </li>
+      <!-- End Buy and Sell -->
+      <!-- End ICO Distribution Admin -->
+
+      <!-- ICO Distribution User -->
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="{% url 'MVP:trader' %}">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-user"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Trader</span>
+        </a>
+      </li>
+      <!-- End ICO Distribution User -->
+
+      <!-- Payment -->
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="{% url 'MVP:billing' %}">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-wallet"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Payment</span>
+        </a>
+      </li>
+      <!-- Payment -->
+
+<!--      &lt;!&ndash; Sidebar Sub Title &ndash;&gt;-->
+<!--      <li class="sidebar-heading h6">Actions</li>-->
+<!--      &lt;!&ndash; End Sidebar Sub Title &ndash;&gt;-->
+
+<!--      &lt;!&ndash; Buy and Sell &ndash;&gt;-->
+
+<!--        <a class="side-nav-menu-link media align-items-center" href="{% url 'MVP:backtester' %}">-->
+<!--          <span class="side-nav-menu-icon d-flex mr-3">-->
+<!--            <i class="nova-stats-up"></i>-->
+<!--          </span>-->
+<!--          <span class="side-nav-fadeout-on-closed media-body">Pattern Recognition</span>-->
+<!--        </a>-->
+
+<!--      &lt;!&ndash; End Buy and Sell &ndash;&gt;-->
+
+<!--      &lt;!&ndash; My Wallet &ndash;&gt;-->
+<!--      <li class="side-nav-menu-item">-->
+<!--        <a class="side-nav-menu-link media align-items-center" href="">-->
+<!--          <span class="side-nav-menu-icon d-flex mr-3">-->
+<!--            <i class="nova-wallet"></i>-->
+<!--          </span>-->
+<!--          <span class="side-nav-fadeout-on-closed media-body">Stock Screener</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      &lt;!&ndash; End My Wallet &ndash;&gt;-->
+
+<!--      &lt;!&ndash; Affiliate Program &ndash;&gt;-->
+<!--      <li class="side-nav-menu-item">-->
+<!--        <a class="side-nav-menu-link media align-items-center" href="../../demo-crypto/actions/affiliate-program.html">-->
+<!--          <span class="side-nav-menu-icon d-flex mr-3">-->
+<!--            <i class="nova-announcement"></i>-->
+<!--          </span>-->
+<!--          <span class="side-nav-fadeout-on-closed media-body">Fundamental Analysis</span>-->
+<!--        </a>-->
+<!--      </li>-->
+
+<!--      &lt;!&ndash; Affiliate Program &ndash;&gt;-->
+<!--      <li class="side-nav-menu-item">-->
+<!--        <a class="side-nav-menu-link media align-items-center" href="../../demo-crypto/actions/affiliate-program.html">-->
+<!--          <span class="side-nav-menu-icon d-flex mr-3">-->
+<!--            <i class="nova-announcement"></i>-->
+<!--          </span>-->
+<!--          <span class="side-nav-fadeout-on-closed media-body">Sentiment Analysis</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      &lt;!&ndash; End Affiliate Program &ndash;&gt;-->
+
+      <!-- Sidebar Sub Title -->
+      <li class="sidebar-heading h6">Settings</li>
+      <!-- End Sidebar Sub Title -->
+
+      <!-- Settings -->
+      <li class="side-nav-menu-item side-nav-has-menu">
+        <a class="side-nav-menu-link media align-items-center" href="#"
+           data-target="#subMenuSettings">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-settings"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Account Settings</span>
+          <span class="side-nav-control-icon d-flex">
+            <i class="nova-angle-right side-nav-fadeout-on-closed"></i>
+          </span>
+          <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+        </a>
+
+        <ul id="subMenuSettings" class="side-nav-menu side-nav-menu-second-level mb-0">
+          <li class="side-nav-menu-item">
+            <a class="side-nav-menu-link" href="{% url 'MVP:myprofile' %}">My Profile</a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="side-nav-menu-link" href="{% url 'MVP:preferences' %}">Preferences</a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="side-nav-menu-link" href="{% url 'MVP:security' %}">Security</a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="side-nav-menu-link" href="{% url 'MVP:linkedaccounts' %}">Linked Accounts</a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="side-nav-menu-link" href="{% url 'MVP:apiaccess' %}">API Access</a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="side-nav-menu-link" href="{% url 'MVP:limits' %}">Limits</a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Settings -->
+
+      <!-- Sidebar Sub Title -->
+      <li class="sidebar-heading h6">API Documentation</li>
+      <!-- End Sidebar Sub Title -->
+
+      <!-- UI Kit Components -->
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" data-toggle="tooltip" data-placement="right" title="To be Launched soon" href="">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-file"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Data API</span>
+        </a>
+      </li>
+      <!-- End UI Kit Components -->
+
+
+      <!-- Crypto API -->
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" data-toggle="tooltip" data-placement="right" title="To be Launched soon" href="">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="nova-file"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body" >Crypto API</span>
+        </a>
+      </li>
+      <!-- Crypto API -->
+    </ul>
+  </aside>
+  <!-- End Sidebar Nav -->
+
+  <div class="content">
+    <div class="py-4 px-3 px-md-4">
+
+      <div class="row align-items-center mb-3 mb-md-5">
+        <div class="col-md mb-2 mb-md-0">
+          <h1 class="h3 mb-0">Alpha Marketplace</h1>
+        </div>
+
+        <div class="col-md ml-md-auto text-md-right">
+          <a class="btn btn-primary" href="#">Submit Strategy</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-xl-4 mb-3 mb-xl-5">
+          <!-- Card -->
+          <div class="card flex-row align-items-center p-3 p-md-4">
+
+            <div>
+              <h4 class="lh-1 mb-1">5,743</h4>
+              <div class="d-flex align-items-center">
+                    <span>Strategies Tested </span>
+                    <span class="indicator indicator-sm indicator-primary rounded-circle ml-2"></span>
+                  </div>
+            </div>
+            <div class="d-flex ml-auto align-items-center text-danger">
+              <span class="mr-1">-3,91%</span>
+              <i class="nova-arrow-down icon-text icon-text-xs"></i>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+
+        <div class="col-md-6 col-xl-4 mb-3 mb-xl-5">
+          <!-- Card -->
+          <div class="card flex-row align-items-center p-3 p-md-4">
+
+            <div>
+              <h4 class="lh-1 mb-1">4,423</h4>
+              <div class="d-flex align-items-center">
+                    <span>Strategies Deployed</span>
+                    <span class="indicator indicator-sm indicator-warning rounded-circle ml-2"></span>
+              </div>
+            </div>
+            <div class="d-flex ml-auto align-items-center text-danger">
+              <span class="mr-1">-4.13%</span>
+              <i class="nova-arrow-down icon-text icon-text-xs"></i>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+
+        <div class="col-md-6 col-xl-4 mb-3 mb-xl-5">
+          <!-- Card -->
+          <div class="card flex-row align-items-center p-3 p-md-4">
+
+            <div>
+              <h4 class="lh-1 mb-1">5,743</h4>
+              <div class="d-flex align-items-center">
+                    <span>Success Rate</span>
+                    <span class="indicator indicator-sm indicator-danger rounded-circle ml-2"></span>
+              </div>
+            </div>
+            <div class="d-flex ml-auto align-items-center text-success">
+              <span class="mr-1">+3.91%</span>
+              <i class="nova-arrow-up icon-text icon-text-xs"></i>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+      </div>
+<!--      Add Strategy Real Time Dynamic Plot Here-->
+
+
+        <div class="col-md-1 col-xl-12 mb-2 mb-md-5">
+          <!-- Card -->
+          <div class="card h-100">
+            <div class="card-header d-flex">
+              <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">Strategy Equity (Real Time)</h5>
+              <div class="position-relative ml-auto">
+                <a id="dropDown5Invoker_1" class="unfold-invoker d-flex text-muted" href="#"
+                   aria-controls="dropDown5" aria-haspopup="true" aria-expanded="false"
+                   data-unfold-target="#dropDown5"
+                   data-unfold-event="click"
+                   data-unfold-type="css-animation"
+                   data-unfold-duration="300"
+                   data-unfold-animation-in="fadeIn"
+                   data-unfold-animation-out="fadeOut">
+                  <i class="nova-more"></i>
+                </a>
+
+                <ul id="dropDown5" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-3" aria-labelledby="dropDown5Invoker" style="min-width: 150px;">
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-plus unfold-item-icon mr-3"></i>
+                      <span class="media-body">Add</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-pencil unfold-item-icon mr-3"></i>
+                      <span class="media-body">Edit</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-shortcode unfold-item-icon mr-3"></i>
+                      <span class="media-body">Rename</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-close unfold-item-icon mr-3"></i>
+                      <span class="media-body">Delete</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card-body p-0">
+              <div class="media align-items-center px-3 px-md-4 mb-3 mb-md-4">
+                <div class="media-body">
+
+                  <p class="small text-muted mb-0">
+                    -$570.5 <span class="text-danger mx-1">-18%</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="js-area-chart chart chart--axis-x chart--points-invisible position-relative chart--labels-hidden"
+                   data-series='[
+                             [
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"42"},
+                               {"meta":"Bitcoin","value":"45"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"90"},
+                               {"meta":"Bitcoin","value":"90"},
+                               {"meta":"Bitcoin","value":"100"},
+                               {"meta":"Bitcoin","value":"100"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"42"},
+                               {"meta":"Bitcoin","value":"45"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"40"}
+                             ]
+                           ]'
+                   data-height="115"
+                   data-high="115"
+                   data-is-line-smooth='[false]'
+                   data-line-width='["1px"]'
+                   data-line-colors='["#8069f2"]'
+                   data-fill-opacity=".3"
+                   data-is-fill-colors-gradient="true"
+                   data-fill-colors='[
+                             ["rgba(128,105,242,.7)","rgba(255,255,255,.6)"]
+                           ]'
+                   data-is-show-tooltips="true"
+                   data-is-tooltips-append-to-body="true"
+                   data-tooltip-custom-class="chart-tooltip chart-tooltip--sections-blocked chart-tooltip__meta--text-muted small text-white p-2"
+                   data-tooltip-currency="USD "
+                   data-is-show-points="true"
+                   data-point-custom-class='chart__point--donut chart__point--border-xxs border-primary rounded-circle'
+                   data-point-dimensions='{"width":8,"height":8}'></div>
+
+              <div class="media d-print-none align-items-center p-3 p-md-4">
+
+                <a class="link link-dark d-flex small ml-auto" href="#">
+                  <i class="nova-split-h icon-text"></i>
+                </a>
+                <a class="link link-dark d-flex small ml-4" href="#">
+                  <i class="nova-star icon-text"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+
+      <!-- Strategies List Card -->
+      <div class="card mb-3 mb-md-4">
+        <div class="card-header">
+          <h5 class="h6 text-uppercase font-weight-semi-bold mb-0">Strategy & Alpha Library - Browse Alphas to License</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="row align-items-center d-print-none px-3 px-md-4 pb-1">
+            <div class="col-md-auto d-flex align-items-center">
+              <span class="text-muted mr-2">Show:</span>
+
+              <select id="datatableEntries" class="js-custom-select"
+                      data-classes="custom-select-without-bordered">
+                <option value="6" selected>6 entries</option>
+                <option value="12">12 entries</option>
+                <option value="18">18 entries</option>
+                <option value="24">24 entries</option>
+              </select>
+            </div>
+
+            <div class="col-md-auto ml-md-auto">
+              <div class="input-group input-group-merge">
+                <div class="input-group-append-merge">
+                  <i class="nova-search icon-text"></i>
+                </div>
+                <input id="datatableSearch" class="form-control bg-lighter border-0 form-control-append-icon" placeholder="Enter search term" type="text">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive datatable">
+            <table class="js-datatable card-table text-nowrap"
+                   data-dt-info="#datatableInfo"
+                   data-dt-search="#datatableSearch"
+                   data-dt-entries="#datatableEntries"
+                   data-dt-is-show-paging="true"
+                   data-dt-pagination="datatablePagination"
+                   data-dt-page-length="6"
+                   data-dt-is-responsive="false"
+                   data-dt-pagination-classes="pagination justify-content-end font-weight-semi-bold mb-0"
+                   data-dt-pagination-items-classes="page-item d-none d-md-block"
+                   data-dt-pagination-links-classes="page-link"
+                   data-dt-pagination-next-classes="page-item"
+                   data-dt-pagination-next-link-classes="page-link"
+                   data-dt-pagination-next-link-markup='<i class="nova-angle-right icon-text icon-text-xs d-inline-block"></i>'
+                   data-dt-pagination-prev-classes="page-item"
+                   data-dt-pagination-prev-link-classes="page-link"
+                   data-dt-pagination-prev-link-markup='<i class="nova-angle-left icon-text icon-text-xs d-inline-block"></i>'>
+              <thead>
+              <tr class="small text-muted">
+                <th class="font-weight-normal py-3">Alpha Name</th>
+                <th class="font-weight-normal py-3">Report</th>
+                <th class="font-weight-normal py-3">Price</th>
+                <th class="font-weight-normal py-3">Add to Cart</th>
+                <th class="font-weight-normal py-3">Score</th>
+                <th class="font-weight-normal py-3">PSR</th>
+                <th class="font-weight-normal py-3">Sharpe</th>
+                <th class="font-weight-normal py-3">Drawdown</th>
+                <th class="font-weight-normal py-3">Assets</th>
+                <th class="font-weight-normal py-3">Live</th>
+                <th class="font-weight-normal py-3">Action</th>
+                <th class="font-weight-normal py-3">Action</th>
+                <th class="font-weight-normal py-3">Capital Requirement</th>
+                <th class="font-weight-normal py-3">Information Ratio</th>
+                <th class="font-weight-normal py-3">Confidence Level</th>
+                <th class="font-weight-normal text-center py-3 d-print-none">CAGR</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="py-3">
+                  <span class="d-none">1</span>
+                 <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="This strategy works on pattern recognition and acts as a hedge in bear market. It scans 3 major indices decline, when the trendline is broken short position is taken as a hedge. ">
+                  Directional Hedge
+                </button>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-warning" href="#">PDF</a>
+                </td>
+                <td class="py-3">$10</td>
+                <td class="py-3">
+                  <button type="button" class="btn btn-primary btn-sm mb-2 mr-2">
+                  <span class="align-middle">Add to cart</span>
+                  <i class="nova-shopping-cart-full icon-text align-middle ml-3"></i>
+                </td>
+                </button>
+                <td class="py-3">48.55854515</td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">449.967</strong>
+                  <small class="text-muted">$0.10</small>
+                </td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">47.00321779</strong>
+                  <small class="text-muted">$12,298,672</small>
+                </td>
+                <td class="py-3 text-danger">
+                  <strong class="d-block font-weight-normal">53.67110896</strong>
+                  <small class="opacity-md">$30,155,735</small>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">96.85512405</strong>
+                  <small class="opacity-md">SPY, QQQ, IWO</small>
+                </td>
+                <td class="py-3 text-success">
+                  <strong class="d-block font-weight-normal">19.72458554</strong>
+                  <small class="opacity-md">$22,053,195</small>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-light" href="#">Backtest</a>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-dark" href="#">Trade</a>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">$10,000</strong>
+                </td>
+                <td class="py-3">0.65</td>
+                <td class="py-3">65%</td>
+                <td class="py-3">26%</td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="d-none">2</span>
+                 <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="OBV is a strategy that trades asset classes with negative correlation and positive returns (stocks and bonds). Bull-Bear mode is controlled by the On Balance Volume Indicator. Focused on investors looking for positive Information ratio, high PSR, reasonable Sharpe ratio, volatility and drawdown. There is protection against maximum drawdown, which liquidates all positions when triggered for a period of cooling, after which trading resumes.">
+                  OBV Trade
+                </button>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-warning" href="#">PDF</a>
+                </td>
+                <td class="py-3">$10</td>
+                <td class="py-3">
+                  <button type="button" class="btn btn-primary btn-sm mb-2 mr-2">
+                  <span class="align-middle">Add to cart</span>
+                  <i class="nova-shopping-cart-full icon-text align-middle ml-3"></i>
+                </td>
+                </button>
+                <td class="py-3">48.55854515</td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">769.301</strong>
+                  <small class="text-muted">$0.10</small>
+                </td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">45.00688408</strong>
+                  <small class="text-muted">$33,120,156</small>
+                </td>
+                <td class="py-3 text-danger">
+                  <strong class="d-block font-weight-normal">51.37647812</strong>
+                  <small class="opacity-md">$32,913,494</small>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">59.77027151</strong>
+                  <small class="opacity-md">Multi Asset Class</small>
+                </td>
+                <td class="py-3 text-success">
+                  <strong class="d-block font-weight-normal">50.69773615</strong>
+                  <small class="opacity-md">$11,337,181</small>
+                </td>
+                 <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-light" href="#">Backtest</a>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-dark" href="#">Trade</a>
+                </td>
+                 <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">$10,000</strong>
+                </td>
+                <td class="py-3">0.91</td>
+                <td class="py-3">81%</td>
+                <td class="py-3">36%</td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="d-none">3</span>
+                 <button type="button" class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title=" strategy, which trades S&P 500 as a main instrument as well as other pre-selected ETFs. Furthermore the portfolio is hedged with 7-10 yrs. Treasury Bond ETF. An insight contains following important values: source-model, ticker, direction, period (sec.), magnitude (magnitude% = magnitude x 100), confidence and weight.">
+                  ETF Hedger
+                </button>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-warning" href="#">PDF</a>
+                </td>
+                <td class="py-3">$10</td>
+                <td class="py-3">
+                  <button type="button" class="btn btn-primary btn-sm mb-2 mr-2">
+                  <span class="align-middle">Add to cart</span>
+                  <i class="nova-shopping-cart-full icon-text align-middle ml-3"></i>
+                </td>
+                </button>
+                <td class="py-3">48.55854515</td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">192.961</strong>
+                  <small class="text-muted">$0.10</small>
+                </td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">96.45717132</strong>
+                  <small class="text-muted">$22,614,994</small>
+                </td>
+                <td class="py-3 text-danger">
+                  <strong class="d-block font-weight-normal">64.42401955</strong>
+                  <small class="opacity-md">$11,400,178</small>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">17.64343402</strong>
+                  <small class="opacity-md">SPY</small>
+                </td>
+                <td class="py-3 text-success">
+                  <strong class="d-block font-weight-normal">61.34061468</strong>
+                  <small class="opacity-md">$26,683,189</small>
+                </td>
+                 <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-light" href="#">Backtest</a>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-dark" href="#">Trade</a>
+                </td>
+                 <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">$10,000</strong>
+                </td>
+                <td class="py-3">-0.22</td>
+                <td class="py-3">36%</td>
+                <td class="py-3">16%</td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="d-none">4</span>
+                  <class class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="This alpha model emits predictions of the level of CBOE VIX directional movement in the future. VIX is a weak predictor of future SPX volatility and SPX shows strong predictive power of the future level of VIX. This model uses the SPY price movements as a factor to predict VIX, past SPY prices are fractionally differentiated to the minimum order that generates an statistically significant stationary time series. Predictions are generated by a random forest model, hyperparametrized using a grid search and using self defined features using recurrent feature elimination. The model has no-hard coded hyperparameters and selects new hyperparameters and features autonomously every training cycle. VIXY holdings are hedged with uncorrelated ETFs: SPY, TLT and GLD.">
+                  ML Volatility Predictor
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-warning" href="#">PDF</a>
+                </td>
+                <td class="py-3">$10</td>
+                <td class="py-3">
+                  <button type="button" class="btn btn-primary btn-sm mb-2 mr-2">
+                  <span class="align-middle">Add to cart</span>
+                  <i class="nova-shopping-cart-full icon-text align-middle ml-3"></i>
+                </td>
+                </button>
+                <td class="py-3">48.55854515</td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">197.605</strong>
+                  <small class="text-muted">$0.10</small>
+                </td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">82.61781182</strong>
+                  <small class="text-muted">$26,972,377</small>
+                </td>
+                <td class="py-3 text-danger">
+                  <strong class="d-block font-weight-normal">24.71302308</strong>
+                  <small class="opacity-md">$36,311,899</small>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">41.16207352</strong>
+                  <small class="opacity-md">TLT, SPY, GLD & VIXY</small>
+                </td>
+                <td class="py-3 text-success">
+                  <strong class="d-block font-weight-normal">85.73681804</strong>
+                  <small class="opacity-md">$37,218,922</small>
+                </td>
+                 <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-light" href="#">Backtest</a>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-dark" href="#">Trade</a>
+                </td>
+                 <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">$10,000</strong>
+                </td>
+                <td class="py-3">0.11</td>
+                <td class="py-3">29%</td>
+                <td class="py-3">18%</td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="d-none">5</span>
+                  <class class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="This alpha uses a voting mechanism to combine the 'trendiness' on different time scales, and goes long only when trend and recent rolling skew agree, plus a tactical VIX-related ETF's overlay. Position weights are examined daily.">
+                  SPY-TLT Switching Algorithm
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-warning" href="#">PDF</a>
+                </td>
+                <td class="py-3">$10</td>
+                <td class="py-3">
+                  <button type="button" class="btn btn-primary btn-sm mb-2 mr-2">
+                  <span class="align-middle">Add to cart</span>
+                  <i class="nova-shopping-cart-full icon-text align-middle ml-3"></i>
+                </td>
+                </button>
+                <td class="py-3">48.55854515</td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">323.971</strong>
+                  <small class="text-muted">$0.10</small>
+                </td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">38.37912846</strong>
+                  <small class="text-muted">$22,955,238</small>
+                </td>
+                <td class="py-3 text-danger">
+                  <strong class="d-block font-weight-normal">31.78857387</strong>
+                  <small class="opacity-md">$19,847,754</small>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">82.45579487</strong>
+                  <small class="opacity-md">SPY, TLT</small>
+                </td>
+                <td class="py-3 text-success">
+                  <strong class="d-block font-weight-normal">96.15421870</strong>
+                  <small class="opacity-md">$17,485,402</small>
+                </td>
+                 <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-light" href="#">Backtest</a>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-dark" href="#">Trade</a>
+                </td>
+                 <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">$10,000</strong>
+                </td>
+                <td class="py-3">0.77</td>
+                <td class="py-3">16%</td>
+                <td class="py-3">26%</td>
+              </tr>
+              <tr>
+                <td class="py-3">
+                  <span class="d-none">6</span>
+                  <class class="btn btn-secondary btn-sm" data-toggle="tooltip" data-placement="right" title="This is a very simple momentum based indicator with the goal of having a similar return to the market in general while spending less time actually invested. As such this is a long only alpha.">
+                  Simple Momentum Indicator
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-warning" href="#">PDF</a>
+                </td>
+                <td class="py-3">$10</td>
+                <td class="py-3">
+                  <button type="button" class="btn btn-primary btn-sm mb-2 mr-2">
+                  <span class="align-middle">Add to cart</span>
+                  <i class="nova-shopping-cart-full icon-text align-middle ml-3"></i>
+                </td>
+                </button>
+                <td class="py-3">48.55854515</td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">486.625</strong>
+                  <small class="text-muted">$0.10</small>
+                </td>
+                <td class="py-3">
+                  <strong class="d-block font-weight-normal">39.09896217</strong>
+                  <small class="text-muted">$31,103,664</small>
+                </td>
+                <td class="py-3 text-danger">
+                  <strong class="d-block font-weight-normal">90.68647228</strong>
+                  <small class="opacity-md">$30,479,950</small>
+                </td>
+                <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">94.04640426</strong>
+                  <small class="opacity-md">Multi Asset Class</small>
+                </td>
+                <td class="py-3 text-success">
+                  <strong class="d-block font-weight-normal">54.34809304</strong>
+                  <small class="opacity-md">$26,140,134</small>
+                </td>
+                  <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-light" href="#">Backtest</a>
+                </td>
+                <td class="py-3 text-right d-print-none">
+                  <a class="badge badge-pill badge-dark" href="#">Trade</a>
+                </td>
+                 <td class="py-3 text-primary">
+                  <strong class="d-block font-weight-normal">$10,000</strong>
+                </td>
+                <td class="py-3">-0.15</td>
+                <td class="py-3">76%</td>
+                <td class="py-3">22%</td>
+              </tr>
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">7</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/bitcoin.svg' %}" alt="Bitcoin">-->
+<!--                  Bitcoin-->
+<!--                </td>-->
+<!--                <td class="py-3">60.55184164</td>-->
+<!--                <td class="py-3">67.02037568</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">453.828</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">47.05594856</strong>-->
+<!--                  <small class="text-muted">$11,978,584</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">49.81290006</strong>-->
+<!--                  <small class="opacity-md">$37,573,357</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">55.48246369</strong>-->
+<!--                  <small class="opacity-md">$38,555,781</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">77.61239578</strong>-->
+<!--                  <small class="opacity-md">$14,017,165</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">8</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/ethereum.svg' %}" alt="Ethereum">-->
+<!--                  Ethereum-->
+<!--                </td>-->
+<!--                <td class="py-3">63.57477133</td>-->
+<!--                <td class="py-3">53.79832165</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">458.021</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">44.64972813</strong>-->
+<!--                  <small class="text-muted">$20,843,624</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">49.89829196</strong>-->
+<!--                  <small class="opacity-md">$35,009,643</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">40.26147306</strong>-->
+<!--                  <small class="opacity-md">$11,954,647</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">75.79807441</strong>-->
+<!--                  <small class="opacity-md">$28,400,876</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">9</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/neo.svg' %}" alt="NEO">-->
+<!--                  NEO-->
+<!--                </td>-->
+<!--                <td class="py-3">75.06448512</td>-->
+<!--                <td class="py-3">18.80946494</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">332.520</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">81.18965816</strong>-->
+<!--                  <small class="text-muted">$39,385,697</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">27.33331967</strong>-->
+<!--                  <small class="opacity-md">$27,842,968</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">69.23976799</strong>-->
+<!--                  <small class="opacity-md">$11,805,545</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">93.66276024</strong>-->
+<!--                  <small class="opacity-md">$16,753,786</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">10</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/bitcoin-cash.svg' %}" alt="BitCash">-->
+<!--                  BitCash-->
+<!--                </td>-->
+<!--                <td class="py-3">74.47851272</td>-->
+<!--                <td class="py-3">49.37514483</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">589.476</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">16.34231720</strong>-->
+<!--                  <small class="text-muted">$33,265,318</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">23.87338773</strong>-->
+<!--                  <small class="opacity-md">$34,023,448</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">53.88978953</strong>-->
+<!--                  <small class="opacity-md">$37,713,080</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">40.84214117</strong>-->
+<!--                  <small class="opacity-md">$14,425,378</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">11</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/cardano.svg' %}" alt="Cardano">-->
+<!--                  Cardano-->
+<!--                </td>-->
+<!--                <td class="py-3">87.13853042</td>-->
+<!--                <td class="py-3">34.19377424</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">401.394</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">87.24634379</strong>-->
+<!--                  <small class="text-muted">$22,992,545</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">22.36344070</strong>-->
+<!--                  <small class="opacity-md">$32,628,935</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">96.42697984</strong>-->
+<!--                  <small class="opacity-md">$39,773,949</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">29.25149130</strong>-->
+<!--                  <small class="opacity-md">$24,432,342</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">12</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'assets/svg/crypto/eos.svg' %}" alt="EOS">-->
+<!--                  EOS-->
+<!--                </td>-->
+<!--                <td class="py-3">89.38560943</td>-->
+<!--                <td class="py-3">92.10945388</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">185.942</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">74.86863160</strong>-->
+<!--                  <small class="text-muted">$25,117,498</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">76.66839908</strong>-->
+<!--                  <small class="opacity-md">$38,323,520</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">44.87699767</strong>-->
+<!--                  <small class="opacity-md">$12,288,452</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">55.21259156</strong>-->
+<!--                  <small class="opacity-md">$12,924,452</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">13</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/bitcoin.svg' %}" alt="Bitcoin">-->
+<!--                  Bitcoin-->
+<!--                </td>-->
+<!--                <td class="py-3">43.77467179</td>-->
+<!--                <td class="py-3">71.54496364</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">592.263</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">36.50570909</strong>-->
+<!--                  <small class="text-muted">$38,186,286</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">86.93651338</strong>-->
+<!--                  <small class="opacity-md">$12,837,481</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">65.20660892</strong>-->
+<!--                  <small class="opacity-md">$36,751,426</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">76.20705408</strong>-->
+<!--                  <small class="opacity-md">$20,246,646</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">14</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/ethereum.svg' %}" alt="Ethereum">-->
+<!--                  Ethereum-->
+<!--                </td>-->
+<!--                <td class="py-3">22.05892963</td>-->
+<!--                <td class="py-3">15.14057503</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">812.914</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">84.88112594</strong>-->
+<!--                  <small class="text-muted">$22,870,590</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">63.07768219</strong>-->
+<!--                  <small class="opacity-md">$36,290,500</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">25.87511556</strong>-->
+<!--                  <small class="opacity-md">$25,486,104</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">33.42853627</strong>-->
+<!--                  <small class="opacity-md">$17,937,995</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">15</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/neo.svg' %}" alt="NEO">-->
+<!--                  NEO-->
+<!--                </td>-->
+<!--                <td class="py-3">28.59017737</td>-->
+<!--                <td class="py-3">35.92295033</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">629.976</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">71.75444580</strong>-->
+<!--                  <small class="text-muted">$11,806,114</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">24.38635027</strong>-->
+<!--                  <small class="opacity-md">$31,911,354</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">94.33994046</strong>-->
+<!--                  <small class="opacity-md">$14,930,732</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">29.57218023</strong>-->
+<!--                  <small class="opacity-md">$21,263,267</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">16</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/bitcoin-cash.svg' %}" alt="BitCash">-->
+<!--                  BitCash-->
+<!--                </td>-->
+<!--                <td class="py-3">61.15887874</td>-->
+<!--                <td class="py-3">44.46728644</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">604.039</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">77.50527464</strong>-->
+<!--                  <small class="text-muted">$24,506,753</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">35.97567767</strong>-->
+<!--                  <small class="opacity-md">$15,200,009</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">75.16107953</strong>-->
+<!--                  <small class="opacity-md">$18,909,555</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">95.66094374</strong>-->
+<!--                  <small class="opacity-md">$11,893,117</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">17</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/cardano.svg' %}" alt="Cardano">-->
+<!--                  Cardano-->
+<!--                </td>-->
+<!--                <td class="py-3">22.85468224</td>-->
+<!--                <td class="py-3">25.72330956</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">740.996</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">47.13760845</strong>-->
+<!--                  <small class="text-muted">$18,813,384</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">80.95833721</strong>-->
+<!--                  <small class="opacity-md">$12,716,061</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">70.50581108</strong>-->
+<!--                  <small class="opacity-md">$22,519,379</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">85.11409970</strong>-->
+<!--                  <small class="opacity-md">$10,943,106</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">18</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/eos.svg' %}" alt="EOS">-->
+<!--                  EOS-->
+<!--                </td>-->
+<!--                <td class="py-3">93.41815371</td>-->
+<!--                <td class="py-3">78.83888108</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">149.013</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">15.89631628</strong>-->
+<!--                  <small class="text-muted">$34,721,547</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">81.34457958</strong>-->
+<!--                  <small class="opacity-md">$26,682,173</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">16.29221825</strong>-->
+<!--                  <small class="opacity-md">$21,129,416</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">63.90978642</strong>-->
+<!--                  <small class="opacity-md">$14,373,926</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">19</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/bitcoin.svg' %}" alt="Bitcoin">-->
+<!--                  Bitcoin-->
+<!--                </td>-->
+<!--                <td class="py-3">57.96426372</td>-->
+<!--                <td class="py-3">81.22261521</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">616.616</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">68.55660636</strong>-->
+<!--                  <small class="text-muted">$37,546,248</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">84.00086266</strong>-->
+<!--                  <small class="opacity-md">$22,708,446</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">63.48188438</strong>-->
+<!--                  <small class="opacity-md">$35,361,657</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">48.38225916</strong>-->
+<!--                  <small class="opacity-md">$32,649,456</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">20</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/ethereum.svg' %}" alt="Ethereum">-->
+<!--                  Ethereum-->
+<!--                </td>-->
+<!--                <td class="py-3">92.24857459</td>-->
+<!--                <td class="py-3">47.83353389</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">840.692</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">29.08461661</strong>-->
+<!--                  <small class="text-muted">$11,444,433</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">30.50833199</strong>-->
+<!--                  <small class="opacity-md">$31,157,960</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">75.51002825</strong>-->
+<!--                  <small class="opacity-md">$39,255,035</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">88.98437140</strong>-->
+<!--                  <small class="opacity-md">$30,063,901</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">21</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/neo.svg' %}" alt="NEO">-->
+<!--                  NEO-->
+<!--                </td>-->
+<!--                <td class="py-3">82.01972016</td>-->
+<!--                <td class="py-3">81.35588058</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">631.618</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">76.58222826</strong>-->
+<!--                  <small class="text-muted">$22,148,956</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">68.59176784</strong>-->
+<!--                  <small class="opacity-md">$37,296,304</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">34.39430339</strong>-->
+<!--                  <small class="opacity-md">$30,503,948</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">22.91206872</strong>-->
+<!--                  <small class="opacity-md">$39,248,565</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">22</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/bitcoin-cash.svg' %}" alt="BitCash">-->
+<!--                  BitCash-->
+<!--                </td>-->
+<!--                <td class="py-3">29.81856466</td>-->
+<!--                <td class="py-3">30.98038086</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">188.812</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">57.83261721</strong>-->
+<!--                  <small class="text-muted">$14,229,237</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">32.32270188</strong>-->
+<!--                  <small class="opacity-md">$12,625,616</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">38.74158928</strong>-->
+<!--                  <small class="opacity-md">$17,869,992</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">88.21381480</strong>-->
+<!--                  <small class="opacity-md">$27,709,822</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">23</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/cardano.svg' %}" alt="Cardano">-->
+<!--                  Cardano-->
+<!--                </td>-->
+<!--                <td class="py-3">83.33305073</td>-->
+<!--                <td class="py-3">62.97162805</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">196.641</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">57.12419572</strong>-->
+<!--                  <small class="text-muted">$15,401,631</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">28.04427769</strong>-->
+<!--                  <small class="opacity-md">$12,649,618</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">79.64212168</strong>-->
+<!--                  <small class="opacity-md">$12,821,542</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">24.44699264</strong>-->
+<!--                  <small class="opacity-md">$37,364,211</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+<!--              <tr>-->
+<!--                <td class="py-3">-->
+<!--                  <span class="d-none">24</span>-->
+<!--                  <img class="icon-img icon-img-sm mr-2" src="{% static 'svg/crypto/eos.svg' %}" alt="EOS">-->
+<!--                  EOS-->
+<!--                </td>-->
+<!--                <td class="py-3">20.39104462</td>-->
+<!--                <td class="py-3">78.61878097</td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">382.620</strong>-->
+<!--                  <small class="text-muted">$0.10</small>-->
+<!--                </td>-->
+<!--                <td class="py-3">-->
+<!--                  <strong class="d-block font-weight-normal">39.08037748</strong>-->
+<!--                  <small class="text-muted">$26,880,061</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-primary">-->
+<!--                  <strong class="d-block font-weight-normal">55.16329793</strong>-->
+<!--                  <small class="opacity-md">$21,085,334</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-danger">-->
+<!--                  <strong class="d-block font-weight-normal">41.96286607</strong>-->
+<!--                  <small class="opacity-md">$17,367,376</small>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-success">-->
+<!--                  <strong class="d-block font-weight-normal">38.59259368</strong>-->
+<!--                  <small class="opacity-md">$30,632,575</small>-->
+<!--                </td>-->
+<!--                 <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Backtest</a>-->
+<!--                </td>-->
+<!--                <td class="py-3 text-right d-print-none">-->
+<!--                  <a class="btn btn-outline-primary" href="#">Trade</a>-->
+<!--                </td>-->
+<!--              </tr>-->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="media d-block d-md-flex align-items-center p-3 p-md-4">
+            <div id="datatableInfo" class="d-flex mb-2 mb-md-0"></div>
+
+            <nav id="datatablePagination" class="d-flex ml-md-auto d-print-none" aria-label="Pagination"></nav>
+          </div>
+        </div>
+      </div>
+      <!-- Strategies List End Card -->
+
+
+      <!-- Card -->
+      <div class="card mb-3 mb-md-4">
+        <div class="card-header d-flex">
+          <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">Strategy Performance</h5>
+          <div class="position-relative ml-auto">
+            <a id="dropDown14Invoker" class="unfold-invoker d-flex text-muted" href="#" aria-controls="dropDown14" aria-haspopup="true" aria-expanded="false"
+               data-unfold-target="#dropDown14"
+               data-unfold-event="click"
+               data-unfold-type="css-animation"
+               data-unfold-duration="300"
+               data-unfold-animation-in="fadeIn"
+               data-unfold-animation-out="fadeOut">
+              <i class="nova-more"></i>
+            </a>
+
+            <ul id="dropDown14" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-3" aria-labelledby="dropDown14Invoker" style="min-width: 150px;">
+              <li class="unfold-item">
+                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                  <i class="nova-plus unfold-item-icon mr-3"></i>
+                  <span class="media-body">Add</span>
+                </a>
+              </li>
+              <li class="unfold-item">
+                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                  <i class="nova-pencil unfold-item-icon mr-3"></i>
+                  <span class="media-body">Edit</span>
+                </a>
+              </li>
+              <li class="unfold-item">
+                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                  <i class="nova-shortcode unfold-item-icon mr-3"></i>
+                  <span class="media-body">Rename</span>
+                </a>
+              </li>
+              <li class="unfold-item">
+                <a class="unfold-link media align-items-center text-nowrap" href="#">
+                  <i class="nova-close unfold-item-icon mr-3"></i>
+                  <span class="media-body">Delete</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body pt-0">
+          <div class="row align-items-center">
+            <div class="col-xl-8 order-2 order-xl-1">
+              <p class="d-md-none small mb-1">Symbol Return</p>
+
+              <div class="progress progress-xl mb-2">
+                <div class="progress-bar bg-transparent h6 text-dark text-left mb-0 px-3" style="width: 30%">
+                  <span class="d-none d-md-inline">Symbol Return</span>
+                </div>
+                <div class="progress-bar text-left ml-auto px-3" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">86.1%</span>
+                </div>
+                <div class="progress-bar bg-semi-soft-primary text-right px-3" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">16 Jul 2018</span>
+                </div>
+              </div>
+
+              <p class="d-md-none small mb-1">Strategy Return</p>
+
+              <div class="progress progress-xl small mb-2">
+                <div class="progress-bar bg-transparent h6 text-dark text-left mb-0 px-3" style="width: 30%">
+                  <span class="d-none d-md-inline">Strategy Return</span>
+                </div>
+                <div class="progress-bar bg-secondary text-left ml-auto px-3" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">120.4%</span>
+                </div>
+                <div class="progress-bar bg-semi-soft-secondary text-right px-3" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">11 Dec 2018</span>
+                </div>
+              </div>
+
+              <p class="d-md-none small mb-1">Gross Performance</p>
+
+              <div class="progress progress-xl small mb-2">
+                <div class="progress-bar bg-transparent h6 text-dark text-left mb-0 px-3" style="width: 30%">
+                  <span class="d-none d-md-inline">Gross Performance</span>
+                </div>
+                <div class="progress-bar bg-success text-left ml-auto px-3" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">42.3%</span>
+                </div>
+                <div class="progress-bar bg-semi-soft-success text-right px-3" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">30 May 2018</span>
+                </div>
+              </div>
+
+              <p class="d-md-none small mb-1">Brokerage/Transactional Costs</p>
+
+              <div class="progress progress-xl small mb-2">
+                <div class="progress-bar bg-transparent h6 text-dark text-left mb-0 px-3" style="width: 30%">
+                  <span class="d-none d-md-inline">Brokerage/Transactional Costs</span>
+                </div>
+                <div class="progress-bar bg-danger text-left ml-auto px-3" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">$234.4</span>
+                </div>
+                <div class="progress-bar bg-semi-soft-danger text-right px-3" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">12 Apr 2018</span>
+                </div>
+              </div>
+
+              <p class="d-md-none small mb-1">No. of Trades Executed</p>
+
+              <div class="progress progress-xl small mb-2">
+                <div class="progress-bar bg-transparent h6 text-dark text-left mb-0 px-3" style="width: 30%">
+                  <span class="d-none d-md-inline">No. of Trades Executed</span>
+                </div>
+                <div class="progress-bar bg-primary-darker text-left ml-auto px-3" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">43</span>
+                </div>
+                <div class="progress-bar bg-semi-soft-primary-darker text-right px-3" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                  <span class="d-none d-md-inline">20 Jan 2018</span>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="col-xl-4 order-1 order-xl-2 mb-5 mb-xl-0">
+              <div class="js-donut-chart d-flex position-relative mx-auto" style="width: 240px; height: 240px;"
+                   data-series="[15,10,15,10,35]"
+                   data-border-width="23"
+                   data-start-angle="0"
+                   data-fill-colors='["#474dee","#07d7f7","#fcd53b","#e1305e","#8069f2","#0cdcb9"]'
+                   data-is-show-tooltips="true"
+                   data-tooltip-currency="%"
+                   data-is-tooltip-currency-reverse="true"
+                   data-tooltip-custom-class="chart-tooltip chart-tooltip--triangle-right chart-tooltip--black small text-white px-2 py-1 mt-5 ml-n5">
+                <div class="position-centered position-absolute text-center text-nowrap">
+                  <div class="h4 text-uppercase mb-1">25.1%</div>
+                  <div class="small text-muted text-uppercase mb-0">Net Return
+                    <span class="text-danger">-4.53%</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card -->
+
+
+      <!-- Strategies Results Plots Start -->
+        <div class="row">
+
+        <div class="col-md-6 col-xl-4 mb-3 mb-md-4">
+          <!-- Card -->
+          <div class="card h-100">
+            <div class="card-header d-flex">
+              <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">Gross Performance</h5>
+              <div class="position-relative ml-auto">
+                <a id="dropDown5Invoker" class="unfold-invoker d-flex text-muted" href="#"
+                   aria-controls="dropDown5" aria-haspopup="true" aria-expanded="false"
+                   data-unfold-target="#dropDown5"
+                   data-unfold-event="click"
+                   data-unfold-type="css-animation"
+                   data-unfold-duration="300"
+                   data-unfold-animation-in="fadeIn"
+                   data-unfold-animation-out="fadeOut">
+                  <i class="nova-more"></i>
+                </a>
+
+                <ul id="dropDown5" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-3" aria-labelledby="dropDown5Invoker" style="min-width: 150px;">
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-plus unfold-item-icon mr-3"></i>
+                      <span class="media-body">Add</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-pencil unfold-item-icon mr-3"></i>
+                      <span class="media-body">Edit</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-shortcode unfold-item-icon mr-3"></i>
+                      <span class="media-body">Rename</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-close unfold-item-icon mr-3"></i>
+                      <span class="media-body">Delete</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card-body p-0">
+              <div class="media align-items-center px-3 px-md-4 mb-3 mb-md-4">
+                <div class="media-body">
+                  <h4 class="h3 lh-1 mb-2">$6,926.32</h4>
+                  <p class="small text-muted mb-0">
+                    -$570.5 <span class="text-danger mx-1">-18%</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="js-area-chart chart chart--axis-x chart--points-invisible position-relative chart--labels-hidden"
+                   data-series='[
+                             [
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"42"},
+                               {"meta":"Bitcoin","value":"45"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"90"},
+                               {"meta":"Bitcoin","value":"90"},
+                               {"meta":"Bitcoin","value":"100"},
+                               {"meta":"Bitcoin","value":"100"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"42"},
+                               {"meta":"Bitcoin","value":"45"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"70"},
+                               {"meta":"Bitcoin","value":"40"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"20"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"32"},
+                               {"meta":"Bitcoin","value":"35"},
+                               {"meta":"Bitcoin","value":"40"}
+                             ]
+                           ]'
+                   data-height="115"
+                   data-high="115"
+                   data-is-line-smooth='[false]'
+                   data-line-width='["1px"]'
+                   data-line-colors='["#8069f2"]'
+                   data-fill-opacity=".3"
+                   data-is-fill-colors-gradient="true"
+                   data-fill-colors='[
+                             ["rgba(128,105,242,.7)","rgba(255,255,255,.6)"]
+                           ]'
+                   data-is-show-tooltips="true"
+                   data-is-tooltips-append-to-body="true"
+                   data-tooltip-custom-class="chart-tooltip chart-tooltip--sections-blocked chart-tooltip__meta--text-muted small text-white p-2"
+                   data-tooltip-currency="USD "
+                   data-is-show-points="true"
+                   data-point-custom-class='chart__point--donut chart__point--border-xxs border-primary rounded-circle'
+                   data-point-dimensions='{"width":8,"height":8}'></div>
+
+              <div class="media d-print-none align-items-center p-3 p-md-4">
+
+                <a class="link link-dark d-flex small ml-auto" href="#">
+                  <i class="nova-split-h icon-text"></i>
+                </a>
+                <a class="link link-dark d-flex small ml-4" href="#">
+                  <i class="nova-star icon-text"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+
+        <div class="col-md-6 col-xl-4 mb-3 mb-md-4">
+          <!-- Card -->
+          <div class="card h-100">
+            <div class="card-header d-flex">
+              <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">Frequency Distribution of Log Returns</h5>
+              <div class="position-relative ml-auto">
+                <a id="dropDown6Invoker" class="unfold-invoker d-flex text-muted" href="#"
+                   aria-controls="dropDown6" aria-haspopup="true" aria-expanded="false"
+                   data-unfold-target="#dropDown6"
+                   data-unfold-event="click"
+                   data-unfold-type="css-animation"
+                   data-unfold-duration="300"
+                   data-unfold-animation-in="fadeIn"
+                   data-unfold-animation-out="fadeOut">
+                  <i class="nova-more"></i>
+                </a>
+
+                <ul id="dropDown6" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-3" aria-labelledby="dropDown6Invoker" style="min-width: 150px;">
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-plus unfold-item-icon mr-3"></i>
+                      <span class="media-body">Add</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-pencil unfold-item-icon mr-3"></i>
+                      <span class="media-body">Edit</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-shortcode unfold-item-icon mr-3"></i>
+                      <span class="media-body">Rename</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-close unfold-item-icon mr-3"></i>
+                      <span class="media-body">Delete</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="media align-items-center px-3 px-md-4 mb-3 mb-md-4">
+                <div class="media-body">
+                  <h4 class="h3 lh-1 mb-2">$389.94</h4>
+                  <p class="small text-muted mb-0">
+                    -$0.05834 <span class="text-danger mx-1">-45%</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="js-area-chart chart--points-invisible chart--labels-hidden position-relative"
+                   data-series='[
+                             [
+                               {"meta":"Ethereum","value":"30"},
+                               {"meta":"Ethereum","value":"30"},
+                               {"meta":"Ethereum","value":"30"},
+                               {"meta":"Ethereum","value":"32"},
+                               {"meta":"Ethereum","value":"33"},
+                               {"meta":"Ethereum","value":"34"},
+                               {"meta":"Ethereum","value":"35"},
+                               {"meta":"Ethereum","value":"34"},
+                               {"meta":"Ethereum","value":"33"},
+                               {"meta":"Ethereum","value":"32"},
+                               {"meta":"Ethereum","value":"31"},
+                               {"meta":"Ethereum","value":"30"},
+                               {"meta":"Ethereum","value":"35"},
+                               {"meta":"Ethereum","value":"36"},
+                               {"meta":"Ethereum","value":"36"},
+                               {"meta":"Ethereum","value":"36"},
+                               {"meta":"Ethereum","value":"36"}
+                             ],
+                             [
+                               {"meta":"Ethereum","value":"70"},
+                               {"meta":"Ethereum","value":"52"},
+                               {"meta":"Ethereum","value":"47"},
+                               {"meta":"Ethereum","value":"58"},
+                               {"meta":"Ethereum","value":"38"},
+                               {"meta":"Ethereum","value":"60"},
+                               {"meta":"Ethereum","value":"77"},
+                               {"meta":"Ethereum","value":"40"},
+                               {"meta":"Ethereum","value":"31"},
+                               {"meta":"Ethereum","value":"53"},
+                               {"meta":"Ethereum","value":"60"},
+                               {"meta":"Ethereum","value":"43"},
+                               {"meta":"Ethereum","value":"55"},
+                               {"meta":"Ethereum","value":"40"},
+                               {"meta":"Ethereum","value":"30"},
+                               {"meta":"Ethereum","value":"70"},
+                               {"meta":"Ethereum","value":"63"}
+                             ]
+                           ]'
+                   data-height="115"
+                   data-high="115"
+                   data-chart-padding='{"top": 5}'
+                   data-is-hide-area="true"
+                   data-line-colors='["#eeeef1","#8069f2"]'
+                   data-line-dasharrays='[10,0]'
+                   data-line-width='["2px","2px"]'
+                   data-is-line-smooth='[true,false]'
+                   data-fill-opacity="1"
+                   data-fill-colors='["#eeeef1","#8069f2"]'
+                   data-stroke-dash-array-axis-y="4"
+                   data-is-show-tooltips="true"
+                   data-tooltip-custom-class="chart-tooltip chart-tooltip--sections-blocked chart-tooltip__meta--text-muted small text-white text-nowrap p-2"
+                   data-tooltip-currency="USD "
+                   data-is-show-points="true"
+                   data-point-custom-class='chart__point--donut chart__point--border-xs border-primary rounded-circle'
+                   data-point-dimensions='{"width":15,"height":15}'></div>
+
+              <div class="media d-print-none align-items-center p-3 p-md-4">
+                <a class="link link-dark d-flex small ml-auto" href="#">
+                  <i class="nova-split-h icon-text"></i>
+                </a>
+                <a class="link link-dark d-flex small ml-4 selected" href="#">
+                  <i class="nova-star icon-text"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+
+        <div class="col-md-6 col-xl-4 mb-3 mb-md-4">
+          <!-- Card -->
+          <div class="card h-100">
+            <div class="card-header d-flex">
+              <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">Market Positioning</h5>
+              <div class="position-relative ml-auto">
+                <a id="dropDown7Invoker" class="unfold-invoker d-flex text-muted" href="#"
+                   aria-controls="dropDown7" aria-haspopup="true" aria-expanded="false"
+                   data-unfold-target="#dropDown7"
+                   data-unfold-event="click"
+                   data-unfold-type="css-animation"
+                   data-unfold-duration="300"
+                   data-unfold-animation-in="fadeIn"
+                   data-unfold-animation-out="fadeOut">
+                  <i class="nova-more"></i>
+                </a>
+
+                <ul id="dropDown7" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-3" aria-labelledby="dropDown7Invoker" style="min-width: 150px;">
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-plus unfold-item-icon mr-3"></i>
+                      <span class="media-body">Add</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-pencil unfold-item-icon mr-3"></i>
+                      <span class="media-body">Edit</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-shortcode unfold-item-icon mr-3"></i>
+                      <span class="media-body">Rename</span>
+                    </a>
+                  </li>
+                  <li class="unfold-item">
+                    <a class="unfold-link media align-items-center text-nowrap" href="#">
+                      <i class="nova-close unfold-item-icon mr-3"></i>
+                      <span class="media-body">Delete</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="media align-items-center px-3 px-md-4 mb-3 mb-md-4">
+                <div class="media-body">
+                  <h4 class="h3 lh-1 mb-2">$0.51372</h4>
+                  <p class="small text-muted mb-0">
+                    -$0.02438 <span class="text-danger mx-1">-33%</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="js-area-chart chart--points-invisible position-relative chart--labels-hidden"
+                   data-series='[
+                             [
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"95"},
+                               {"meta":"Bitcoin","value":"60"},
+                               {"meta":"Bitcoin","value":"77"},
+                               {"meta":"Bitcoin","value":"84"}
+                             ],
+                             [
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"80"},
+                               {"meta":"Bitcoin","value":"50"},
+                               {"meta":"Bitcoin","value":"66"},
+                               {"meta":"Bitcoin","value":"55"},
+                               {"meta":"Bitcoin","value":"99"}
+                             ]
+                           ]'
+                   data-height="115"
+                   data-high="95"
+                   data-line-dasharrays='[0,10]'
+                   data-line-width='["1px","2px"]'
+                   data-line-colors='["#0cdcB9","#eeeef1"]'
+                   data-is-line-smooth='["simple","simple"]'
+                   data-fill-opacity=".3"
+                   data-is-fill-colors-gradient="true"
+                   data-fill-colors='[
+                             ["rgba(28,240,221,.5)","rgba(255,255,255,.5)"],
+                             ["rgba(238,238,241,.5)","rgba(255,255,255,.5)"]
+                           ]'
+                   data-is-show-tooltips="true"
+                   data-tooltip-custom-class="chart-tooltip chart-tooltip--sections-blocked chart-tooltip__meta--text-info chart-tooltip--shadow-gray small bg-white p-2"
+                   data-tooltip-currency="USD "
+                   data-is-show-points="true"
+                   data-point-custom-class='chart__point--donut chart__point--border-xs border-primary rounded-circle'
+                   data-point-dimensions='{"width":15,"height":15}'></div>
+
+              <div class="media d-print-none align-items-center p-3 p-md-4">
+                <a class="link link-dark d-flex small ml-auto" href="#">
+                  <i class="nova-split-h icon-text"></i>
+                </a>
+                <a class="link link-dark d-flex small ml-4" href="#">
+                  <i class="nova-star icon-text"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+
+      </div>
+      <!-- Strategies Results Plots Start -->
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="small bg-white p-3 px-md-4 mt-auto d-print-none">
+      <div class="row justify-content-between">
+        <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+          <ul class="list-dot list-inline mb-0">
+            <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="#">FAQ</a></li>
+            <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="#">Support</a></li>
+            <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg text-center mb-3 mb-lg-0">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="nova-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="nova-vimeo-alt"></i></a></li>
+            <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="nova-github"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg text-center text-lg-right">
+          &copy; 2021 Quantl AI. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </div>
+</main>
+
+<!-- JS Global Compulsory -->
+<script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+<script>
+  django = django || {};
+  django.jQuery = django.jQuery || jQuery;
+</script>
+<script src="{% static 'vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+<script src="{% static 'vendor/popper.js/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+<!-- JS Implementing Libraries -->
+<script src="{% static 'vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script src="{% static 'vendor/flatpickr/dist/flatpickr.min.js' %}"></script>
+<script src="{% static 'vendor/select2/dist/js/select2.full.min.js' %}"></script>
+<script src="{% static 'vendor/chartist/dist/chartist.min.js' %}"></script>
+<script src="{% static 'vendor/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js' %}"></script>
+<script src="{% static 'vendor/chartist-bar-labels/src/scripts/chartist-bar-labels.js' %}"></script>
+<script src="{% static 'vendor/resize-sensor/dist/resizeSensor.min.js' %}"></script>
+<script src="{% static 'vendor/jquery-shorten/src/jquery.shorten.js' %}"></script>
+<script src="{% static 'vendor/datatables/media/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'vendor/datatables.net-select/js/dataTables.select.js' %}"></script>
+
+<!-- JS Nova -->
+<script src="{% static 'js/hs.core.js' %}"></script>
+<script src="{% static 'js/components/hs.malihu-scrollbar.js' %}"></script>
+<script src="{% static 'js/components/hs.side-nav.js' %}"></script>
+<script src="{% static 'js/components/hs.unfold.js' %}"></script>
+<script src="{% static 'js/components/hs.flatpickr.js' %}"></script>
+<script src="{% static 'js/components/hs.header-search.js' %}"></script>
+<script src="{% static 'js/components/hs.select2.js' %}"></script>
+<script src="{% static 'js/components/hs.chartist-area.js' %}"></script>
+<script src="{% static 'js/components/hs.chartist-bar.js' %}"></script>
+<script src="{% static 'js/components/hs.chartist-pie.js' %}"></script>
+<script src="{% static 'js/components/hs.chartist-donut.js' %}"></script>
+<script src="{% static 'js/components/hs.datatables.js' %}"></script>
+
+<!-- JS Libraries Init. -->
+<script>
+  $(document).on('ready', function () {
+    // initialization of custom scroll
+    $.HSCore.components.HSMalihuScrollBar.init($('.js-custom-scroll'));
+
+    // initialization of sidebar navigation component
+    $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+    // initialization of dropdown component
+    $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+      unfoldHideOnScroll: false,
+      afterOpen: function () {
+        // initialization of charts
+        $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+        setTimeout(function () {
+          $('#activity .js-bar-chart').css('opacity', 1);
+        }, 100);
+
+        // help function for accordions in hidden block
+        $('#headerProjects .accordion-header').on('click', function () {
+          // vars
+          var target = $(this).data('target');
+
+          $(target).collapse('show');
+        });
+      }
+    });
+
+    // initialization of range datepicker
+    $.HSCore.components.HSFlatpickr.init('#headerRightSidebarDatepicker', {
+      locale: {
+        weekdays: {
+          shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        }
+      },
+      nextArrow: '<i class="nova-arrow-right icon-text icon-text-xs"></i>',
+      prevArrow: '<i class="nova-arrow-left icon-text icon-text-xs"></i>'
+    });
+
+    $.HSCore.components.HSFlatpickr.init('#rangeDatepicker, #rangeDatepickerMyPortfolio', {
+      locale: {
+        weekdays: {
+          shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        },
+        rangeSeparator: ' - '
+      },
+      nextArrow: '<em class="nova-arrow-right"></em>',
+      prevArrow: '<em class="nova-arrow-left"></em>'
+    });
+
+    // initialization of show on type module
+    $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+    // initialization of show on type module
+    $.HSCore.components.HSSelect2.init('.js-custom-select');
+
+    // initialization of charts
+    $.HSCore.components.HSChartistArea.init('.js-area-chart');
+    $.HSCore.components.HSChartistBar.init('.js-bar-chart');
+    $.HSCore.components.HSChartistDonut.init('.js-donut-chart');
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $(e.currentTarget.hash).find('.js-area-chart').each(function (el, tab) {
+        tab.__chartist__.update();
+      });
+    });
+
+    // initialization of datatables
+    $.HSCore.components.HSDatatables.init('.js-datatable', {
+      "columnDefs": [
+        { "orderable": false, "targets": 8 }
+      ]
+    });
+  });
+</script>
+</body>
+</html>

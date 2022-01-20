@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Title -->
+  <title>Changelog | Nova - Responsive WebApp UI Kit</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link href="../../assets/vendor/nova-icons/nova-icons.css" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+  <!-- CSS Nova Template -->
+  <link rel="stylesheet" href="../../assets/css/theme.css">
+
+  <!-- CSS Nova Doc -->
+  <link rel="stylesheet" href="../assets/css/docs.css">
+</head>
+
+<body class="bg-gray has-sidebar has-fixed-sidebar-and-header">
+  <header class="header header-light bg-white">
+    <nav class="navbar flex-nowrap p-0">
+      <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+        <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+          <img class="img-fluid w-100" src="../../assets/img/logo-mini.png" alt="Nova">
+        </a>
+
+        <a class="navbar-brand navbar-brand-desktop" href="../../demo-crypto/dashboards/index.html">
+          <img class="side-nav-show-on-closed" src="../../assets/img/logo-mini.png" alt="Nova"
+               style="width: 41px; height: 33px;">
+          <img class="side-nav-hide-on-closed" src="../../assets/img/logo.png" alt="Nova"
+               style="width: 130px; height: 33px;">
+        </a>
+      </div>
+
+      <div class="header-content col px-md-3">
+        <div class="d-flex align-items-center">
+          <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+             data-close-invoker="#sidebarClose"
+             data-target="#sidebar"
+             data-target-wrapper="body">
+            <i class="nova-align-left"></i>
+          </a>
+
+          <div class="js-header-search ml-lg-2"
+               data-search-target="#headerSearchResults"
+               data-search-mobile-invoker="#headerSearchMobileInvoker"
+               data-search-form="#headerSearchForm"
+               data-search-field="#headerSearchField">
+            <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+              <i class="nova-search"></i>
+            </a>
+
+            <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+            <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                   data-url="../assets/include/json/autocomplete-data.json">
+            <div class="input-group-append-merge">
+              <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                <i class="nova-search icon-text"></i>
+              </a>
+            </div>
+          </form>
+          </div>
+
+          <a class="link-dark ml-auto mr-3 mr-sm-0" href="../../demo-crypto/dashboards/index.html">
+              Crypto Demo
+            </a>
+
+           <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3 d-none d-sm-block" href="./changelog.html">
+                Changelog (v1.2.2) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+             </div>
+
+          <a class="btn btn-primary mr-2" href="../../ui-components/widgets.html" title="UI Kit Components">UI Kit <span
+              class="d-none d-md-inline">Components</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Sidebar Nav -->
+    <aside id="sidebar" class="js-custom-scroll side-nav">
+      <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+        <li class="sidebar-heading h6 text-uppercase">Getting Started</li>
+        <li><a class="side-nav-menu-link py-1" href="../index.html">Introduction</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../getting-started/file-structures.html">File Structures</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../getting-started/approach.html">Approach</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../getting-started/gulp.html">Gulp</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../getting-started/customization.html">Customization</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../getting-started/credits.html">Credits</a></li>
+        <li><a class="side-nav-menu-link py-1 active" href="../getting-started/changelog.html">Changelog</a></li>
+
+        <li class="sidebar-heading h6 text-uppercase">Content</li>
+        <li><a class="side-nav-menu-link py-1" href="../components/typography.html">Typography</a></li>
+
+        <li class="sidebar-heading h6 text-uppercase">Components</li>
+        <li><a class="side-nav-menu-link py-1" href="../components/alerts.html">Alerts</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/avatars.html">Avatars</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/badges-indicators.html">Badges &amp; Indicators</a>
+        </li>
+        <li><a class="side-nav-menu-link py-1" href="../components/breadcrumb.html">Breadcrumb</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/buttons.html">Buttons</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/cards.html">Cards</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/collapse.html">Collapse</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/dropdowns.html">Dropdowns</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/forms.html">Forms</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/icons.html">Icons</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/modal.html">Modal</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/navs.html">Navs</a></li>
+      <li><a class="side-nav-menu-link py-1" href="../components/navbar.html">Navbar</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/pagination.html">Pagination</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/popovers.html">Popovers</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/progress.html">Progress</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/spinners.html">Spinners</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/tables.html">Tables</a></li>
+          <li><a class="side-nav-menu-link py-1" href="../components/tooltips.html">Tooltips</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../components/toasts.html">Toasts</a></li>
+
+
+        <li class="sidebar-heading h6 text-uppercase">Libraries</li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/animations.html">Animations</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/autocomplete.html">Autocomplete</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/chartist.html">Chartist.js</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/clipboard.html">Clipboard</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/datatables.html">Datatables</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/date-range-picker.html">Date Range Picker</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/dropzone.html">Dropzone</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/editable-rows.html">Editable Rows</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/file-attach.html">File Attach</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/flatpickr.html">Flatpickr</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/font-awesome.html">Font Awesome</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/google-geo-chart.html">Google Geo Chart</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/google-recaptcha.html">Google reCAPTCHA</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/header-search.html">Header Search</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/malihu-scrollbar.html">Malihu Scrollbar</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/masked-input.html">Input Masks</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/range-slider.html">Range Slider</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/select2.html">Select2</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/side-nav.html">Sidebar Navigation</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/summernote.html">Summernote</a></li>
+        <!-- <li><a class="side-nav-menu-link py-1" href="../libraries/step-form.html">Step Form</a></li> -->
+        <li><a class="side-nav-menu-link py-1" href="../libraries/tabs.html">Tabs</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/tagsinput.html">Input Tags</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/unfold.html">Unfold</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/validation.html">Validation</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../libraries/visavail-timeline.html">Visavail Timeline</a></li>
+
+        <li class="sidebar-heading h6 text-uppercase">Utilities</li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/background.html">Background</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/borders.html">Borders</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/colors.html">Colors</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/links.html">Links</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/positions.html">Positions</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/spacing.html">Spacing</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/transitions.html">Transitions</a></li>
+        <li><a class="side-nav-menu-link py-1" href="../utilities/others.html">Others</a></li>
+      </ul>
+    </aside>
+    <!-- End Sidebar Nav -->
+
+    <div class="content overflow-inherit">
+      <div class="hs-docs-content py-4 px-3 px-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+              </div>
+
+              <div class="col-xl-10 order-xl-1">
+                <div class="border-bottom pb-2 mb-6">
+                  <h1 class="h3">Changelog</h1>
+                  <p class="lead">See what's new added, changed, fixed, improved or updated in the latest versions.</p>
+                </div>
+
+                <div class="alert alert-primary mb-5">
+                  <h3 class="h5 font-weight-bold">Read this before updating</h3>
+                  <p>Do <span class="font-weight-semi-bold">not</span> forget to <span class="font-weight-semi-bold">backup</span> your files and <span class="font-weight-semi-bold">read the changelog</span> before updating your Nova copy. If you come across with any problems with Nova template during the update and development processes, feel free to contact our support group at <a href="https://htmlstream.com/contact-us" target="_blank">htmlstream.com/contact-us <small class="fas fa-external-link-alt"></small></a> and our team will assist you within a short time.</p>
+                </div>
+
+                <div id="initial-release4" class="mb-5">
+                  <h2 class="h5"><code>v1.2.2</code> - <span class="h5 mb-0">11 February, 2020</span> <a class="anchorjs-link" href="#initial-release3" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                  <h5>Others</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Updated source files for all libraries from the previouse version such as Bootstrap, Selects2, Chartist etc.
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      CSS minor issues.
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Chartist Area unnecessary function removed.
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Added path to js for "How to use?" in Range Slider documantation
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Accessibility styles for fields with validation state and switchers.
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Selects2 from <code>v4.0.12</code> to <code>v4.0.13</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Tagify from <code>v2.31.6</code> to <code>v3.3.1</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Pdfmake from <code>v0.1.63</code> to <code>v0.1.64</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Popper.js from <code>v1.16.0</code> to <code>v1.16.1</code>
+                    </li>
+                  </ul>
+
+                  <h5>List of important updated files and folders</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <code>gulpfile.js</code>
+                    </li>
+                    <li>
+                      <code>assets/js/components/hs.chartist-area.js</code>
+                    </li>
+                    <li>
+                      <code>assets/js/components/hs.tagsinput.js</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/vendor/tagsinput/_tagsinput.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/modals/_modals.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/paginations/_paginations.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/forms/form-checks/_form-checks-custom.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/forms/form-controls/_form-validate.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/forms/form-radios/_form-radios.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/forms/switch/_form-switch.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/reboot/_accessibility.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/bootstrap/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/select2/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/chartist/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/flatpickr/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/tagify/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/ion-rangeslider/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/popper.js/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/pdfmake/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/datatables.net-buttons/..</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/datatables.net-select/..</code>
+                    </li>
+                    <li>
+                      <code>ui-components/advanced-forms/tagsinput.html</code>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="initial-release4" class="mb-5">
+                  <h2 class="h5"><code>v1.2.1</code> - <span class="h5 mb-0">22 January, 2020</span> <a class="anchorjs-link" href="#initial-release3" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                  <h5>Others</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Added documentation page for Font Awesome <a href="../libraries/font-awesome.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Layout with static header and sidebar <a href="../../ui-components/layouts/static.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Layout with fixed header and sidebar <a href="../../ui-components/layouts/fixed-header-sidebar.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Set custom colors for points in chartist with <code>data-points-colors</code> attribute.
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Set tooltip currency without <code>meta</code> in chartist with <code>data-tooltip-currency='["Bitcoint: $ ", "Ripple: $ "]'</code> attribute.
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Hiding sidebar at 992px.
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Fixed errors when press keyboard up or down arrows in Firefox browser.
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Fixed modal centered.
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Fixed modal padding and border radius.
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Fixed points colors in chartist.
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Gulp from <code>v3.x</code> to <code>v4.x</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Bootstrap from <code>v4.3.1</code> to <code>v4.4.1</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Selects2 from <code>v4.0.10</code> to <code>v4.0.12</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Tagify from <code>v2.27.0</code> to <code>v2.31.6</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Chartist from <code>v0.11.3</code> to <code>v0.11.4</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Flatpickr from <code>v4.6.2</code> to <code>v4.6.3</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Ion Rangeslider from <code>v2.3.0</code> to <code>v2.3.1</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Pdfmake from <code>v0.1.59</code> to <code>v0.1.63</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Popper.js from <code>v1.14.7</code> to <code>v1.16.0</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Datatables.net-buttons from <code>v1.5.6</code> to <code>v1.6.1</code>
+                    </li>
+                  </ul>
+
+                  <h5>List of important updated files</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <code>gulpfile.js</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/_variables.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/modals/_modals.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/js/components/hs.chartist-area.js</code>
+                    </li>
+                    <li>
+                      <code>assets/js/components/hs.unfold.js</code>
+                    </li>
+                    <li>
+                      <code>ui-components/layouts/static-mini-nav-mobi.html</code>
+                    </li>
+                    <li>
+                      <code>ui-components/layouts/fixed-header-sidebar.html</code>
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="initial-release3" class="mb-5">
+                  <h2 class="h5"><code>v1.2</code> - <span class="h5 mb-0">September 14, 2019</span> <a class="anchorjs-link" href="#initial-release3" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                  <h5>Libraries and Components</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Input Masks components <a href="../../ui-components/advanced-forms/masked-inputs.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Tagify Input Tags components <a href="../../ui-components/advanced-forms/tagsinput.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Login page <a href="../../ui-components/authentication/login.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Registration page <a href="../../ui-components/authentication/registration.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Forgot password page <a href="../../ui-components/authentication/forgot-password.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Lock screen page <a href="../../ui-components/authentication/lock-screen.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Google reCAPTCHA components <a href="../../ui-components/advanced-forms/google-recaptcha.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Date Range Picker components <a href="../../ui-components/advanced-forms/date-range-picker.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Added datatables file exprort option <a href="../libraries/datatables.html#with-export">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Added pagination link length <a href="../libraries/datatables.html#with-limited-pagination">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Added libraries for datatables buttons.
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">New</span>
+                      Added new examples for Clipboard <a href="../../ui-components/advanced-forms/clipboard.html">view here</a>
+                    </li>
+                  </ul>
+
+                  <h5>Others</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Datatables sorting and made some minor improvemetns
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Added active background color for soft buttons
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Sizing for Select2 Tags
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Sidebar Mini option
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Documentation for Sidebar Navigations with more examples and details <a href="../libraries/side-nav.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Documentation for Navbar with more examples and details <a href="../components/navbar.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Added documentation example pages for Popovers and Tooltips
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Added new top and bottom arrow styles and made others minor improvemetns to Datepicker library
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Light Alert text color
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Selects2 from <code>v4.0.8</code> to <code>v4.0.10</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Chartist from <code>v0.11.0</code> to <code>v0.11.3</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Animate.css from <code>v3.7.0</code> to <code>v3.7.2</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      jQuery Validation from <code>v1.19.0</code> to <code>v1.19.1</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Editable rows on pressing ESC keyboard
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Fixed</span>
+                      Clipboard in modal
+                    </li>
+                    <li>
+                      <span class="badge badge-danger text-uppercase mr-2">Dropped</span>
+                      Old Input Masks and Input Tags library in a favor of new extended and up-to-date library
+                    </li>
+                  </ul>
+
+                  <h5>List of important updated files</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <code>assets/js/components/hs.datatables.js</code>
+                    </li>
+                    <li>
+                      <code>assets/js/components/hs.side-nav.js</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/_nova.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/_variables.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/side-nav/_side-nav.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/vendor/datatables/_datatables.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/paginations/_paginations.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/vendor/flatpickr/_flatpickr.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/mixins/_buttons.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/vendor/select2/_select2.scss</code>
+                    </li>
+                    <li>
+                      <code>assets/include/scss/nova/_mixins.scss</code>
+                    </li>
+                    <li>
+                      <code>ui-components/tables/datatables.htm</code>
+                    </li>
+                    <li>
+                      <code>ui-components/advanced-forms/clipboard.html</code>
+                    </li>
+                    <li>
+                      <code>ui-components/advanced-forms/summernote.html</code>
+                    </li>
+                    <li>
+                      <code>assets/vendor/table-edits</code>
+                    </li>
+                    <li>
+                      New - <code>assets/vendor/datatables-buttons</code>
+                    </li>
+                    <li>
+                      New - <code>assets/vendor/jszip</code>
+                    </li>
+                    <li>
+                      New - <code>assets/vendor/pdfmake</code>
+                    </li>
+                  </ul>
+
+                  <h5>Breaking changes</h5>
+                  <ul class="text-dark">
+                    <li>
+                      Removed class <code>.link-dark</code> from sort links in a favor of new classes <code>.link-sorting-desc</code> and <code>.link-sorting-asc</code> from Datatables
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="initial-release2" class="mb-5">
+                  <h2 class="h5"><code>v1.1</code> - <span class="h5 mb-0">August 09, 2019</span> <a class="anchorjs-link" href="#initial-release2" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+
+                  <h5>Libraries and Components</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Form Layouts options <a href="../../ui-components/forms/form-layouts.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Basic Inputs components <a href="../../ui-components/forms/basic-inputs.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Input Groups components <a href="../../ui-components/forms/input-groups.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Checkboxes & Switches components <a href="../../ui-components/forms/checkboxes.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Slects2 page with extended options <a href="../../ui-components/advanced-forms/select2.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Datepicker page with extended options <a href="../../ui-components/advanced-forms/flatpickr.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Clipboard page with extended options <a href="../../ui-components/advanced-forms/clipboard.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Summernote super simple WYSIWYG editor <a href="../../ui-components/advanced-forms/summernote.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      DropzoneJS library that provides drag’n’drop file uploads with image previews <a href="../../ui-components/advanced-forms/dropzone.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Ion.RangeSlider easy to use, flexible and responsive range slider <a href="../../ui-components/advanced-forms/range-sliders.html">view here</a>
+                    </li>
+                    <li>
+                      <span class="badge badge-info text-uppercase mr-2">new</span>
+                      Validation page with exnteded options <a href="../../ui-components/advanced-forms/validation.html">view here</a>
+                    </li>
+                  </ul>
+
+                  <h5>Others</h5>
+                  <ul class="text-dark">
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Documentation pages for forms and added new library pages
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Added <code>.input-group-merge</code> class for input groups
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Added <code>data-width</code> attribute <code>.custom-select-without-bordered</code> class for select2
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Extends <code>.form-control-[prepend, append]-img</code> and <code>.form-control-[prepend, append]-icon</code> classes
+                    </li>
+                    <li>
+                      <span class="badge badge-success text-uppercase mr-2">Enhanced</span>
+                      Replaced class <code>.select2-selection--single</code> with <code>.custom-select</code> in selects2
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      jQuery from <code>v3.3.1</code> to <code>v3.4.1</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Selects2 from <code>v4.0.4</code> to <code>v4.0.8</code>
+                    </li>
+                    <li>
+                      <span class="badge badge-warning text-uppercase mr-2">Updated</span>
+                      Flatpickr from <code>v4.1.2</code> to <code>v4.6.2</code>
+                    </li>
+                  </ul>
+
+                  <h5>Breaking Changes</h5>
+                  <ul class="text-dark">
+                    <li>
+                      Custom input groups are re-written, please <a href="../../documentation/components/forms.html#merge-styles">check documentation page</a> for the new code example
+                      <ul>
+                        <li>
+                          <code>.input-group-append-infinity</code> changed to <code>.input-group-append-merge</code>
+                        </li>
+                        <li>
+                          <code>.form-control-icon-img</code> changed to <code>.form-control-append-img</code> and <code>.form-control-append-img</code>.
+                        </li>
+                        <li>
+                          <code>.form-control-icon-text</code> changed to <code>.form-control-append-icon</code> and <code>.form-control-append-icon</code>.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      Updated html code for datepicker inputs and inputs with icons in all Demo Crypto pages
+                    </li>
+                    <li>
+                      Removed class <code>.icon-text-lg</code> in a favor of <code>input-group-sm</code> and <code>input-group-lg</code>.
+                    </li>
+                    <li>
+                      Removed custom <code>.checkbox</code> class and components in favor of default Bootstrap custom checkboxes
+                    </li>
+                    <li>
+                      Removed styles from <code>selec2-alt.scss</code>, <code>select.scss</code> in favor of new Enhanced select2 styles
+                    </li>
+                  </ul>
+                </div>
+
+                <div id="initial-release">
+                  <h2 class="h5">
+                    <code>v1.0</code> - <span class="h5 mb-0">April 07, 2019</span> <a class="anchorjs-link" href="#initial-release" aria-label="Anchor" data-anchorjs-icon="#"></a>
+                  </h2>
+                  <ul class="text-dark">
+                    <li>Initial release.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="small bg-white p-3 px-md-4 mt-auto">
+        <div class="row justify-content-between">
+          <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+            <ul class="list-dot list-inline mb-0">
+              <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="https://themes.getbootstrap.com/store/htmlstream/" target="_blank">Our products</a></li>
+              <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="https://htmlstream.com/contact-us" target="_blank">Contact us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg text-center mb-3 mb-lg-0">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mx-2">
+                <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                  <i class="nova-twitter-alt"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                  <i class="nova-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                  <i class="nova-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                  <i class="nova-dribbble"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                  <i class="nova-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg text-center text-lg-right">
+            &copy; 2019 <a class="link-dark" href="https://htmlstream.com" target="_blank">Htmlstream</a>. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+  <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+  <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+  <script src="../../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+  <script src="../../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+  <script src="../assets/vendor/prism/prism.js"></script>
+
+  <!-- JS Nova -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.malihu-scrollbar.js"></script>
+  <script src="../../assets/js/components/hs.side-nav.js"></script>
+  <script src="../../assets/js/components/hs.unfold.js"></script>
+  <script src="../../assets/js/components/hs.header-search.js"></script>
+  <script src="../../assets/js/components/hs.autocomplete.js"></script>
+  <script src="../assets/js/components/hs.scroll-nav.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+      $(document).on('ready', function () {
+          // initialization of custom scroll
+          var $scrollbar = $('.js-custom-scroll');
+          $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+          $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+          // initialization of sidebar navigation component
+          $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+          // initialization of dropdown component
+          $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+              unfoldHideOnScroll: false,
+              afterOpen: function () {
+                  // initialization of charts
+                  $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+                  setTimeout(function () {
+                      $('#activity .js-bar-chart').css('opacity', 1);
+                  }, 100);
+
+                  // help function for accordions in hidden block
+                  $('#headerProjects .accordion-header').on('click', function () {
+                      // vars
+                      var target = $(this).data('target');
+
+                      $(target).collapse('show');
+                  });
+              }
+          });
+
+          // initialization of show on type module
+          $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+          // initialization of autocomplete
+          $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+          // initialization of HSScrollNav component
+          $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+              duration: 700
+          });
+      });
+  </script>
+  </body>
+</html>

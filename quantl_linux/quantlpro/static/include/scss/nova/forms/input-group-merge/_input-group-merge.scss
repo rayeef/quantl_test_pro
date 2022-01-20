@@ -1,0 +1,284 @@
+/*------------------------------------
+  Input Group Merge
+------------------------------------*/
+
+// Input Group Prepend Icon
+.input-group-merge {
+  .input-group-prepend-merge {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    transform: translateY(-50%);
+    left: $input-padding-x;
+  }
+}
+
+// Input Group Prepend Icon with Error Message
+.input-group-merge.input-group-merge-error {
+  .input-group-prepend-merge {
+    display: flex;
+    position: absolute;
+    top: 32%;
+    z-index: 4;
+    transform: translateY(-50%);
+    left: $input-padding-x;
+  }
+}
+
+// Input Group Append Icon
+.input-group-merge {
+  .input-group-append-merge {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    transform: translateY(-50%);
+    right: $input-padding-x;
+  }
+}
+
+// Input Group Append Icon with Error Message
+.input-group-merge.input-group-merge-error {
+  .input-group-append-merge {
+    display: flex;
+    position: absolute;
+    top: 32%;
+    z-index: 4;
+    transform: translateY(-50%);
+    right: $input-padding-x;
+  }
+}
+
+// Input Group Prepend Space for Image
+.input-group-merge {
+  .form-control-prepend-img {
+    padding-left: $input-group-form-control-img-padding-left;
+  }
+}
+
+// Input Group Prepend Space for Icon
+.input-group-merge {
+  .form-control-prepend-icon {
+    padding-left: $input-group-form-control-icon-padding-left;
+  }
+}
+
+// Input Group Append Space for Image
+.input-group-merge {
+  .form-control-append-img {
+    padding-right: $input-group-form-control-img-padding-right;
+  }
+}
+
+// Input Group Append Space for Icon
+.input-group-merge {
+  .form-control-append-icon {
+    padding-right: $input-group-form-control-icon-padding-right;
+  }
+}
+
+// Input Group Prepend Large (lg) Space for Image
+.input-group-lg.input-group-merge {
+  .form-control-prepend-img {
+    padding-left: $input-group-lg-form-control-img-padding-left;
+  }
+}
+
+// Input Group Prepend Large (lg) Space for Icon
+.input-group-lg.input-group-merge {
+  .form-control-prepend-icon {
+    padding-left: $input-group-lg-form-control-icon-padding-left;
+  }
+}
+
+// Input Group Append Large (lg) Space for Image
+.input-group-lg.input-group-merge {
+  .form-control-append-img {
+    padding-right: $input-group-lg-form-control-img-padding-right;
+  }
+}
+
+// Input Group Append Large (lg) Space for Icon
+.input-group-lg.input-group-merge {
+  .form-control-append-icon {
+    padding-right: $input-group-lg-form-control-icon-padding-right;
+  }
+}
+
+// Input Group Prepend Small (sm) Space for Image
+.input-group-sm.input-group-merge {
+  .form-control-prepend-img {
+    padding-left: $input-group-sm-form-control-img-padding-left;
+  }
+}
+
+// Input Group Prepend Small (sm) Space for Icon
+.input-group-sm.input-group-merge {
+  .form-control-prepend-icon {
+    padding-left: $input-group-sm-form-control-icon-padding-left;
+  }
+}
+
+// Input Group Append Small (sm) Space for Image
+.input-group-sm.input-group-merge {
+  .form-control-append-img {
+    padding-right: $input-group-sm-form-control-img-padding-right;
+  }
+}
+
+// Input Group Append Small (sm) Space for Icon
+.input-group-sm.input-group-merge {
+  .form-control-append-icon {
+    padding-right: $input-group-sm-form-control-icon-padding-right;
+  }
+}
+
+// Border Radius for Form Control
+.input-group {
+  &.input-group-merge .form-control {
+    border-radius: $border-radius;
+  }
+}
+
+// Icon Default
+.input-group {
+  .icon-text {
+    width: $icon-text-width;
+    color: $text-muted;
+    cursor: pointer;
+  }
+}
+
+// Image Default
+.input-group {
+  .icon-img {
+    width: $icon-img;
+    height: $icon-img;
+  }
+}
+
+// Large Icon
+.input-group-lg {
+  .icon-text {
+    font-size: $icon-text-lg;
+    color: $text-muted;
+    cursor: pointer;
+  }
+}
+
+// Large Image
+.input-group-lg {
+  .icon-img {
+    width: $icon-img;
+    height: $icon-img;
+  }
+}
+
+// Small Icon
+.input-group-sm {
+  .icon-text {
+    font-size: $icon-text-sm;
+    color: $text-muted;
+    cursor: pointer;
+  }
+}
+
+// Small Image
+.input-group-sm {
+  .icon-img {
+    width: $icon-img-sm;
+    height: $icon-img-sm;
+  }
+}
+
+// Input Group Merge Button
+.input-group.input-group-merge-btn {
+  .input-group-append-merge {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $input-group-merge-btn-append-right;
+    padding-left: $input-group-merge-btn-append-padding-left;
+    padding-right: $input-group-merge-btn-append-padding-right;
+    background-image: $input-group-merge-btn-append-bg-img;
+    background-repeat: $input-group-merge-btn-append-bg-repeat;
+
+    .btn {
+      border-top-left-radius: $border-radius !important;
+      border-bottom-left-radius: $border-radius !important;
+      padding: $input-group-merge-btn-padding-y $input-group-merge-btn-padding-x;
+      font-size: $btn-font-size-sm;
+    }
+  }
+}
+
+// Input Group Merge Button Large (lg) Sieze
+.input-group-lg.input-group-merge-btn {
+  .input-group-append-merge {
+    .btn {
+      padding: $input-group-merge-btn-padding-y-lg $input-group-merge-btn-padding-x-lg;
+      font-size: $btn-font-size-lg;
+    }
+  }
+}
+
+// Input Group Merge Button Small (sm) Sieze
+.input-group-sm.input-group-merge-btn {
+  .input-group-append-merge {
+    .btn {
+      padding: $input-group-merge-btn-padding-y-sm $input-group-merge-btn-padding-x-sm;
+      font-size: $btn-font-size-sm;
+    }
+  }
+}
+
+// Focus Show Prepend
+.input-group-merge {
+  .input-group-prepend-merge.focus-show {
+    display: none;
+  }
+}
+
+// Focus Show Append
+.input-group-merge {
+  .input-group-append-merge.focus-show {
+    display: none;
+  }
+}
+
+// Large Input Group Prepend Spacing
+.input-group-lg.input-group-merge  {
+  .input-group-prepend-merge {
+    left: $input-group-lg-prepend-merge-left;
+  }
+}
+
+// Large Input Group Append Spacing
+.input-group-lg.input-group-merge  {
+  .input-group-append-merge {
+    right: $input-group-lg-append-merge-right;
+  }
+}
+
+// Small Input Group Prepend Spacing
+.input-group-sm.input-group-merge  {
+  .input-group-prepend-merge {
+    left: $input-group-sm-prepend-merge-left;
+  }
+}
+
+// Small Input Group Append Spacing
+.input-group-sm.input-group-merge  {
+  .input-group-append-merge {
+    right: $input-group-sm-append-merge-right;
+  }
+}
+
+// Header Search Toggle Icons
+input:focus + .input-group-append-merge.focus-show,
+input:focus + * + .input-group-append-merge.focus-show,
+input.focused + .input-group-append-merge.focus-show,
+input.focused + * + .input-group-append-merge.focus-show {
+  display: flex;
+}

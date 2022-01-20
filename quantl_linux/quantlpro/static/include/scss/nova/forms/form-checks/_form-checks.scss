@@ -1,0 +1,63 @@
+/*------------------------------------
+	Checkboxes and Radio Buttons
+------------------------------------*/
+.form-check {
+  line-height: 1.5;
+
+  .btn-group & {
+    & .btn {
+      border-radius: 0;
+    }
+
+    @if $enable-rounded {
+      &:first-of-type .btn {
+        border-radius: 2px 0 0 2px;
+      }
+    }
+
+    @if $enable-rounded {
+      &:last-of-type .btn {
+        border-radius: 0 2px 2px 0;
+      }
+    }
+
+    & + .form-check .btn {
+      margin-left: -1px;
+    }
+  }
+}
+
+// Check
+@each $color, $value in $theme-colors {
+  input:checked + .btn-outline-#{$color} {
+    @include check($value);
+  }
+}
+
+// Check 2
+.check-2 {
+  border: solid 1px $border-color;
+  padding: $input-btn-padding-y-lg $input-btn-padding-x;
+  color: $text-muted;
+  transition: color, border-color .1 $transition-function;
+
+  &:hover {
+    border-color: $primary;
+    color: $primary;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  input:checked + .check-2 {
+    @include check-2($value);
+  }
+}
+
+// Backgrounds
+.checkbox-bg-white::before {
+  background-color: $white;
+}
+
+input:checked + .btn .form-check-subtext {
+  color: $white !important;
+}

@@ -1,0 +1,293 @@
+{% extends './base.html' %}
+{%block content%}
+
+    <!-- Header -->
+    <header class="header header-light bg-white">
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+      <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="../assets/vendor/prism/prism.css">
+
+      <script>hljs.initHighlightingOnLoad();</script>
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
+          <!--a class="navbar-brand navbar-brand-mobile" href="../demo-crypto/dashboards/index.html"-->
+          <a class="navbar-brand navbar-brand-mobile" href="{% url 'MVP:demo' %}">
+            {% load static %}
+
+          </a>
+
+          <a class="navbar-brand navbar-brand-desktop" href="../demo-crypto/dashboards/index.html">
+          </a>
+        </div>
+
+        <div class="header-content col px-md-3">
+          <div class="d-flex align-items-center">
+            <a class="js-side-nav header-invoker d-flex mr-md-2 d-lg-none" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+
+            <div class="js-header-search ml-lg-2"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+
+              <form id="headerSearchForm" class="header-search input-group input-group-merge w-xl-31_25rem mr-2" action="#">
+                <input class="js-autocomplete header-search-input form-control form-control-append-icon pr-6" type="text" placeholder="Search..."
+                       data-url="assets/include/json/autocomplete-data.json">
+                <div class="input-group-append-merge">
+                  <a class="btn text-muted bg-transparent border-0 p-0 lh-1" href="#">
+                    <i class="nova-search icon-text"></i>
+                  </a>
+                </div>
+              </form>
+            </div>
+
+            <a class="link-dark ml-auto d-none d-sm-block" href="{% url 'MVP:demo' %}">
+              MVP Demo
+            </a>
+
+            <div class="mx-3 mx-md-4">
+              <a class="link-dark position-relative pr-3" href="./getting-started/changelog.html">
+                Changelog (Beta 0.1) <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-right indicator-secondary rounded-circle"></span>
+              </a>
+            </div>
+
+            <a class="btn btn-primary mr-2" href="{% url 'MVP:login' %}" title="Log In">Sign Up / Log In <span class="d-none d-md-inline"></span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <li class="sidebar-heading h6 text-uppercase">Learn about Quantl</li>
+          <li><a class="side-nav-menu-link py-1 active" href="index.html">Platform</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/file-structures.html">Technology</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/approach.html">Data Pipeline</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/gulp.html">Platform Security</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/customization.html">Deployment</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/credits.html">Trade Execution Engine</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/changelog.html">Whitepaper</a></li>
+          <li><a class="side-nav-menu-link py-1" href="getting-started/changelog.html">API</a></li>
+
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+
+      <div class="content overflow-inherit">
+        <!-- Main Content -->
+        <div class="hs-docs-content py-4 px-3 px-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <!-- Secondary Sidebar -->
+                <div class="col-xl-2 order-xl-2 d-none d-xl-inline-block">
+                </div>
+                <!-- End Secondary Sidebar -->
+
+                <!-- Content -->
+                <div class="col-xl-10 order-xl-1">
+                  <div class="border-bottom pb-3 mb-6">
+                    <h1 class="h3 mb-3 mb-md-4">Quantl AI</h1>
+                    <p class="lead">Cloud Hosted<strong> Algorithmic Trading Platform </strong> </p>
+                  </div>
+
+                  <div class="alert alert-danger mb-5" role="alert">
+                    <h3 id="nova-is-a-static-template" class="h5 font-weight-bold">Preparing for a Beta Launch</h3>
+                    <p class="alert-text mb-0">For the time being, we are presenting <strong>MVP</strong> to demonstrate our platform capabilities to potential investors & beta testers to perform Backtetsing on Equities, Trading Crypto currencies and applying data mining to financial data sets. <strong>Quantl</strong>, aims to launch <em>Beta V1</em> by the end of Q4 2021. Beta version will only be available to Beta Testers. To sign up for Beta Testing register on <strong>www.quantl.net</strong>.</strong></p>
+                  </div>
+
+                  <div id="quick-start" class="mb-5">
+                    <h2 class="h4 mb-3">One Platform all, you need<a class="anchorjs-link" href="#quick-start" aria-label="Anchor" data-anchorjs-icon="#"></a></h2>
+                    <p>Quantl offers an AI & Data driven <strong>API</strong> and Cloud hosted systematic trading platform providing a single FIX connection to over <strong>400 liquidity venues</strong>, bringing your investment strategies to production. Trading Platform is composed of multiple code invariant modules that can be run independently or altogether reducing drastically the elapsed time for implementation project as well as the associated operational risk.</p>
+                      <li>Data Science Acceleration</li>
+                      <li>Meeting Heterogeneous Data Challenges</li>
+                      <li>Real Time Data API</li>
+                      <li>Cloud Hosted Algorithmic Trading Platform</li>
+                  </div>
+
+                  <div id="css" class="mb-9">
+                    <h2 class="h4 mb-4">Universal API <a class="anchorjs-link" href="#css" data-anchorjs-icon="#"></a></h2>
+                    <p>Quantl Data engine includes full API access to bring observability to all your apps and infrastructure.</p>
+
+                    <pre>
+                      <code class="language-python" data-lang="python">
+                        from quantl import data_feed, set, api_key
+                        import quantl as qt
+                        from pandas_datareader import data as web
+                        set.api_key("kl1276hgds16_H763dghsd5")
+                          def _loadwindata(win):
+                            try:
+                            os.mkdir(os.path.expanduser('~/.quantl'))
+                            except:
+                                pass
+                            try: f = os.path.expanduser('~/.quantl/' + win.title.replace('/', '-') + '.ini')
+                              settings = [(k.strip(), literal_eval(v.strip())) for line in _openfile(f) /
+                                for k, d, v in [line.partition('=')] if v]
+                                  except: return
+                                    {............}
+
+
+                            def calc_vwap(period):
+                                vwap = pd.Series ([], dtype = 'float64')
+                                df['hlc3v'] = df['hlc3'] * df.volume
+                                    for _,g in df.groupby(pd.Grouper(key='time', freq=period)):
+                                        i0,i1 = g.index[0],g.index[-1] vwap =
+                                                      vwap.append(g.hlc3v.loc[i0:i1].cumsum() /
+                                                      df.volume.loc[i0:i1].cumsum())
+                            return vwap
+
+                      </code>
+                    </pre>
+                    <p><strong>API Features</strong></p>
+                      <li>Capture events & metrics from your own applications using our client libraries</li>
+                    <li>Tag servers or query Quantl in command-line</li>
+                    <li>Generate and upload JSON-formatted dashboards</li>
+                    <li>Use our Restful HTTP API for full data access</li>
+                    <p></p>
+                    <p>The Quantl API is an HTTP REST API. The API uses resource-oriented URLs to call the API, uses status codes to indicate the success or failure of requests, returns JSON from all requests, and uses standard HTTP response codes. Use the Quantl API to access the Quantl Data platform
+                      programmatically. </p>
+                    <p></p>
+                    <p>Data is stored as JSON and synchronized in real-time to every connected client.. all of our clients share one Realtime Database instance and automatically receive updates with the newest data.</p>
+                  </div>
+                </div>
+                <!-- End Content -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+
+        <!-- Footer -->
+        <footer class="small bg-white p-3 px-md-4 mt-auto">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="http://quantl.net" target="_blank">Our platform</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="http://quantl.net" target="_blank">Contact us</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://twitter.com/htmlstream" target="_blank" title="Twitter">
+                    <i class="nova-twitter-alt"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://www.facebook.com/htmlstream" target="_blank" title="Facebook">
+                    <i class="nova-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://github.com/htmlstream" target="_blank" title="Github">
+                    <i class="nova-github"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://dribbble.com/htmlstream" target="_blank" title="Dribbble">
+                    <i class="nova-dribbble"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mx-2">
+                  <a class="link-muted" href="https://instagram.com/htmlstream" target="_blank" title="Instagram">
+                    <i class="nova-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2021 <a class="link-dark" href="http://quantl.net" target="_blank">Quantl AI</a>. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/vendor/jquery-ui/jquery-ui.core.min.js"></script>
+    <script src="../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+    <script src="../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+    <script src="../assets/vendor/jquery-ui/ui/widgets/autocomplete.js"></script>
+    <script src="../assets/vendor/resize-sensor/dist/resizeSensor.min.js"></script>
+    <script src="assets/vendor/prism/prism.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../assets/js/hs.core.js"></script>
+    <script src="../assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="../assets/js/components/hs.side-nav.js"></script>
+    <script src="../assets/js/components/hs.unfold.js"></script>
+    <script src="../assets/js/components/hs.header-search.js"></script>
+    <script src="../assets/js/components/hs.autocomplete.js"></script>
+    <script src="assets/js/components/hs.scroll-nav.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of custom scroll
+        var $scrollbar = $('.js-custom-scroll');
+        $.HSCore.components.HSMalihuScrollBar.init($scrollbar);
+        $($scrollbar).mCustomScrollbar('scrollTo', '#sideNav li a.active');
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of dropdown component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+          unfoldHideOnScroll: false,
+          afterOpen: function () {
+            // initialization of charts
+            $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+            setTimeout(function() {
+              $('#activity .js-bar-chart').css('opacity', 1);
+            }, 100);
+
+            // help function for accordions in hidden block
+            $('#headerProjects .accordion-header').on('click', function () {
+              // vars
+              var target = $(this).data('target');
+
+              $(target).collapse('show');
+            });
+          }
+        });
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of autocomplete
+        $.HSCore.components.HSAutocomplete.init('.js-autocomplete');
+
+        // initialization of HSScrollNav component
+        $.HSCore.components.HSScrollNav.init($('#scrollNav'), {
+          duration: 700
+        });
+      });
+    </script>
+{% endblock%}

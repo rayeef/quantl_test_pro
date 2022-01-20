@@ -1,0 +1,39 @@
+/*------------------------------------
+	List Inside
+------------------------------------*/
+.list-inside {
+	padding-left: 0;
+	list-style-position: inside;
+}
+
+.list-inside > li {
+	list-style: none;
+	position: relative;
+	padding-left: 15px;
+	margin-bottom: 8px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 6px;
+		height: 6px;
+		background-color: $gray-300;
+		border-radius: 50%;
+	}
+}
+
+.list-small {
+	font-size: 14px;
+}
+
+.list-small.list-inside > li {
+	&::before {
+		top: 7px;
+	}
+}
+
+.list-markers-grey {
+
+}

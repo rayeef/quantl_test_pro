@@ -1,0 +1,17 @@
+/*------------------------------------
+	Form controls
+------------------------------------*/
+
+// Note!
+// !important is used as a temporary solution
+// to overwrite Bootstrap heritage classes.
+
+.form-control {
+  &-onfocus-inherit:focus {
+    border-color: $input-border-color;
+  }
+
+  &.form-control-plaintext {
+    border: none;
+  }
+}

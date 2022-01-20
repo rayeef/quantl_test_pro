@@ -1,0 +1,41 @@
+/*------------------------------------
+  Modals
+------------------------------------*/
+
+.modal {
+  &-backdrop.show {
+    opacity: .9;
+  }
+
+  &-dialog {
+    .modal-content {
+      max-width: 100%;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      padding: $modal-dialog-padding;
+      @if $enable-rounded {
+        border-radius: $border-radius;
+      }
+      background-color: $white;
+      .modal-nova & {
+        width: $modal-content;
+      }
+    }
+  }
+
+  &.modal-nova .modal-dialog {
+    background-color: $modal-background-color;
+  }
+
+  .modal-nova &-header {
+    padding: $modal-nova-header-padding;
+  }
+  .modal-nova &-body {
+    padding: $modal-nova-inner-padding;
+  }
+  .modal-nova &-footer {
+    padding: $modal-nova-inner-padding;
+  }
+}

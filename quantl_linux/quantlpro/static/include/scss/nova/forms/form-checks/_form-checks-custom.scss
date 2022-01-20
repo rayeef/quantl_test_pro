@@ -1,0 +1,27 @@
+/*------------------------------------
+	Custom Checkboxes and Radio Buttons
+------------------------------------*/
+
+.form-check-composite-bg-changing .form-check-label,
+.form-check-composite-border-changing .form-check-label,
+.form-check-composite-color-changing .form-check-label {
+	transition: background-color .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.form-check-composite-bg-changing--white input:checked + .form-check-label {
+	background-color: $white;
+}
+
+.custom-checkbox {
+	.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+		border-color: $custom-checkbox-focus-border-color;
+	}
+}
+
+.form-check-composite-border-changing--primary input:checked + .form-check-label {
+	border-color: $primary !important;
+}
+
+.form-check-composite-color-changing--primary input:checked + .form-check-label {
+	color: $primary;
+}

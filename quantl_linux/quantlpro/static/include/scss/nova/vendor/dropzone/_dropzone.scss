@@ -1,0 +1,81 @@
+/*------------------------------------
+  Dropzone
+------------------------------------*/
+
+.u-dropzone {
+  display: $dropzone-display;
+  justify-content: $dropzone-justify-content;
+  width: $dropzone-width;
+  background-color: $dropzone-bg;
+  border: $dropzone-border;
+  border-radius: $dropzone-border-radius;
+  cursor: $dropzone-cursor;
+  padding: $dropzone-padding;
+  -ms-flex-wrap: $dropzone-flex-wrap;
+  flex-wrap: $dropzone-flex-wrap;
+
+  .dz-img {
+    max-width: $dz-img-max-width;
+    border: $dz-img-border;
+    border-radius: $dz-img-border-radius;
+    padding: $dz-img-padding;
+    margin-right: $dz-img-margin-bottom;
+  }
+
+  .dz-file-abbr {
+    display: inline-block;
+    width: $dropzone-abbr-width;
+    height: $dropzone-abbr-height;
+    line-height: $dropzone-abbr-line-height;
+    font-weight: $dropzone-abbr-font-weight;
+    font-size: $dropzone-abbr-font-size;
+    color: $dropzone-abbr-color;
+    text-align: center;
+    background-color: $dropzone-abbr-bg-color;
+    border-radius: $dropzone-abbr-border-radius;
+    margin-right: .75rem;
+  }
+
+  .dz-file-preview {
+    min-width: $dz-file-preview-min-width;
+    background-color: $dz-file-preview-bg;
+    border-radius: $dz-file-preview-border-radius;
+    padding: $dz-file-preview-padding;
+    box-shadow: $dz-file-preview-box-shadow;
+  }
+
+  .dz-details {
+    margin-bottom: $dz-details-margin-bottom;
+  }
+
+  .dz-progress {
+    margin-bottom: $dz-progress-margin-bottom;
+  }
+
+  .dz-processing {
+    .dz-error-mark {
+      color: $dz-error-mark-color;
+    }
+    .dz-success-mark {
+      color: $dz-success-mark-color;
+    }
+  }
+
+  .dz-message {
+    text-align: $dz-message-text-align;
+  }
+
+  &.dz-started .u-dropzone__message,
+  & .dz-processing .dz-error-mark,
+  & .dz-processing .dz-success-mark {
+    display: none;
+  }
+
+  & .dz-processing.dz-error .dz-error-mark,
+  & .dz-processing.dz-success .dz-success-mark {
+    display: block;
+  }
+}
+
+
+

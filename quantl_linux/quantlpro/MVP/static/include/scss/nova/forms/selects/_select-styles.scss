@@ -1,0 +1,18 @@
+/*------------------------------------
+	Select Styles
+------------------------------------*/
+
+.select {
+  &-bold {
+    & > span {
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}

@@ -1,0 +1,38 @@
+{
+  "_args": [
+    [
+      "table-edits@0.0.3",
+      "/Users/ruslanibragimov/Sites/Nova"
+    ]
+  ],
+  "_from": "table-edits@0.0.3",
+  "_id": "table-edits@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-Sc20SzlhP2Ug/BFhhB9X+zzYRUE=",
+  "_location": "/table-edits",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "table-edits@0.0.3",
+    "name": "table-edits",
+    "escapedName": "table-edits",
+    "rawSpec": "0.0.3",
+    "saveSpec": null,
+    "fetchSpec": "0.0.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/table-edits/-/table-edits-0.0.3.tgz",
+  "_spec": "0.0.3",
+  "_where": "/Users/ruslanibragimov/Sites/Nova",
+  "description": "[![File Size](https://badge-size.herokuapp.com/nathancahill/table-edits/master/build/table-edits.min.js.svg?compression=gzip&label=size)](https://raw.githubusercontent.com/nathancahill/table-edits/master/build/table-edits.min.js)",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "^0.9.1"
+  },
+  "name": "table-edits",
+  "version": "0.0.3"
+}
